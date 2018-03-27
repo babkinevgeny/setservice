@@ -115,7 +115,7 @@ $('.btn-nav-close').click(function() {
 
 $(document).on('click touchstart', '.mouse', function(){
 			var hei = $(document).find('.page-header').outerHeight();
-			$('html, body').animate({ scrollTop: hei-63}, 500);
+			$('html, body').animate({ scrollTop: hei-81}, 500);
 });
 
 window.onscroll = function() {

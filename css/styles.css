@@ -60,7 +60,6 @@ body {
 }
 .page-header {
   height: 100vh;
-  background: #000;
 }
 .menu {
   display: -webkit-flex;
@@ -78,6 +77,7 @@ body {
   background: #fff;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   padding: 13px 40px 17px 12px;
+  z-index: 2;
 }
 .menu.fixed .hamburger::after {
   color: #282828;
@@ -124,7 +124,7 @@ body {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  z-index: 3;
   transition: .5s;
 }
 .navigation .btn-nav-close {
