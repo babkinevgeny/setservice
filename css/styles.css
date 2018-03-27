@@ -7,8 +7,29 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Ubuntu, sans-serif;
+}
+.link {
+  text-decoration: none;
+  color: #fff;
+  font-family: Ubuntu, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+.page-header {
+  height: 100vh;
+  background: #282828;
+}
+.menu {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 55px 40px 0 40px;
 }
 .navigation {
+  display: block;
   display: none;
   width: 100%;
   height: 100%;
@@ -17,7 +38,7 @@ body {
   left: 0;
   background: rgba(0, 0, 0, 0.5);
 }
-.navigation .btn-close {
+.navigation .btn-nav-close {
   display: block;
   width: 100px;
   height: 100px;
@@ -27,7 +48,7 @@ body {
   background: url('../img/close.svg') no-repeat center;
   cursor: pointer;
 }
-.navigation .btn-close:hover {
+.navigation .btn-nav-close:hover {
   background-image: url('../img/close-hover.svg');
 }
 .navigation-list {
@@ -61,4 +82,65 @@ body {
 }
 .navigation-link:hover {
   color: #b8a17f;
+}
+.hamburger {
+  width: 189px;
+  padding-right: 139px;
+  height: 50px;
+  padding: 9px 0 0 9px;
+  cursor: pointer;
+  position: relative;
+}
+.hamburger::after {
+  content: "Меню";
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 50px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+}
+.hamburger-item {
+  display: block;
+  min-height: 6px;
+  margin-top: 4px;
+  width: 32px;
+  background-color: #ffee00;
+}
+.hamburger:hover .hamburger-item:first-child {
+  position: relative;
+  top: -3px;
+}
+.hamburger:hover .hamburger-item:last-child {
+  position: relative;
+  bottom: -3px;
+}
+.contacts-block {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+.contacts-block .link-phone {
+  font-size: 22px;
+  text-align: right;
+  margin-bottom: 10px;
+}
+.contacts-block .btn-send {
+  color: #ffee00;
+  font-family: Ubuntu, sans-serif;
+  font-size: 20px;
+  padding: 8px;
+  font-weight: 500;
+  border: none;
+  border-top: 2px solid #ffee00;
+  border-bottom: 2px solid #ffee00;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: .25s;
+}
+.contacts-block .btn-send:hover {
+  background: #ffee00;
+  color: #fff;
 }

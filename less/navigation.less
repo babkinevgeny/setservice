@@ -1,4 +1,19 @@
+.page-header {
+  height: 100vh;
+  background: #282828;
+}
+
+.menu{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 55px 40px 0 40px;
+}
+
 .navigation {
+  display: block;
   display: none;
   width: 100%;
   height: 100%;
@@ -7,7 +22,7 @@
   left: 0;
   background: rgba(0,0,0,.5);
 
-  .btn-close{
+  .btn-nav-close{
     display: block;
     width: 100px;
     height: 100px;
@@ -54,4 +69,69 @@
     }
   }
 
+}
+
+.hamburger{
+  width: 189px;
+  padding-right: 139px;
+  height: 50px;
+  padding: 9px 0 0 9px;
+  cursor: pointer;
+  position: relative;
+  &::after{
+    content:"Меню";
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 50px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  &-item{
+    display: block;
+    min-height: 6px;
+    margin-top: 4px;
+    width: 32px;
+    background-color: @yellow;
+  }
+  &:hover{
+    .hamburger-item:first-child{
+      position: relative;
+      top:-3px;
+    }
+    .hamburger-item:last-child{
+      position: relative;
+      bottom:-3px;
+    }
+  }
+}
+
+.contacts-block{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  .link-phone{
+    font-size: 22px;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  .btn-send{
+    color: @yellow;
+    font-family: Ubuntu, sans-serif;
+    font-size: 20px;
+    padding: 8px;
+    font-weight: 500;
+    border:none;
+    border-top: 2px solid @yellow;
+    border-bottom: 2px solid @yellow;
+    background: rgba(255,255,255,.5);
+    cursor: pointer;
+    transition: .25s;
+    &:hover{
+      background: @yellow;
+      color: #fff;
+    }
+  }
 }
