@@ -1,6 +1,7 @@
 .page-header {
   height: 100vh;
-  background: transparent;
+  background: #000;
+
 }
 
 .menu {
@@ -17,7 +18,8 @@
   top: 0;
   left: 0;
   height: 75px;
-  background: #f7f7f7;
+  background: #fff;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
   padding: 13px 40px 17px 12px;
 
   .hamburger {
@@ -29,15 +31,16 @@
   }
   .link-logo {
     display: block;
-    width: 300px;
+    width: 100%;
     height: 48px;
     position: relative;
     &::after {
        content: url('../img/logo-horizontal.png');
        position: absolute;
        top: 50%;
-       left: 0;
+       left: 50%;
        margin-top: -9px;
+       margin-left: -150px;
      }
     & img {
       display: none;
@@ -58,6 +61,7 @@
   }
 
   .contacts-block {
+    width: 33%;
     flex-direction: row;
   }
 }
@@ -123,8 +127,8 @@
 }
 
 .hamburger{
-  width: 189px;
-  padding-right: 139px;
+  width: 33%;
+  // padding-right: 139px;
   height: 50px;
   padding: 9px 0 0 9px;
   cursor: pointer;
@@ -162,15 +166,22 @@
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
+  width: 33%;
   flex-direction: column;
   .link-phone{
     font-size: 22px;
     text-align: right;
     margin-bottom: 10px;
   }
+  .btn-text-send{
+    width: 190px;
+    margin-left: auto;
+  }
 }
 
 .btn-text{
+  display: block;
+  min-width: 150px;
   text-align: center;
   text-decoration: none;
   color: @yellow;

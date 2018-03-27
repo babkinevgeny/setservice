@@ -15,32 +15,33 @@
 //    direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
 // });
 
-$(document).ready( function() {
-	var slider = $.fn.fsvs({
-		speed : 1000,
-		bodyID : 'fsvs-body',
-		selector : '> .onepage-scroll',
-		mouseSwipeDisance : 40,
-		afterSlide : function(){},
-		beforeSlide : function(){},
-		endSlide : function(){},
-		mouseWheelEvents : true,
-		mouseWheelDelay : false,
-		scrollableArea : 'scrollable',
-		mouseDragEvents : true,
-		touchEvents : true,
-		arrowKeyEvents : true,
-		pagination : true,
-		nthClasses : false,
-		detectHash : true
-	});
-	//slider.slideUp();
-	//slider.slideDown();
-	//slider.slideToIndex( index );
-	//slider.unbind();
-	//slider.rebind();
-});
-//jQuery is required to run this code
+// $(document).ready( function() {
+// 	var slider = $.fn.fsvs({
+// 		speed : 1000,
+// 		bodyID : 'fsvs-body',
+// 		selector : '> .onepage-scroll',
+// 		mouseSwipeDisance : 40,
+// 		afterSlide : function(){},
+// 		beforeSlide : function(){},
+// 		endSlide : function(){},
+// 		mouseWheelEvents : true,
+// 		mouseWheelDelay : false,
+// 		scrollableArea : 'scrollable',
+// 		mouseDragEvents : true,
+// 		touchEvents : true,
+// 		arrowKeyEvents : true,
+// 		pagination : true,
+// 		nthClasses : false,
+// 		detectHash : true
+// 	});
+// 	//slider.slideUp();
+// 	//slider.slideDown();
+// 	//slider.slideToIndex( index );
+// 	//slider.unbind();
+// 	//slider.rebind();
+// });
+
+// //jQuery is required to run this code
 $( document ).ready(function() {
 
     scaleVideoContainer();
@@ -114,16 +115,33 @@ $('.btn-nav-close').click(function() {
 
 $(document).on('click touchstart', '.mouse', function(){
 			var hei = $(document).find('.page-header').outerHeight();
-			$('html, body').animate({ scrollTop: hei-43}, 500);
+			$('html, body').animate({ scrollTop: hei-63}, 500);
 });
 
 window.onscroll = function() {
-  var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-  if (scrolled >= $('.menu').height()) {
-    $('.menu').addClass('fixed');
-  } else {
-    $('.menu').removeClass('fixed');
-  }
+		  if ($(document).scrollTop()>=300) {
+				$('.page-header .title-header').css('padding-top', '298px');
+				var newHei = $(window).height() - 33;
+				$('.page-header ').css('height', newHei+'px');
+		    $('.menu').addClass('fixed');
+		  } else {
+				$('.page-header .title-header').css('padding-top', '0px');
+				$('.page-header ').css('height', '100vh');
+		    $('.menu').removeClass('fixed');
+		  }
+		$(window).scroll(function(){
+			  //ss = $(document).height()-$(document).scrollTop();
+			  if ($(document).scrollTop()>=300) {
+					$('.page-header .title-header').css('padding-top', '298px');
+					var newHei = $(window).height() - 33;
+					$('.page-header ').css('height', newHei+'px');
+			    $('.menu').addClass('fixed');
+			  } else {
+					$('.page-header .title-header').css('padding-top', '0px');
+					$('.page-header ').css('height', '100vh');
+			    $('.menu').removeClass('fixed');
+			  }
+		});
 }
 
 while(true) {

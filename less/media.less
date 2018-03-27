@@ -1,3 +1,17 @@
+@media screen and (max-width: 1200px) {
+  .menu.fixed {
+    .btn-text-send {
+      display: none;
+    }
+    .logo {
+      width: 33%;
+    }
+    .link-phone {
+      margin-left: auto;
+    }
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1000px) {
   .title-header {
     font-size: 30pt;
@@ -25,6 +39,12 @@
     &-img{
       width: 80px;
       height: 80px;
+    }
+  }
+
+  .menu.fixed {
+    .link-logo::after {
+      width: 200px;
     }
   }
 }
