@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="page-header">
+  <header class="page-header homepage-hero-module">
     <nav class="navigation">
       <ul class="navigation-list">
         <div class="btn btn-nav-close"></div>
@@ -38,11 +38,64 @@
     <h1 class="title title-header">Изготовление металлоконструкций <br>любой сложности</h1>
     <a href="#" class="btn-text btn-more">Подробнее</a>
     <div class="mouse"><span class="mouse-dot"></span></div>
+      <div class="video-container">
+        <div class="filter"></div>
+        <video autoplay loop class="fillWidth">
+          <source src="video/setservice.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+          <source src="PATH_TO_WEBM" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+        <div class="poster hidden">
+          <img src="PATH_TO_JPEG" alt="">
+        </div>
+      </div>
   </header>
+  <section class="services one-page-scroll">
+	  <h2 class="title-section">Каталог продукции</h2>
+		<ul class="services-list">
+			<li class="services-item">
+				<a href="https://setservice24.ru/stroitelnyye-metallokonstruktsii" class="services-link">
+					<div class="services-content">
+						<img src="images/images/services-icon-1.png" alt="" class="services-img" width="100" height="100">
+						<h3 class="title-services">Строительные <br>металлоконструкции</h3>
+						<span class="services-description">(Колонны, Связи, Фермы, Балки)</span>
+					</div>
+				</a>
+			</li>
+			<li class="services-item">
+			  <a href="https://setservice24.ru/tekhnologicheskiye-metallokonstruktsii" class="services-link">
+				  <div class="services-content">
+					  <img src="images/images/services-icon-2.png" alt="" class="services-img" width="100" height="100">
+					  <h3 class="title-services">Технологические <br>металлоконструкции</h3>
+					  <span class="services-description">(Площадки обслуживания, Опоры, Технолог. ТП)</span>
+				  </div>
+			  </a>
+		  </li>
+			<li class="services-item">
+				<a href="https://setservice24.ru/skladskoye-oborudovaniye" class="services-link">
+					<div class="services-content">
+						<img src="images/images/services-icon-3.png" alt="" class="services-img" width="100" height="100">
+						<h3 class="title-services">Складское <br>оборудование</h3>
+						<span class="services-description">(Стеллажи, Лестницы, Помосты, Шкафы)</span>
+					</div>
+				</a>
+			</li>
+			<li class="services-item">
+				<a href="https://setservice24.ru/pogruzochnoye-oborudovaniye" class="services-link">
+					<div class="services-content">
+						<img src="images/images/services-icon-4.png" alt="" class="services-img" width="100" height="100">
+						<h3 class="title-services">Погрузочное <br>оборудование</h3>
+						<span class="services-description">(Эстакады, Подъёмные столы, Подъёмники)</span>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<a href="https://setservice24.ru/katalog-produktsii" class="btn-more btn-text">Подробнее</a>
+	</section>
 
 
   <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery.backgroundvideo.min.js"></script>
+  <script src="js/jquery.mb.YTPlayer.min.js"></script>
+  <!-- <script src="js/jquery.backgroundvideo.min.js"></script> -->
   <script src="js/main.js"></script>
 </body>
 </html>
