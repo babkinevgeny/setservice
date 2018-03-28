@@ -140,7 +140,6 @@ body {
 .menu.fixed .contacts-block {
   width: 33%;
   flex-direction: row;
-  justify-content: space-around;
 }
 .navigation {
   display: none;
@@ -487,6 +486,24 @@ body {
 .statistic-tag-small {
   font-size: 18px;
 }
+.statistic-chart-first .statistic-tag::after {
+  background-position: center 4px;
+}
+.statistic-chart-second .statistic-tag::after {
+  background-position: center -21px;
+}
+.statistic-chart-third .statistic-tag::after {
+  background-position: center -48px;
+}
+.statistic-chart-fourth .statistic-tag::after {
+  background-position: center -75px;
+}
+.statistic-chart-fifth .statistic-tag::after {
+  background-position: center -100px;
+}
+.statistic-chart-sixth .statistic-tag::after {
+  background-position: center -126px;
+}
 .statistic-undertitle {
   display: block;
   font-family: Arial, sans-serif;
@@ -604,6 +621,182 @@ body {
   margin: 0 auto;
   text-align: center;
   position: relative;
+}
+.recomend {
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.item {
+  height: 420px;
+}
+.owl-carousel {
+  padding: 20px 0;
+}
+div.item img.item-img {
+  width: 282px;
+  height: 374px;
+  margin: 0 auto;
+}
+.item-link {
+  display: block;
+  box-sizing: border-box;
+  width: 294px;
+  height: 386px;
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+.item-link:focus {
+  outline: none;
+}
+.owl-nav {
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  margin-top: -20px;
+}
+.owl-prev {
+  position: absolute;
+  left: 0;
+}
+.owl-next {
+  position: absolute;
+  right: 0;
+}
+.owl-next {
+  position: absolute;
+  right: 0;
+}
+.owl-item {
+  min-height: 500px;
+}
+.owl-nav span {
+  font-size: 40px;
+  display: block;
+  line-height: 32px;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+.owl-theme div.owl-nav button.owl-next,
+.owl-theme div.owl-nav button.owl-prev {
+  background: #fff899;
+  border-radius: 50%;
+}
+.owl-theme div.owl-nav button.owl-next:hover,
+.owl-theme div.owl-nav button.owl-prev:hover {
+  color: #000;
+  background: #ffee00;
+}
+.owl-theme div.owl-nav button span {
+  padding-top: 2px;
+}
+.owl-theme div.owl-nav button.owl-next span {
+  padding-left: 2px;
+}
+.owl-theme div.owl-nav button.owl-next:focus,
+.owl-theme div.owl-nav button.owl-prev:focus {
+  outline: none;
+}
+.item-undertitle {
+  font-family: Open Sans, sans-serif;
+  font-size: 15px;
+  padding: 12px 4px 0;
+  text-align: center;
+  color: #ddd;
+}
+.center .item-undertitle {
+  font-family: Open Sans, sans-serif;
+  font-size: 15px;
+  padding: 12px 4px 0;
+  text-align: center;
+  color: #282828;
+  font-weight: bold;
+}
+.owl-nav {
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  margin-top: -20px;
+}
+/*Брейк-поинты для слайдера*/
+@media screen and (min-width: 610px) and (max-width: 1000px) {
+  .item {
+    height: 250px;
+  }
+  div.item img.item-img {
+    width: 178px;
+    height: 238px;
+    margin: 0 auto;
+  }
+  .item-link {
+    display: block;
+    box-sizing: border-box;
+    width: 190px;
+    height: 250px;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #ddd;
+  }
+}
+.owl-item .item-img {
+  opacity: 0.4;
+}
+.owl-item.center .item-img {
+  opacity: 1;
+}
+@media screen and (max-width: 650px) {
+  .item {
+    height: 290px;
+  }
+  div.item img.item-img {
+    width: 198px;
+    height: 278px;
+    margin: 0 auto;
+  }
+  .item-link {
+    display: block;
+    box-sizing: border-box;
+    width: 210px;
+    height: 290px;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #ddd;
+  }
+}
+/*Анимация и стили для magnific popup*/
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.9;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+  cursor: pointer;
 }
 @media screen and (min-height: 992px) {
   .title-header {
