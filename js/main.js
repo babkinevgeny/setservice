@@ -153,16 +153,19 @@ window.onscroll = function() {
 		});
 }
 
-// while(true) {
-//   $(document).find('.mouse .mouse-dot').stop()
-//     .css({ top : 10, left : 11, opacity : 1 })
-//     .delay(200)
-//   //   .animate({ top : 29, opacity : 0 },1500,'swing',function(){
-//   // $(this).css({ top : 10 })
-//   // .animate({ opacity : 1 },500,'swing',function(){ aniamate(); });
-// };
-// animate();
-// };
+
+$(function(){
+	 	var aniamate = function(){
+			$(document).find('.mouse .mouse-dot').stop()
+			.css({ top : 10, left : 11, opacity : 1 })
+			.delay(200)
+			.animate({ top : 29, opacity : 0 },1500,'swing',function(){
+				$(this).css({ top : 10 })
+				.animate({ opacity : 1 },500,'swing',function(){ aniamate(); });
+			});
+	 	}
+		aniamate();
+});
 
 (function($){
 	$.fn.percentPie = function(options){
