@@ -106,11 +106,14 @@ function scaleBannerVideoSize(element){
 }
 
 $('.hamburger').click(function() {
-    $('.navigation').css('display', 'block');
+    setTimeout(function() { $('.navigation').fadeIn(100) }, 100);
+    $('.navigation-list').animate({left: 0},500);
 });
 
 $('.btn-nav-close').click(function() {
-    $('.navigation').css('display', 'none');
+    $('.navigation-list').animate({left: -324},500);
+    setTimeout(function() { $('.navigation').fadeOut(100) }, 400);
+    //
 });
 
 $(document).on('click touchstart', '.mouse', function(){

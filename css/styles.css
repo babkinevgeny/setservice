@@ -131,11 +131,12 @@ body {
   margin-left: auto;
 }
 .menu.fixed .btn-text-send {
-  color: #282828;
+  color: #686868;
   background: #fff899;
 }
 .menu.fixed .btn-text-send:hover {
   background: #ffee00;
+  color: #282828;
 }
 .menu.fixed .contacts-block {
   width: 33%;
@@ -175,7 +176,7 @@ body {
   padding-top: 100px;
   position: relative;
   top: 0;
-  left: 0;
+  left: -324px;
 }
 .navigation-item {
   background-color: #000;

@@ -53,10 +53,11 @@
   }
 
   .btn-text-send {
-    color: #282828;
-    background: lighten(@yellow, 30%);
+    color: @color-btn;
+    background: @background-btn;
     &:hover{
       background: @yellow;
+      color: #282828;
     }
   }
 
@@ -72,7 +73,7 @@
   height: 100%;
   position: fixed;
   top:0;
-  left: 0;
+  left:0;
   background: rgba(0,0,0,.5);
   z-index: 3;
   transition: .5s;
@@ -101,7 +102,7 @@
     padding-top: 100px;
     position: relative;
     top: 0;
-    left: 0;
+    left: -324px;
   }
   &-item {
     background-color: #000;
