@@ -1,4 +1,5 @@
 // out: ../css/styles.css, sourcemap: false, compress: false
+@import "fonts.less";
 *, *::after, *::before {
   box-sizing: inherit;
 }
@@ -16,8 +17,23 @@ body{
   font-size: 14px;
   font-weight: 500;
 }
+
+.container {
+  max-width: 1180px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.text {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 1.4px;
+  margin: 0 0 20px 0;
+}
 @import "variables.less";
 @import "videobackground.less";
 @import "navigation.less";
 @import "services.less";
+@import "about.less";
 @import "media.less";

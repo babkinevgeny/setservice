@@ -1,0 +1,269 @@
+.about {
+  
+}
+.statistic{
+  padding: 20px 0;
+  .title-section {
+    font-size: 20px;
+  }
+  .flex-outer {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+  }
+
+  .flex-inner {
+    width: 100%;
+    margin: auto;
+  }
+  &-wrapper{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &-chart {
+    position:relative;
+    margin-bottom: 10px;
+    &::after {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 4px;
+      background: #f9b407;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      margin-left: -2px;
+    }
+    &-second::after {
+      background: #f7c20a;
+    }
+
+    &-third::after {
+      background: #fbd414;
+    }
+    &-fourth::after {
+      background: #f9db17;
+    }
+    &-fifth::after {
+      background: #f7e524;
+    }
+    &-sixth::after {
+      background: #f7e524;
+    }
+  }
+
+
+  /* .chart::before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: #5b5b5b;
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    margin-left: -7px;
+    transform: rotate(45deg);
+  }*/
+
+
+  &-tag {
+    width:100%;
+    text-align:center;
+    position:absolute;
+    top:43%;
+    font-size: 33px;
+    color: #000;
+    cursor: default;
+    font-family: BicubikRegular, Ubuntu, sans-serif;
+    &::before {
+      content: '';
+      width: 50px;
+      height: 1px;
+      background: #5b5b5b;
+      position: absolute;
+      top: -2px;
+      left: 50%;
+      margin-left: -25px;
+    }
+    &::after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background: url(../img/sprite.png) center no-repeat;
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      margin-left: -10px;
+    }
+  }
+
+  &-tag-small {
+    font-size: 18px;
+  }
+
+  // .first .tag::after {
+  //   background-position: center 4px;
+  // }
+  //
+  // .second .tag::after {
+  //   background-position: center -21px;
+  // }
+  //
+  // .third .tag::after {
+  //   background-position: center -48px;
+  // }
+  //
+  // .fourth .tag::after {
+  //   background-position: center -75px;
+  // }
+  //
+  // .fifth .tag::after {
+  //   background-position: center -100px;
+  // }
+  //
+  // .sixth .tag::after {
+  //   background-position: center -126px;
+  // }
+
+  &-undertitle {
+    display: block;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+}
+
+
+.statistic-wrapper{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.chart {
+  position:relative;
+  margin-bottom: 10px;
+}
+
+.chart::after {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: #f9b407;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -2px;
+}
+
+/* .chart::before {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: #5b5b5b;
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  margin-left: -7px;
+  transform: rotate(45deg);
+}*/
+
+.second::after {
+  background: #f7c20a;
+}
+
+.third::after {
+  background: #fbd414;
+}
+.fourth::after {
+  background: #f9db17;
+}
+.fifth::after {
+  background: #f7e524;
+}
+.sixth::after {
+  background: #f7e524;
+}
+
+
+.tag {
+  width:100%;
+  text-align:center;
+  position:absolute;
+  top:43%;
+  font-size: 33px;
+  color: #000;
+  cursor: default;
+  font-family: BicubikRegular, Ubuntu, sans-serif;
+}
+
+.tag-small {
+  font-size: 18px;
+}
+
+.tag::before {
+  content: '';
+  width: 50px;
+  height: 1px;
+  background: #5b5b5b;
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  margin-left: -25px;
+}
+
+.tag::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: url(../img/sprite.png) center no-repeat;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  margin-left: -10px;
+}
+
+.first .tag::after {
+  background-position: center 4px;
+}
+
+.second .tag::after {
+  background-position: center -21px;
+}
+
+.third .tag::after {
+  background-position: center -48px;
+}
+
+.fourth .tag::after {
+  background-position: center -75px;
+}
+
+.fifth .tag::after {
+  background-position: center -100px;
+}
+
+.sixth .tag::after {
+  background-position: center -126px;
+}
+
+.undertitle {
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
