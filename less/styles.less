@@ -38,3 +38,80 @@ body{
 @import "about.less";
 @import "recomend.less";
 @import "media.less";
+
+.map {
+  min-width: 100%;
+  min-height: 500px;
+  position: relative;
+  border-top: 2px solid #eee;
+}
+
+#map-spb,
+#map-msc {
+  width: 100%;
+  height: 500px;
+}
+.map .contacts {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  margin-top: -200px;
+  z-index: 1;
+  min-height: 400px;
+  width: 400px;
+  background-color: #ffffff;
+  padding: 40px;
+  border: 2px solid #eee;
+}
+
+.contacts p {
+  margin: 0;
+  font-weight: 300;
+  color: #666;
+}
+p.contacts-title {
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+p.contacts-info{
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.contacts-btns {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: 100%;
+}
+
+.btn-contacts {
+  width: 39%;
+  font-family: Ubuntu, sans-serif;
+  font-size: 18px;
+  background: lighten(@yellow, 30%);
+  border: none;
+  border-top: 2px solid @yellow;
+  border-bottom: 2px solid @yellow;
+  cursor: pointer;
+  padding: 10px 4px;
+  transition: .25s;
+  color: lighten(#282828, 10%);
+  &:first-child{
+    margin-right: 8px;
+  }
+  &:hover {
+    background: @yellow;
+    transition: .25s;
+    color: #282828;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.contacts .social {
+  text-align: center;
+}
