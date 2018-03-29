@@ -1,0 +1,104 @@
+/*Карты для contact.html*/
+$(document).ready(function (){
+  ymaps.ready(init);
+
+  function init () {
+    myMap = new ymaps.Map('map-move-msc', {
+      center:[55.710004, 37.652705],
+      zoom:16
+    });
+
+    myMap.controls
+      .add('zoomControl', { left: 15, top: 15 });
+
+    myPlacemark = new ymaps.Placemark([55.708354, 37.652705], {
+    }, {
+      iconImageHref: 'img/map-marker.png',
+      iconImageSize: [201, 160],
+      iconImageOffset: [-60, -160]
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+  };
+});
+
+$(document).ready(function (){
+  ymaps.ready(init);
+
+  function init () {
+    myMap = new ymaps.Map('map-move-spb', {
+      center:[59.924224, 30.441875],
+      zoom:16
+    });
+
+    myMap.controls
+      .add('zoomControl', { left: 15, top: 15 });
+
+    myPlacemark = new ymaps.Placemark([59.922764, 30.442275], {
+    }, {
+      iconImageHref: 'img/map-marker.png',
+      iconImageSize: [201, 160],
+      iconImageOffset: [-60, -160]
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+  };
+
+});
+
+/* Заполнение адресов карт в contacts.html*/
+$(document).ready(function() {
+  if($('.contacts-move').hasClass('contacts-move-spb')) {
+    $('#map-move-msc').css('display', 'none');
+    $('#map-move-spb').css('display', 'block');
+    $('.contacts-content').prepend('<p class="contacts-title"><b>ГК "КОМПЛЕКТ СЕРВИС" <br>в Санкт-Петербурге  </b></p><p class="contacts-info"><b>Адрес офиса:</b> г. Санкт-Петербург, <br>ул. Ворошилова, 2, Деловой Центр "ОХТА"</p><p class="contacts-info"><b>Адрес склада:</b> г. Санкт-Петербург, <br>ул. Дорога на Петрославянку, д. 5</p><p class="contacts-info"><b>Адрес производства:</b> г. Санкт-Петербург, <br>Кингисепское ш., 53</p><p class="contacts-info"><b>Телефон:</b> +7(812) 627-15-16</p>');
+  }
+  if($('.contacts-move').hasClass('contacts-move-msc')) {
+    $('#map-move-spb').css('display', 'none');
+    $('#map-move-msc').css('display', 'block');
+    $('.contacts-content').prepend('<p class="contacts-title"><b>ГК "КОМПЛЕКТ СЕРВИС" <br>в Москве  </b></p><p class="contacts-info"><b>Адрес офиса:</b> г. Москва, ул. Ленинская Слобода, д.19, БЦ "Омега Плаза"</p><p class="contacts-info"><b>Адрес склада:</b> г. Электросталь, Промышленный проезд, д.11, корпус 11. (Въезд с 9.00 до 16.30 ч.)</p><p class="contacts-info"><b>Телефон:</b> +7 (495) 205-60-07</p>');
+  }
+});
+
+/* Переключение карты в contacts.html*/
+$('.contacts-btns-big .btn-contacts-spb').click(function(){
+  if ($('.contacts-move').hasClass('contacts-move-spb')) {
+    return;
+  } else {
+      $('#map-move-msc').css('display', 'none');
+      $('#map-move-spb').fadeIn();
+      $('#map-move-spb .ymaps-image-with-content').css('display','none');
+      $('.map .contacts-move').addClass('contacts-move-spb').removeClass('contacts-move-msc');
+      $('.contacts-move-spb').fadeIn();
+      $('.contacts-content').empty().prepend('<p class="contacts-title"><b>ГК "КОМПЛЕКТ СЕРВИС" <br>в Санкт-Петербурге  </b></p><p class="contacts-info"><b>Адрес офиса:</b> г. Санкт-Петербург, <br>ул. Ворошилова, 2, Деловой Центр "ОХТА"</p><p class="contacts-info"><b>Адрес склада:</b> г. Санкт-Петербург, <br>ул. Дорога на Петрославянку, д. 5</p><p class="contacts-info"><b>Адрес производства:</b> г. Санкт-Петербург, <br>Кингисепское ш., 53</p><p class="contacts-info"><b>Телефон:</b> +7(812) 627-15-16</p>');
+  }
+});
+$('.contacts-btns-big .btn-contacts-msc').click(function(){
+  if ($('.contacts-move').hasClass('contacts-move-msc')) {
+    return;
+  } else {
+    $('#map-move-spb').css('display', 'none');
+    $('#map-move-msc').fadeIn();
+    $('#map-move-msc .ymaps-image-with-content').css('display','none');
+    $('.map .contacts-move').addClass('contacts-move-msc').removeClass('contacts-move-spb');
+    $('.contacts-move-msc').fadeIn();
+    $('.contacts-content').empty().prepend('<p class="contacts-title"><b>ГК "КОМПЛЕКТ СЕРВИС" <br>в Москве  </b></p><p class="contacts-info"><b>Адрес офиса:</b> г. Москва, ул. Ленинская Слобода, д.19, БЦ "Омега Плаза"</p><p class="contacts-info"><b>Адрес склада:</b> г. Электросталь, Промышленный проезд, д.11, корпус 11. (Въезд с 9.00 до 16.30 ч.)</p><p class="contacts-info"><b>Телефон:</b> +7 (495) 205-60-07</p>');
+  }
+});
+
+$('.contacts-move .btn-content-close').click( function () {
+  $(this).parent().fadeOut();
+  if($(this).parent().hasClass('contacts-move-spb')) {
+    $('#map-move-spb .ymaps-image-with-content').fadeIn();
+  }
+  if($(this).parent().hasClass('contacts-move-msc')) {
+    $('#map-move-msc .ymaps-image-with-content').fadeIn();
+  }
+});
+
+$('#map-move-spb .ymaps-point-overlay').click(function () {
+  $('.contacts-move-spb').css('display','block');
+});
+$('#map-move-msc .ymaps-point-overlay').click(function () {
+  $('.contacts-move-msc').fadeIn();
+});

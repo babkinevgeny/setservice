@@ -934,6 +934,138 @@ div.item img.item-img {
 .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
   cursor: pointer;
 }
+#map-spb,
+#map-msc,
+#map-move-spb,
+#map-move-msc {
+  width: 100%;
+  height: 500px;
+}
+.map {
+  min-width: 100%;
+  min-height: 500px;
+  position: relative;
+  border-top: 2px solid #eee;
+}
+.map .contacts {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  margin-top: -200px;
+  z-index: 1;
+  min-height: 400px;
+  width: 400px;
+  background-color: #ffffff;
+  padding: 40px;
+  border: 2px solid #eee;
+  font-weight: 300;
+  color: #666;
+}
+.map .contacts-title {
+  margin-top: 0;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.map .contacts-info {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.map .contacts-btns {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: 100%;
+}
+.btn-contacts {
+  width: 39%;
+  font-family: Ubuntu, sans-serif;
+  font-size: 18px;
+  background: #fff899;
+  border: none;
+  border-top: 2px solid #ffee00;
+  border-bottom: 2px solid #ffee00;
+  cursor: pointer;
+  padding: 10px 4px;
+  transition: .25s;
+  color: #424242;
+}
+.btn-contacts:first-child {
+  margin-right: 8px;
+}
+.btn-contacts:hover {
+  background: #ffee00;
+  transition: .25s;
+  color: #282828;
+}
+.btn-contacts:focus {
+  outline: none;
+}
+.contacts-btns-big {
+  width: 320px;
+  padding: 20px 0;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.contacts-btns-big .btn-contacts {
+  padding: 10px 5px;
+  width: 160px;
+}
+.contacts-move {
+  display: block;
+  width: 300px;
+  min-height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 141px;
+  margin-left: -150px;
+  background: #fff;
+  z-index: 2;
+  padding: 15px;
+  padding-top: 35px;
+  color: #282828;
+}
+.contacts-move::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -20px;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+.contacts-move .btn-content-close {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: url('../img/close-yellow.svg') no-repeat center;
+  transition: .5s;
+}
+.contacts-move .btn-content-close:hover {
+  background: url('../img/close-black.svg') no-repeat center;
+  transition: .5s;
+}
+.contacts-content .contacts-title {
+  margin-bottom: 15px;
+}
+.contacts-content .contacts-info {
+  text-align: center;
+  margin: 10px 0;
+}
+.ymaps-image-with-content {
+  display: none;
+}
 @media screen and (min-height: 992px) {
   .title-header {
     margin-top: 150px;
@@ -1074,75 +1206,4 @@ div.item img.item-img {
   .menu-fixed .hamburger::after {
     display: none;
   }
-}
-.map {
-  min-width: 100%;
-  min-height: 500px;
-  position: relative;
-  border-top: 2px solid #eee;
-}
-#map-spb,
-#map-msc {
-  width: 100%;
-  height: 500px;
-}
-.map .contacts {
-  position: absolute;
-  top: 50%;
-  left: 50px;
-  margin-top: -200px;
-  z-index: 1;
-  min-height: 400px;
-  width: 400px;
-  background-color: #ffffff;
-  padding: 40px;
-  border: 2px solid #eee;
-}
-.contacts p {
-  margin: 0;
-  font-weight: 300;
-  color: #666;
-}
-p.contacts-title {
-  text-align: center;
-  color: #000;
-  text-transform: uppercase;
-  margin-bottom: 25px;
-}
-p.contacts-info {
-  text-align: left;
-  margin-bottom: 20px;
-}
-.contacts-btns {
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
-  width: 100%;
-}
-.btn-contacts {
-  width: 39%;
-  font-family: Ubuntu, sans-serif;
-  font-size: 18px;
-  background: #fff899;
-  border: none;
-  border-top: 2px solid #ffee00;
-  border-bottom: 2px solid #ffee00;
-  cursor: pointer;
-  padding: 10px 4px;
-  transition: .25s;
-  color: #424242;
-}
-.btn-contacts:first-child {
-  margin-right: 8px;
-}
-.btn-contacts:hover {
-  background: #ffee00;
-  transition: .25s;
-  color: #282828;
-}
-.btn-contacts:focus {
-  outline: none;
-}
-.contacts .social {
-  text-align: center;
 }
