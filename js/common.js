@@ -9,6 +9,10 @@ $('.btn-nav-close').click(function() {
     //
 });
 
+$('.link-logo').click(function () {
+    $("body,html").animate({"scrollTop":0},700);
+});
+
 $(document).ready(function (){
   ymaps.ready(init);
 
