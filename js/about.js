@@ -1,7 +1,7 @@
-$('.questions-title').click(function() {
-  if($(this).siblings('.questions-item-content').hasClass('questions-item-content-show')) {
-    $(this).siblings('.questions-item-content').slideUp().removeClass('questions-item-content-show');
+$('.questions-title .container').click(function() {
+  if($(this).parent().siblings('.container').children('.questions-item-content').hasClass('questions-item-content-show')) {
+    $(this).parent().siblings('.container').children('.questions-item-content').slideUp().removeClass('questions-item-content-show');
   } else {
-    $(this).siblings('.questions-item-content').slideDown().addClass('questions-item-content-show');
+    $(this).parent().siblings('.container').children('.questions-item-content').slideDown().addClass('questions-item-content-show');
   }
 });

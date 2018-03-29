@@ -270,29 +270,29 @@
 .questions{
   margin-top: 50px;
   padding: 0;
-  list-style: none;
   &-title{
-    text-align: center;
     width: 100%;
+    background: #f5f5f5;
+    margin: 0;
+    text-align: left;
     font-size: 30px;
     padding: 15px;
-    background: lighten(@yellow, 40%);
-    margin: 0;
-    border-bottom: 2px solid lighten(@yellow, 30%);
+    border-bottom: 2px solid #ddd;
     cursor: pointer;
-    color: @color-btn;
+    color: lighten(@color-btn, 20%);
     transition: .25s;
     &:hover{
-      color: #000;
       transition: .25s;
-      background: lighten(@yellow, 30%);
+      color: @color-btn;
     }
   }
   &-item{
+    list-style-type: none;
     &-content {
       display: none;
       &-show{
         display: block;
+        background: #fff;
       }
     }
   }
@@ -408,6 +408,7 @@
   }
   .questions{
     &-title{
+      text-align: center;
       font-size: 18px;
       padding-left: 5px;
       padding-right: 5px;
