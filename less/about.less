@@ -267,11 +267,42 @@
   text-align: center;
   position: relative;
 }
+.questions{
+  margin-top: 50px;
+  padding: 0;
+  list-style: none;
+  &-title{
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    padding: 15px;
+    background: lighten(@yellow, 40%);
+    margin: 0;
+    border-bottom: 2px solid lighten(@yellow, 30%);
+    cursor: pointer;
+    color: @color-btn;
+    transition: .25s;
+    &:hover{
+      color: #000;
+      transition: .25s;
+      background: lighten(@yellow, 30%);
+    }
+  }
+  &-item{
+    &-content {
+      display: none;
+      &-show{
+        display: block;
+      }
+    }
+  }
 
+}
 .catalog {
   margin: 0;
   padding: 0;
   list-style: none;
+  padding-bottom: 25px;
 }
 
 .catalog-row {

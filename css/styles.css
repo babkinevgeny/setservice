@@ -623,10 +623,39 @@ body {
   text-align: center;
   position: relative;
 }
+.questions {
+  margin-top: 50px;
+  padding: 0;
+  list-style: none;
+}
+.questions-title {
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+  padding: 15px;
+  background: #fffccc;
+  margin: 0;
+  border-bottom: 2px solid #fff899;
+  cursor: pointer;
+  color: #686868;
+  transition: .25s;
+}
+.questions-title:hover {
+  color: #000;
+  transition: .25s;
+  background: #fff899;
+}
+.questions-item-content {
+  display: none;
+}
+.questions-item-content-show {
+  display: block;
+}
 .catalog {
   margin: 0;
   padding: 0;
   list-style: none;
+  padding-bottom: 25px;
 }
 .catalog-row {
   display: -webkit-flex;
