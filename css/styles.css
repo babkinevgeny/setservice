@@ -93,8 +93,13 @@ body {
   width: 100%;
   padding: 55px 40px 0 40px;
 }
-.menu.fixed {
+.menu-fixed {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
   position: fixed;
+  justify-content: space-between;
+  width: 100%;
   top: 0;
   left: 0;
   height: 75px;
@@ -103,17 +108,17 @@ body {
   padding: 13px 12px 17px 12px;
   z-index: 2;
 }
-.menu.fixed .hamburger::after {
+.menu-fixed .hamburger::after {
   color: #282828;
   top: 13px;
 }
-.menu.fixed .link-logo {
+.menu-fixed .link-logo {
   display: block;
   width: 300px;
   height: 48px;
   position: relative;
 }
-.menu.fixed .link-logo::after {
+.menu-fixed .link-logo::after {
   content: url('../img/logo-horizontal.png');
   position: absolute;
   top: 50%;
@@ -121,24 +126,24 @@ body {
   margin-top: -9px;
   margin-left: -150px;
 }
-.menu.fixed .link-logo img {
+.menu-fixed .link-logo img {
   display: none;
 }
-.menu.fixed .link-phone {
+.menu-fixed .link-phone {
   color: #282828;
   margin-right: 10px;
   line-height: 48px;
   margin-left: auto;
 }
-.menu.fixed .btn-text-send {
+.menu-fixed .btn-text-send {
   color: #686868;
   background: #fff899;
 }
-.menu.fixed .btn-text-send:hover {
+.menu-fixed .btn-text-send:hover {
   background: #ffee00;
   color: #282828;
 }
-.menu.fixed .contacts-block {
+.menu-fixed .contacts-block {
   width: 33%;
   flex-direction: row;
 }
@@ -719,6 +724,19 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
+  .container {
+    padding: 0 5px;
+  }
+  .text {
+    padding: 0 20px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .questions-title {
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
   .catalog-row {
     flex-wrap: wrap;
     justify-content: space-around;
@@ -920,25 +938,25 @@ div.item img.item-img {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  .menu.fixed {
+  .menu-fixed {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
   }
-  .menu.fixed .hamburger {
+  .menu-fixed .hamburger {
     width: 177px;
   }
-  .menu.fixed .btn-text-send {
+  .menu-fixed .btn-text-send {
     display: none;
   }
-  .menu.fixed .logo {
+  .menu-fixed .logo {
     margin-right: auto;
     margin-left: auto;
   }
-  .menu.fixed .contacts-block {
+  .menu-fixed .contacts-block {
     width: 177px;
   }
-  .menu.fixed .link-phone {
+  .menu-fixed .link-phone {
     margin-left: auto;
     margin-right: 0;
   }
@@ -949,25 +967,25 @@ div.item img.item-img {
   }
 }
 @media screen and (min-width: 665px) and (max-width: 768px) {
-  .menu.fixed {
+  .menu-fixed {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
   }
-  .menu.fixed .hamburger {
+  .menu-fixed .hamburger {
     width: 177px;
   }
-  .menu.fixed .logo {
+  .menu-fixed .logo {
     margin-left: auto;
     margin-right: auto;
   }
-  .menu.fixed .link-logo {
+  .menu-fixed .link-logo {
     display: block;
     width: 250px;
     height: 48px;
     position: relative;
   }
-  .menu.fixed .link-logo::after {
+  .menu-fixed .link-logo::after {
     content: url('../img/logo-horizontal-small.png');
     position: absolute;
     top: 50%;
@@ -975,27 +993,27 @@ div.item img.item-img {
     margin-top: -4px;
     margin-left: -125px;
   }
-  .menu.fixed .link-logo img {
+  .menu-fixed .link-logo img {
     display: none;
   }
 }
 @media screen and (max-width: 665px) {
-  .menu.fixed .contacts-block {
+  .menu-fixed .contacts-block {
     display: none;
   }
-  .menu.fixed .hamburger {
+  .menu-fixed .hamburger {
     width: 177px;
   }
-  .menu.fixed .logo {
+  .menu-fixed .logo {
     margin-left: auto;
   }
-  .menu.fixed .link-logo {
+  .menu-fixed .link-logo {
     display: block;
     width: 250px;
     height: 48px;
     position: relative;
   }
-  .menu.fixed .link-logo::after {
+  .menu-fixed .link-logo::after {
     content: url('../img/logo-horizontal-small.png');
     position: absolute;
     top: 50%;
@@ -1003,7 +1021,7 @@ div.item img.item-img {
     margin-top: -4px;
     margin-left: -125px;
   }
-  .menu.fixed .link-logo img {
+  .menu-fixed .link-logo img {
     display: none;
   }
 }
@@ -1020,10 +1038,10 @@ div.item img.item-img {
     width: 80px;
     height: 80px;
   }
-  .menu.fixed .link-logo::after {
+  .menu-fixed .link-logo::after {
     width: 200px;
   }
-  .menu.fixed .btn-text-send {
+  .menu-fixed .btn-text-send {
     display: none;
   }
 }
@@ -1050,7 +1068,7 @@ div.item img.item-img {
     width: 50px;
     height: 50px;
   }
-  .menu.fixed .hamburger::after {
+  .menu-fixed .hamburger::after {
     display: none;
   }
 }

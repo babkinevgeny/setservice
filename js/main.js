@@ -105,43 +105,28 @@ function scaleBannerVideoSize(element){
     });
 }
 
-$(document).on('click touchstart', '.mouse', function(){
-      var hei = $(document).find('.page-header').outerHeight();
-      if($(window).height() >= 992) {
-        console.log("я длиный экран");
-        $('html, body').animate({ scrollTop: hei+37}, 500);
-      } else {
-        console.log("я короткий экран");
-        $('html, body').animate({ scrollTop: hei-81}, 500);
-      }
-});
-
+/*Проверяем расстояние от верха окна. Если больше 300рх - показываем меню*/
+// $(function(){
+//   if($(window).s.crollTop() >= 300) {
+//     $('.menu-fixed').css('display', 'flex');
+//   }
+// });
+/*Показ меню при скроллинге*/
 window.onscroll = function() {
-		  if ($(document).scrollTop()>=300) {
-				$('.page-header .title-header').css('padding-top', '298px');
-				var newHei = $(window).height() - 33;
-				$('.page-header ').css('height', newHei+'px');
-		    $('.menu').addClass('fixed');
-		  } else {
-				$('.page-header .title-header').css('padding-top', '0px');
-				$('.page-header ').css('height', '100vh');
-		    $('.menu').removeClass('fixed');
-		  }
-		$(window).scroll(function(){
-			  //ss = $(document).height()-$(document).scrollTop();
-			  if ($(document).scrollTop()>=300) {
-					$('.page-header .title-header').css('padding-top', '298px');
-					var newHei = $(window).height() - 33;
-					$('.page-header ').css('height', newHei+'px');
-			    $('.menu').addClass('fixed');
-			  } else {
-					$('.page-header .title-header').css('padding-top', '0px');
-					$('.page-header ').css('height', '100vh');
-			    $('.menu').removeClass('fixed');
-			  }
-		});
+  var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrolled >= 300) {
+    $('.menu-fixed').slideDown();
+  }
+  if (scrolled < 300) {
+    $('.menu-fixed').slideUp();
+  }
 }
 
+
+$('.mouse').click(function () {
+   var heightHeader = $('.page-header').height();
+    $("body,html").animate({"scrollTop":heightHeader-75},700);
+});
 
 $(function(){
 	 	var aniamate = function(){
