@@ -1,11 +1,11 @@
 .about {
 
 }
+.title-section-small {
+  font-size: 20px;
+}
 .statistic{
   padding: 20px 0;
-  .title-section {
-    font-size: 20px;
-  }
   .flex-outer {
     display: -webkit-flex;
     display: -ms-flex;
@@ -266,4 +266,124 @@
   margin: 0 auto;
   text-align: center;
   position: relative;
+}
+
+.catalog {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog-row {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  // &:nth-child(even) {
+  //   .catalog-item {
+  //     &:nth-child(even) {
+  //       background: lighten(@yellow, 45%);
+  //     }
+  //     &:nth-child(odd) {
+  //       background: lighten(@yellow, 40%);
+  //     }
+  //   }
+  // }
+  // &:nth-child(odd) {
+  //   .catalog-item {
+  //     &:nth-child(even) {
+  //       background: lighten(@yellow, 40%);
+  //     }
+  //     &:nth-child(odd) {
+  //       background: lighten(@yellow, 45%);
+  //     }
+  //   }
+  // }
+}
+
+.catalog-item{
+  width: 25%;
+  padding: 20px 10px;
+
+}
+
+.catalog-link {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #000;
+}
+
+.catalog-img{
+  width: 80px;
+  height: 80px;
+  opacity: .5;
+  transition: .5s;
+  margin-right: 15px;
+  float: left;
+}
+
+.catalog-link:hover .catalog-img{
+  opacity: 1;
+  transition: .5s;
+}
+
+.catalog-link:hover .catalog-undertitle {
+  color: #282828;
+  transition: .5s;
+}
+
+.catalog-undertitle {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: left;
+  padding-top: 25px;
+  color: lighten(#282828, 20%);
+  transition: .5s;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1125px) {
+  .catalog {
+    &-item {
+      width: 180px;
+    }
+    &-link{
+      flex-direction: column;
+    }
+    &-img {
+      margin: auto;
+    }
+    &-undertitle {
+      margin: auto;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .catalog {
+    &-row{
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    &-item {
+      width: 180px;
+    }
+    &-link{
+      flex-direction: column;
+    }
+    &-img {
+      margin: auto;
+    }
+    &-undertitle {
+      margin: auto;
+      text-align: center;
+    }
+  }
 }
