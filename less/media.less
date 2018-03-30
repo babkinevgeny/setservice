@@ -102,7 +102,7 @@
   .title-header {
     font-size: 25pt;
   }
-  .services{
+  .products{
     &-list {
   		// flex-direction: column;
   		// flex-wrap: nowrap;
@@ -136,7 +136,7 @@
     font-size: 25pt;
   }
 
-  .services{
+  .products{
     &-list {
   		flex-direction: column;
   		flex-wrap: nowrap;
@@ -163,6 +163,24 @@
       &::after{
         display: none;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services{
+    &-item{
+      background: #fff;
+      padding: 20px 15px;
+    }
+    &-title {
+      text-align: center;
+    }
+    &-description{
+      text-align: center;
+    }
+    .btn-more{
+      display: block;
     }
   }
 }

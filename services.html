@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class="fsvs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Setservice24</title>
+  <!-- <link rel="stylesheet" href="css/onepage-scroll.css"> -->
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .page-header {
+      height: 75px;
+    }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <nav class="navigation">
+      <ul class="navigation-list">
+        <div class="btn btn-nav-close"></div>
+        <li class="navigation-item"><a href="index.html" class="navigation-link">Главная</a></li>
+        <li class="navigation-item"><a href="about.html" class="navigation-link">О компании</a></li>
+        <li class="navigation-item"><a href="catalog.html" class="navigation-link">Каталог продукции</a></li>
+        <li class="navigation-item"><a href="#" class="navigation-link">Услуги</a></li>
+        <li class="navigation-item"><a href="contacts.html" class="navigation-link">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="menu-fixed">
+      <div class="btn btn-nav-open hamburger">
+        <span class="hamburger-item"></span>
+        <span class="hamburger-item"></span>
+        <span class="hamburger-item"></span>
+      </div>
+      <div class="logo">
+        <div class="link-logo">
+          <img src="img/logo.png" alt="Логотип Set Service" width="200px" height="240px">
+        </div>
+      </div>
+      <div class="contacts-block">
+        <a href="tel:+78126271516" class="link link-phone">8 (812) 627-15-16</a>
+        <button class="btn-text btn-text-send">Отправить заявку</button>
+      </div>
+    </div>
+  </header>
+  <section class="services">
+     <h2 class="title-section">Услуги</h2>
+     <div class="container">
+       <ul class="services-list">
+         <li class="services-item">
+           <div class="services-title">Разработка КМД</div>
+           <p class="services-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo aspernatur nulla illum velit nesciunt deserunt blanditiis optio consequatur eum, corporis, obcaecati, id ratione veritatis eaque praesentium sequi veniam, voluptatibus iusto!</p>
+           <div class="a btn-text btn-more" href="#">Подробнее</div>
+         </li>
+         <li class="services-item">
+           <div class="services-title">Производство металлоконструкций</div>
+           <p class="services-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, numquam provident voluptatibus impedit architecto non alias, animi ipsum maiores officiis, repudiandae vitae cumque quas a, id et sapiente obcaecati odio!</p>
+           <div class="a btn-text btn-more" href="#">Подробнее</div>
+         </li>
+         <li class="services-item">
+           <div class="services-title">Монтажные / Демонтажные работы</div>
+           <p class="services-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, sint. Culpa necessitatibus omnis mollitia, sit ab quae, quidem quam labore esse a, recusandae, nostrum alias. Laboriosam natus aliquam quam necessitatibus.</p>
+           <div class="a btn-text btn-more" href="#">Подробнее</div>
+         </li>
+         <li class="services-item">
+           <div class="services-title">Транспортные услуги</div>
+           <p class="services-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, voluptas? Molestiae illum commodi ab placeat minus fugit tempore cum eveniet eius voluptatem, ipsum, quasi, repellat quidem, libero in facilis dignissimos.</p>
+           <div class="a btn-text btn-more" href="#">Подробнее</div>
+         </li>
+       </ul>
+     </div>
+  </section>
+  <section class="map">
+      <div id="map-spb"></div>
+      <div id="map-msc"></div>
+      <div class="contacts contacts-spb">
+        <div class="contacts-content"></div>
+        <div class="contacts-btns">
+          <button class="btn btn-contacts btn-contacts-spb">Санкт-Петербург</button>
+          <button class="btn btn-contacts btn-contacts-msc">Москва</button>
+        </div>
+      </div>
+    </section>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <!-- <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.js"></script> -->
+  <!-- <script src="js/fsvs.js"></script>
+  <script src="js/bundle.js"></script> -->
+  <!-- <script src="js/jquery.onepage-scroll.min.js"></script> -->
+  <script src="http://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
+  <script src="js/map.js"></script>
+  <script src="js/common.js"></script>
+
+  <script>
+    $('.catalog-title').click(function(){
+      $('.catalog-title-active').removeClass('catalog-title-active');
+      $(this).addClass('catalog-title-active');
+      var indexShowed = $('.catalog-title').index(this);
+      $('.category-active').removeClass('category-active');
+      $('.category').eq(indexShowed).addClass('category-active');
+    });
+  </script>
+</body>
+</html>

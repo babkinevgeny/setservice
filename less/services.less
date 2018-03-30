@@ -1,118 +1,26 @@
-.title-section {
-	text-transform: uppercase;
-	font-size: 30px;
-	padding: 25px 0;
-  text-align: center;
-  font-family: Ubuntu, sans-serif;
-  color: #2b2b2b;
-  letter-spacing: 5px;
-	margin: 0;
-}
-.services {
-	background: #fff;
-	width: 100%;
-	//height : calc(100vh - 75px);
-	padding-bottom: 10px;
-	&-list{
+.services{
+  &-list{
     margin: 0;
-  	padding: 0;
-  	list-style: none;
-  	display: flex;
-  	flex-wrap: wrap;
-  	margin-bottom: 20px;
-    height: 71%;
+    padding: 0;
+    list-style: none;
   }
-	&-item{
-		width: 50%;
-		height: 50%;
-		text-align: center;
-		&:nth-child(1),
-		&:nth-child(4){
-			background: #f2f4f3;
-		}
-		&:nth-child(2),
-		&:nth-child(3){
-			background: #e4eae8;
-		}
-	}
-	&-link{
-		box-sizing: border-box;
-		text-decoration: none;
-		display: block;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: #000;
-	}
-	&-content{
-		margin: 0;
-		&:hover .services-img{
-			-webkit-transform: scale(1.1);
-			 -ms-transform: scale(1.1);
-			 transform: scale(1.1);
-			 transition: .5s
-		}
-	}
-	&-img{
-		width: 100px;
-		height: 100px;
-		transition: .5s
-	}
-	&-description {
-		font-size: 13px;
-		font-family: Arial, Helvetica, sans-serif;
-		color: #000;
-	}
-	.btn-more {
-		background: @background-btn;
-		color: @color-btn;
-	}
-	.btn-more:hover {
-		background: @yellow;
-		color: #282828;
-	}
+  &-item{
+    padding: 50px 15px 50px 400px;
+    border-bottom: 2px solid #eee;
+    background: url('../img/монтаж.png');
+    background-repeat: no-repeat;
+    background-position: 70px 10px;
+  }
+  &-title{
+    font-size: 36px;
+  }
+  .btn-more{
+    display: inline-block;
+    color: @color-btn;
+    background: lighten(@yellow, 30%);
+    &:hover{
+      background: @yellow;
+      color: #000;
+    }
+  }
 }
-
-.title-services {
-	text-transform: uppercase;
-	font-weight: normal;
-	position: relative;
-	font-size: 15px;
-	font-weight: bold;
-	margin: 10px 0;
-	line-height: 1;
-}
-
-
-
-// .btn {
-// 	display: inline-block;
-// 	padding: 13px 30px;
-//     border: 1px solid #229fe3;
-//     box-sizing: border-box;
-//     font-family: Open Sans, sans-serif;
-// 	text-align: center;
-//     font-size: 13px;
-//     color: #383838;
-//     text-decoration: none;
-//     background: #fff;
-//     font-weight: 600;
-// 	transition: .25s;
-// }
-
-// .btn:hover {
-// 	background: #787878;
-// 	transition: .25s;
-// 	border: 1px solid #787878;
-// 	color: #fff;
-// }
-//
-// .btn:active {
-// 	background: #fff;
-// 	color: #383838;
-// 	border: 1px solid transparent;
-//  	box-shadow: inset 0px 0px 0px 2px #06abdd;
-// 	transition: .25s;
-// }
