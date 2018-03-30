@@ -1063,7 +1063,8 @@ div.item img.item-img {
   text-align: center;
   margin: 10px 0;
 }
-.ymaps-image-with-content {
+#map-move-spb .ymaps-image-with-content,
+#map-move-msc .ymaps-image-with-content {
   display: none;
 }
 @media screen and (min-height: 992px) {
