@@ -117,6 +117,7 @@ body {
   width: 300px;
   height: 48px;
   position: relative;
+  cursor: pointer;
 }
 .menu-fixed .link-logo::after {
   content: url('../img/logo-horizontal.png');
@@ -131,21 +132,30 @@ body {
 }
 .menu-fixed .link-phone {
   color: #282828;
-  margin-right: 10px;
-  line-height: 48px;
-  margin-left: auto;
 }
-.menu-fixed .btn-text-send {
+.menu-fixed a.link-email {
+  font-size: 18px;
+  color: #282828;
+}
+.menu-fixed button.btn-text-send {
   color: #686868;
   background: #fff899;
+  margin-left: 10px;
 }
-.menu-fixed .btn-text-send:hover {
+.menu-fixed button.btn-text-send:hover {
   background: #ffee00;
   color: #282828;
 }
 .menu-fixed .contacts-block {
   width: 33%;
   flex-direction: row;
+}
+.menu-fixed .contacts-block-inner {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
 }
 .navigation {
   display: none;
@@ -242,10 +252,20 @@ body {
   width: 33%;
   flex-direction: column;
 }
+.contacts-block-inner {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
 .contacts-block .link-phone {
   font-size: 22px;
   text-align: right;
-  margin-bottom: 10px;
+}
+.contacts-block .link-email {
+  font-size: 22px;
+  text-align: right;
 }
 .contacts-block .btn-text-send {
   width: 190px;
@@ -1164,7 +1184,7 @@ div.item img.item-img {
     display: flex;
   }
   .menu-fixed .hamburger {
-    width: 177px;
+    width: 189px;
   }
   .menu-fixed .btn-text-send {
     display: none;
@@ -1174,7 +1194,7 @@ div.item img.item-img {
     margin-left: auto;
   }
   .menu-fixed .contacts-block {
-    width: 177px;
+    width: 189px;
   }
   .menu-fixed .link-phone {
     margin-left: auto;
@@ -1186,14 +1206,14 @@ div.item img.item-img {
     font-size: 30pt;
   }
 }
-@media screen and (min-width: 665px) and (max-width: 768px) {
+@media screen and (min-width: 667px) and (max-width: 768px) {
   .menu-fixed {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
   }
   .menu-fixed .hamburger {
-    width: 177px;
+    width: 189px;
   }
   .menu-fixed .logo {
     margin-left: auto;
@@ -1216,8 +1236,11 @@ div.item img.item-img {
   .menu-fixed .link-logo img {
     display: none;
   }
+  .menu-fixed .contacts-block {
+    width: 189px;
+  }
 }
-@media screen and (max-width: 665px) {
+@media screen and (max-width: 666px) {
   .menu-fixed .contacts-block {
     display: none;
   }

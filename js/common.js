@@ -10,7 +10,13 @@ $('.btn-nav-close').click(function() {
 });
 
 $('.link-logo').click(function () {
-    $("body,html").animate({"scrollTop":0},700);
+    if($(this).prop('tagName') == 'A' && $(this).parent().parent().offset().top > 0) {
+      event.preventDefault();
+      $("body,html").animate({"scrollTop":0},700);
+    }
+    if($(this).prop('tagName') !== 'A' && $(this).parent().parent().offset().top > 0) {
+      $("body,html").animate({"scrollTop":0},700);
+    }
 });
 
 

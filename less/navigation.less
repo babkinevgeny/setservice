@@ -38,6 +38,7 @@
     width: 300px;
     height: 48px;
     position: relative;
+    cursor: pointer;
     &::after {
        content: url('../img/logo-horizontal.png');
        position: absolute;
@@ -52,14 +53,16 @@
   }
   .link-phone {
     color: #282828;
-    margin-right: 10px;
-    line-height: 48px;
-    margin-left: auto;
+  }
+  a.link-email{
+    font-size: 18px;
+    color: #282828;
   }
 
-  .btn-text-send {
+  button.btn-text-send {
     color: @color-btn;
     background: @background-btn;
+    margin-left: 10px;
     &:hover{
       background: @yellow;
       color: #282828;
@@ -69,6 +72,13 @@
   .contacts-block {
     width: 33%;
     flex-direction: row;
+    &-inner{
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+    }
   }
 }
 
@@ -174,10 +184,20 @@
   display: flex;
   width: 33%;
   flex-direction: column;
+  &-inner{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
   .link-phone{
     font-size: 22px;
     text-align: right;
-    margin-bottom: 10px;
+  }
+  .link-email{
+    font-size: 22px;
+    text-align: right;
   }
   .btn-text-send{
     width: 190px;
