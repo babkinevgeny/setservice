@@ -360,7 +360,7 @@ section {
 }
 .products-item {
   width: 50%;
-  height: 50%;
+  height: 320px;
   text-align: center;
 }
 .products-item:nth-child(1),
@@ -431,6 +431,7 @@ section {
 }
 .statistic {
   padding: 20px 0;
+  margin-bottom: 50px;
   /* .chart::before {
     content: '';
     display: block;
@@ -793,6 +794,8 @@ section {
 .recomend {
   padding: 0 30px;
   margin: 0 auto;
+  border-bottom: none;
+  margin-bottom: 50px;
 }
 .item {
   height: 420px;
@@ -1348,7 +1351,7 @@ div.item img.item-img {
   }
   .products-item {
     width: 50%;
-    height: 50%;
+    height: 200px;
     margin-bottom: 0;
   }
   .products-img {
