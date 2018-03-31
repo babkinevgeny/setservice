@@ -23,7 +23,7 @@
     min-height: 400px;
     width: 400px;
     background-color: #ffffff;
-    padding: 40px;
+    padding: 20px;
     border: 2px solid #eee;
     font-weight: 300;
     color: #666;
@@ -40,9 +40,28 @@
     }
     &-btns {
       position: absolute;
-      bottom: 40px;
-      left: 40px;
+      bottom: 20px;
+      left: 0px;
+      padding-left: 20px;
+      padding-right: 20px;
       width: 100%;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-between;
+      .btn{
+        width: 170px;
+      }
+    }
+    .btn-more {
+      display: inline-block;
+      color: @color-btn;
+      background: lighten(@yellow, 30%);
+      margin-top: 0;
+      &:hover{
+        background: @yellow;
+        color: #000;
+      }
     }
   }
 }
@@ -89,12 +108,12 @@
 .contacts {
   &-move {
     display: block;
-    width: 300px;
+    width: 400px;
     min-height: 300px;
     position: absolute;
     left: 50%;
     top:141px;
-    margin-left: -150px;
+    margin-left: -200px;
     background: #fff;
     z-index: 2;
     padding: 15px;
@@ -127,14 +146,48 @@
         transition: .5s;
       }
     }
+    .contacts-info{
+      text-align: left;
+      padding-left: 40px;
+      margin: 10px 0;
+      color:#666;
+      &-office {
+        background: url('../img/icon-office.svg') no-repeat 5px center;
+      }
+      &-warehouse {
+        background: url('../img/icon-warehouse.svg') no-repeat 5px center;
+      }
+      &-factory {
+        background: url('../img/icon-factory.svg') no-repeat 5px center;
+      }
+      &-telephone {
+        background: url('../img/icon-telephone.svg') no-repeat 5px center;
+        height: 20px;
+      }
+    }
   }
   &-content {
     .contacts-title {
       margin-bottom: 15px;
     }
     .contacts-info{
-      text-align: center;
+      text-align: left;
+      padding-left: 40px;
       margin: 10px 0;
+      color:#666;
+      &-office {
+        background: url('../img/icon-office.svg') no-repeat 5px center;
+      }
+      &-warehouse {
+        background: url('../img/icon-warehouse.svg') no-repeat 5px center;
+      }
+      &-factory {
+        background: url('../img/icon-factory.svg') no-repeat 5px center;
+      }
+      &-telephone {
+        background: url('../img/icon-telephone.svg') no-repeat 5px center;
+        height: 20px;
+      }
     }
   }
 }
