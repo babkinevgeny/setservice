@@ -1181,9 +1181,15 @@ div.item img.item-img {
   color: #000;
 }
 @media screen and (min-height: 992px) {
-  .title-header {
-    margin-top: 150px;
+  .page-header .title-header {
+    margin-top: 165px;
     font-size: 30pt;
+  }
+  .page-header .link-more {
+    margin-top: 40px;
+  }
+  .page-header .mouse {
+    bottom: 200px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
