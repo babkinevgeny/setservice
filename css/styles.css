@@ -414,6 +414,14 @@ body {
   margin: 10px 0;
   line-height: 1;
 }
+.about .btn-more {
+  background: #fff899;
+  color: #686868;
+}
+.about .btn-more:hover {
+  background: #ffee00;
+  color: #282828;
+}
 .title-section-small {
   font-size: 20px;
 }
