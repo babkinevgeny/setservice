@@ -136,6 +136,7 @@ section {
 }
 .menu-fixed .link-phone {
   color: #282828;
+  padding-top: 12px;
 }
 .menu-fixed a.link-email {
   font-size: 18px;
@@ -551,6 +552,9 @@ section {
   margin: 0 auto;
   text-align: center;
   position: relative;
+}
+.statistic .btn-more {
+  margin-top: 30px;
 }
 .statistic-wrapper {
   display: -webkit-flex;
@@ -1242,7 +1246,7 @@ div.item img.item-img {
   background: #ffee00;
   color: #000;
 }
-@media screen and (min-height: 992px) {
+@media screen and (min-height: 900px) {
   .page-header .title-header {
     margin-top: 165px;
     font-size: 30pt;
