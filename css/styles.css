@@ -1168,11 +1168,26 @@ div.item img.item-img {
   border-right: 2px solid #eee;
   padding-bottom: 25px;
 }
-.catalog .title-section {
+.catalog-wrapper .title-section {
   font-size: 16px;
   padding-left: 20px;
   padding-right: 20px;
   letter-spacing: 0;
+}
+.catalog-wrapper .btn-text-send {
+  display: block;
+  margin: 0 auto;
+  color: #686868;
+  background: #fffab3;
+  transition: .25s;
+}
+.catalog-wrapper .btn-text-send:hover {
+  color: #282828;
+  background: #ffee00;
+  transition: .25s;
+}
+.catalog-wrapper .btn-text-send:focus {
+  outline: none;
 }
 .catalog-list {
   width: 324px;
@@ -1239,21 +1254,6 @@ div.item img.item-img {
 .catalog-email:hover {
   color: #000;
   transition: .25s;
-}
-.catalog .btn-text-send {
-  display: block;
-  margin: 0 auto;
-  color: #686868;
-  background: #fffab3;
-  transition: .25s;
-}
-.catalog .btn-text-send:hover {
-  color: #282828;
-  background: #ffee00;
-  transition: .25s;
-}
-.catalog .btn-text-send:focus {
-  outline: none;
 }
 .category {
   list-style: none;

@@ -6,12 +6,27 @@
     width: 324px;
     border-right: 2px solid #eee;
     padding-bottom: 25px;
-  }
-  .title-section{
-    font-size: 16px;
-    padding-left: 20px;
-    padding-right: 20px;
-    letter-spacing: 0;
+    .title-section{
+      font-size: 16px;
+      padding-left: 20px;
+      padding-right: 20px;
+      letter-spacing: 0;
+    }
+    .btn-text-send{
+      display: block;
+      margin: 0 auto;
+      color: @color-btn;
+      background: lighten(@yellow, 35%);
+      transition: .25s;
+      &:hover{
+        color:#282828;
+        background: @yellow;
+        transition: .25s;
+      }
+      &:focus{
+        outline: none;
+      }
+    }
   }
   &-list{
     width: 324px;
@@ -67,7 +82,7 @@
     }
   }
   &-contacts{
-    
+
   }
   &-phone,
   &-email {
@@ -81,21 +96,6 @@
     &:hover{
       color: #000;
       transition: .25s;
-    }
-  }
-  .btn-text-send{
-    display: block;
-    margin: 0 auto;
-    color: @color-btn;
-    background: lighten(@yellow, 35%);
-    transition: .25s;
-    &:hover{
-      color:#282828;
-      background: @yellow;
-      transition: .25s;
-    }
-    &:focus{
-      outline: none;
     }
   }
 }
