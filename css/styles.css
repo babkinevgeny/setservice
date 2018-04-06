@@ -1380,9 +1380,6 @@ div.item img.item-img {
 .services-item {
   padding: 50px 15px 50px 400px;
   border-bottom: 2px solid #eee;
-  background: url('../img/монтаж.png');
-  background-repeat: no-repeat;
-  background-position: 70px 10px;
 }
 .services-item:nth-child(1) {
   background: url('../img/разработка кмд.png');
