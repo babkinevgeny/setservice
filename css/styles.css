@@ -1223,6 +1223,8 @@ div.item img.item-img {
 }
 .catalog-worker .title-section {
   padding-left: 20px;
+  padding-bottom: 0px;
+  padding-top: 0px;
 }
 .catalog-worker-img {
   display: block;
