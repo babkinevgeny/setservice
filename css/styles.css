@@ -1268,6 +1268,7 @@ div.item img.item-img {
 }
 .category-item-link {
   display: block;
+  margin: 0 50px;
   width: 180px;
   height: 220px;
   background: #fffab3;
