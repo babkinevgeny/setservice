@@ -1221,6 +1221,9 @@ div.item img.item-img {
   border-bottom: 2px solid #eee;
   padding-bottom: 20px;
 }
+.catalog-worker .title-section {
+  padding-left: 20px;
+}
 .catalog-worker-img {
   display: block;
   width: 150px;
