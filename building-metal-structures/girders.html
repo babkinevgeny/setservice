@@ -320,18 +320,19 @@
     });
   </script>
   <script>
-    $('.catalog-title').click( function () {
-      if($(this).hasClass('catalog-title-active')) {
-        $(this).removeClass('catalog-title-active');
-        $(this).children(".catalog-title-icon").css("background", "url('../img/plus.svg') no-repeat center");
-        $(this).children(".inner-list").slideUp();
+    $('.catalog-title-inner').click( function () {
+      if($(this).hasClass('catalog-title-inner-active')) {
+        $(this).removeClass('catalog-title-inner-active');
+        $(this).siblings(".catalog-title-icon").css("background", "url('../img/plus.svg') no-repeat center");
+        $(this).siblings(".inner-list").slideUp();
 
       } else {
-        $(this).addClass('catalog-title-active');
-        $(this).children(".catalog-title-icon").css("background", "url('../img/minus.svg') no-repeat center");
-        $(this).children(".inner-list").slideDown();
+        $(this).addClass('catalog-title-inner-active');
+        $(this).siblings(".catalog-title-icon").css("background", "url('../img/minus.svg') no-repeat center");
+        $(this).siblings(".inner-list").slideDown();
       }
     });
+  </script>
   </script>
 </body>
 </html>

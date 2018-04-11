@@ -149,8 +149,8 @@
             <li class="inner-title"><a href="/building-metal-structures/hangar.html" class="inner-link">Ангары из металлоконструкций</a></li>
             <li class="inner-title"><a href="/building-metal-structures/modular-buildings.html" class="inner-link">Модульные строения</a></li>
             <li class="inner-title"><a href="/building-metal-structures/balks.html" class="inner-link">Балки подкрановые сварные Н-обазные</a></li>
-            <li class="inner-title"><a href="/girders.html" class="inner-link inner-link-active">Фермы</a></li>
-            <li class="inner-title"><a href="#" class="inner-link">Несущие элементы (Колонны, Связи, Прогоны, Каркасы, Рамы)</a></li>
+            <li class="inner-title"><a href="/girders.html" class="inner-link">Фермы</a></li>
+            <li class="inner-title"><a href="#" class="inner-link inner-link-active">Несущие элементы (Колонны, Связи, Прогоны, Каркасы, Рамы)</a></li>
             <li class="inner-title"><a href="#" class="inner-link">Потолочные и стеновые секции</a></li>
             <li class="inner-title"><a href="#" class="inner-link">Винтовые сваи</a></li>
             <li class="inner-title"><a href="#" class="inner-link">Закладные детали, Кронштейны, Фундаментные болты</a></li>
@@ -346,16 +346,16 @@
   </script>
 
   <script>
-    $('.catalog-title').click( function () {
-      if($(this).hasClass('catalog-title-active')) {
-        $(this).removeClass('catalog-title-active');
-        $(this).children(".catalog-title-icon").css("background", "url('../img/plus.svg') no-repeat center");
-        $(this).children(".inner-list").slideUp();
+    $('.catalog-title-inner').click( function () {
+      if($(this).hasClass('catalog-title-inner-active')) {
+        $(this).removeClass('catalog-title-inner-active');
+        $(this).siblings(".catalog-title-icon").css("background", "url('../img/plus.svg') no-repeat center");
+        $(this).siblings(".inner-list").slideUp();
 
       } else {
-        $(this).addClass('catalog-title-active');
-        $(this).children(".catalog-title-icon").css("background", "url('../img/minus.svg') no-repeat center");
-        $(this).children(".inner-list").slideDown();
+        $(this).addClass('catalog-title-inner-active');
+        $(this).siblings(".catalog-title-icon").css("background", "url('../img/minus.svg') no-repeat center");
+        $(this).siblings(".inner-list").slideDown();
       }
     });
   </script>
