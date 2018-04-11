@@ -1438,32 +1438,63 @@ div.item img.item-img {
   color: #000;
 }
 .popupform {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 5;
   width: 100%;
   background: #eee;
-  padding: 20px 0;
+  padding: 20px 30px;
+  overflow-y: auto;
+}
+.popupform .btn-form-close {
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: all .5s ease;
+  background: url('../img/delete.svg');
+}
+.popupform .btn-form-close:hover {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  transition: all .5s ease;
 }
 .popupform .title-form {
   font-size: 50px;
   text-align: center;
-  margin-top: 35px;
   margin-bottom: 15px;
+  margin-top: 15px;
   color: #000;
   text-transform: uppercase;
   font-weight: normal;
 }
 .popupform p {
+  display: block;
+  max-width: 520px;
+  padding: 0 15px;
+  margin: 0 auto;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 40px;
 }
 .popupform form {
-  width: 400px;
+  max-width: 430px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 .popupform input[type="text"],
 .popupform input[type="email"],
 .popupform textarea {
-  width: 400px;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
   font-size: 18px;
   line-height: 18px;
   height: 18px;
@@ -1517,6 +1548,11 @@ div.item img.item-img {
 }
 .popupform button:focus {
   outline: none;
+}
+@media screen and (max-width: 768px) {
+  .popupform .title-form {
+    font-size: 33px;
+  }
 }
 @media screen and (min-height: 900px) {
   .page-header .title-header {
