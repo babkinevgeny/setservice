@@ -1,0 +1,49 @@
+.popupform{
+  width: 100%;
+  background: #eee;
+  padding: 20px 0;
+  .title-form{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  p {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  form{
+    width: 400px;
+    margin: 0 auto;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 400px;
+    font-size: 18px;
+    line-height: 18px;
+    height: 18px;
+    padding: 13px 20px;
+    color: #82533b;
+    border: 2px solid #e6ddd8;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    border-radius: 6px;
+    outline: 0;
+    margin-bottom: 20px;
+    height: 48px;
+    &:hover{
+      border: 2px solid lighten(@yellow, 20%);
+    }
+    &:focus{
+      border: 2px solid @yellow;
+    }
+  }
+  textarea {
+    height: 130px;
+  }
+}
