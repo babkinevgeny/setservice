@@ -267,7 +267,7 @@
           <p class="article-text" style="margin-top: 30px">Для получения консультации по изготовлению ферм из металлоконструкций просто оставьте заявку и наши специалисты свяжутся с вами в ближайшее время.</p>
           <button class="btn-text btn-text-send">Отправить заявку</button>
         </div>
-      </section>
+      </article>
   </main>
 
   <section class="map">
@@ -281,7 +281,26 @@
         <button class="btn btn-contacts btn-contacts-msc">Москва</button>
       </div>
     </div>
-  </article>
+  </section>
+  <section class="popupform">
+    <div class="btn-form-close">
+    </div>
+    <h2 class="title-form">Сделайте заказ прямо сейчас</h2>
+    <p>Чтобы экономить ваше время, мы создали систему электронной подачи заказов. Заполните форму и наш специалист свяжится с вами в ближайшее время.</p>
+    <form>
+      <!-- Hidden Required Fields -->
+      <input type="hidden" name="project_name" value="setservice24.ru">
+      <input type="hidden" name="admin_email" value="info@zaoks.ru">
+      <input type="hidden" name="form_subject" value="Заявка с сайта setservice24.ru">
+      <!-- END Hidden Required Fields -->
+
+      <input type="text" name="Имя или организация" placeholder="Ваше имя или название организации *" required>
+      <input type="text" name="E-mail" placeholder="Ваш E-mail *" required>
+      <input type="text" name="Телефон" placeholder="Ваш телефон *" required>
+      <textarea name="Текст заявки" id="" cols="30" rows="10" placeholder="Текст заявки"></textarea>
+      <button>Отправить</button>
+    </form>
+  </section>
 
   <script src="../js/jquery-3.3.1.min.js"></script>
   <script src="../js/owl.carousel.min.js"></script>
