@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="fsvs">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -136,7 +136,7 @@
     <div class="catalog-wrapper">
       <h2 class="title-section">Каталог продукции</h2>
       <ul class="catalog-list">
-        <li class="catalog-title">
+        <li class="catalog-title catalog-title-active">
           <span class="catalog-title-icon"></span>
           <div class="catalog-title-inner catalog-title-inner-active">Строительные <br>металлоконструкции</div>
           <ul class="inner-list">
@@ -145,7 +145,7 @@
             <li class="inner-title"><a href="/building-metal-structures/modular-buildings.html" class="inner-link">Модульные строения</a></li>
             <li class="inner-title"><a href="#" class="inner-link inner-link-active">Балки подкрановые сварные Н-обазные</a></li>
             <li class="inner-title"><a href="/building-metal-structures/girders.html" class="inner-link">Фермы</a></li>
-            <li class="inner-title"><a href="#" class="inner-link">Несущие элементы (Колонны, Связи, Прогоны)</a></li>
+            <li class="inner-title"><a href="/building-metal-structures/bearing-elements.html" class="inner-link">Несущие элементы (Колонны, Связи, Прогоны, Каркасы, Рамы)</a></li>
             <li class="inner-title"><a href="#" class="inner-link">Каркасы, Рамы</a></li>
             <li class="inner-title"><a href="#" class="inner-link">Потолочные и стеновые секции</a></li>
             <li class="inner-title"><a href="#" class="inner-link">Винтовые сваи</a></li>
@@ -269,7 +269,7 @@
   <!-- <script src="js/fsvs.js"></script>
   <script src="js/bundle.js"></script> -->
   <!-- <script src="js/jquery.onepage-scroll.min.js"></script> -->
-  <script src="http://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
+  <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
   <script src="../js/map.js"></script>
   <script src="../js/common.js"></script>
   <script>
@@ -291,6 +291,12 @@
         }
     }
   })
+  </script>
+  <script>
+    $( document ).ready(function() {
+      $('.catalog-title-active').children(".inner-list").css("display", "block");
+        $('.catalog-title-active').children(".catalog-title-icon").css("background", "url('../img/minus.svg') no-repeat center");
+    });
   </script>
   <script>
     $('.catalog-title').click( function () {
