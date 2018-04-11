@@ -250,13 +250,18 @@
     <section class="popupform">
       <h2 class="title-form">Сделайте заказ прямо сейчас</h2>
       <p>Чтобы экономить ваше время, мы создали систему <br>электронной подачи заказов. Заполните форму и наш <br>специалист свяжится с вами в ближайшее время.</p>
-      <form action="https://formspree.io/babkinevgeny@gmail.com" method="POST" enctype="multipart/form-data">
-        <input type="text" name="userName" id="userName" placeholder="Ваше имя или название организации *">
-        <input type="email" name="_replyto" id="userEMail" placeholder="Ваш E-mail *" required>
-        <input type="text" name="userPhone" id="userPhone" placeholder="Ваш телефон *" required>
-        <textarea name="userText" id="userText" cols="30" rows="10" placeholder="Текст"></textarea>
-        <input type="file" value"Загрузить файлы (до 6 мб)">
-        <input type="submit" value="Отправить">
+      <form>
+        <!-- Hidden Required Fields -->
+    		<input type="hidden" name="project_name" value="Заявка с сайта setservice24.ru">
+    		<input type="hidden" name="admin_email" value="babkinevgeny@gmail.com">
+    		<input type="hidden" name="form_subject" value="Form Subject">
+    		<!-- END Hidden Required Fields -->
+
+    		<input type="text" name="Имя или организация" placeholder="Ваше имя или название организации *" required><br>
+    		<input type="text" name="E-mail" placeholder="Ваш E-mail *" required><br>
+    		<input type="text" name="Телефон" placeholder="Ваш телефон *" required><br>
+        <textarea name="Текст заявки" id="" cols="30" rows="10" placeholder="Текст"></textarea>
+    		<button>Отправить</button>
       </form>
     </section>
   </div>
@@ -272,5 +277,27 @@
   <script src="js/map.js"></script>
   <script src="js/main.js"></script>
   <script src="js/common.js"></script>
+  <script>
+  $(document).ready(function() {
+
+    //E-mail Ajax Send
+    $(".popupform form").submit(function() { //Change
+      var th = $(this);
+      $.ajax({
+        type: "POST",
+        url: "mail.php", //Change
+        data: th.serialize()
+      }).done(function() {
+        alert("Спасибо за заявку. Наш специалист свяжестся с вами в ближайшее время.");
+        setTimeout(function() {
+          // Done Functions
+          th.trigger("reset");
+        }, 1000);
+      });
+      return false;
+    });
+
+  });
+  </script>
 </body>
 </html>

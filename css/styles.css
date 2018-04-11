@@ -1454,6 +1454,7 @@ div.item img.item-img {
 .popupform p {
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 40px;
 }
 .popupform form {
   width: 400px;
@@ -1489,6 +1490,33 @@ div.item img.item-img {
 }
 .popupform textarea {
   height: 130px;
+  font-family: Arial, sans-serif;
+}
+.popupform button {
+  display: block;
+  margin: 0 auto;
+  min-width: 150px;
+  text-align: center;
+  text-decoration: none;
+  font-family: Ubuntu, sans-serif;
+  font-size: 20px;
+  padding: 8px;
+  font-weight: 500;
+  border: none;
+  border-top: 2px solid #ffee00;
+  border-bottom: 2px solid #ffee00;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: .25s;
+  color: #686868;
+  background: #fff899;
+}
+.popupform button:hover {
+  background: #ffee00;
+  color: #282828;
+}
+.popupform button:focus {
+  outline: none;
 }
 @media screen and (min-height: 900px) {
   .page-header .title-header {
