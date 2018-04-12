@@ -1179,6 +1179,36 @@ div.item img.item-img {
 #map-move-msc .ymaps-image-with-content {
   display: none;
 }
+.workers {
+  padding-top: 30px;
+  list-style: none;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.workers-item {
+  max-height: 300px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.workers-name {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.workers-position {
+  color: #777;
+  font-size: 14px;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+.workers-img {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
 .catalog {
   display: -webkit-flex;
   display: -ms-flex;
