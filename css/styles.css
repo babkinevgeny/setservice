@@ -1454,6 +1454,10 @@ div.item img.item-img {
   padding: 20px 30px;
   overflow-y: auto;
 }
+.popupform-inner {
+  max-height: 600px;
+  margin: auto;
+}
 .popupform .btn-form-close {
   position: absolute;
   display: block;

@@ -151,7 +151,7 @@ $(document).ready(function() {
 });
 
 $('.btn-text-send').click(function() {
-    $('.popupform').slideDown();
+    $('.popupform').slideDown().css('display','flex');
 });
 
 $('.btn-form-close').click(function() {
