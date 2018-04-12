@@ -89,27 +89,28 @@
         </div>
       </div>
     </section>
+    <section class="popupform">
+      <div class="popupform-inner">
+        <div class="btn-form-close">
+        </div>
+        <h2 class="title-form">Сделайте заказ прямо сейчас</h2>
+        <p>Чтобы экономить ваше время, мы создали систему электронной подачи заказов. Заполните форму и наш специалист свяжится с вами в ближайшее время.</p>
+        <form enctype="multipart/form-data">
+          <!-- Hidden Required Fields -->
+      		<input type="hidden" name="project_name" value="setservice24.ru">
+      		<input type="hidden" name="admin_email" value="9290355@gmail.com">
+      		<input type="hidden" name="form_subject" value="Заявка с сайта setservice24.ru">
+      		<!-- END Hidden Required Fields -->
 
+      		<input type="text" name="Имя или организация" placeholder="Ваше имя или название организации *" required>
+      		<input type="text" name="E-mail" placeholder="Ваш E-mail *" required>
+      		<input type="text" name="Телефон" placeholder="Ваш телефон *" required>
+          <textarea name="Текст заявки" id="" cols="30" rows="10" placeholder="Текст заявки"></textarea>
+      		<button>Отправить</button>
+        </form>
+      </div>
+    </section>
   <script src="js/jquery-3.3.1.min.js"></script>
-  <section class="popupform">
-    <div class="btn-form-close">
-    </div>
-    <h2 class="title-form">Сделайте заказ прямо сейчас</h2>
-    <p>Чтобы экономить ваше время, мы создали систему электронной подачи заказов. Заполните форму и наш специалист свяжится с вами в ближайшее время.</p>
-    <form>
-      <!-- Hidden Required Fields -->
-      <input type="hidden" name="project_name" value="setservice24.ru">
-      <input type="hidden" name="admin_email" value="9290355@gmail.com">
-      <input type="hidden" name="form_subject" value="Заявка с сайта setservice24.ru">
-      <!-- END Hidden Required Fields -->
-
-      <input type="text" name="Имя или организация" placeholder="Ваше имя или название организации *" required>
-      <input type="text" name="E-mail" placeholder="Ваш E-mail *" required>
-      <input type="text" name="Телефон" placeholder="Ваш телефон *" required>
-      <textarea name="Текст заявки" id="" cols="30" rows="10" placeholder="Текст заявки"></textarea>
-      <button>Отправить</button>
-    </form>
-  </section>
   <!-- <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.magnific-popup.js"></script> -->
   <!-- <script src="js/fsvs.js"></script>
