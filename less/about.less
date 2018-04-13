@@ -439,3 +439,51 @@ ul.catalog{
     }
   }
 }
+
+.dropdown{
+  margin: 0;
+  padding: 0;
+  &-title{
+    width: 100%;
+    background: #f5f5f5;
+    margin: 0;
+    text-align: left;
+    font-size: 30px;
+    padding: 15px;
+    border-bottom: 2px solid #ddd;
+    cursor: pointer;
+    color: lighten(@color-btn, 20%);
+    transition: .25s;
+    &:hover{
+      transition: .25s;
+      color: @color-btn;
+    }
+  }
+  &-item{
+    list-style-type: none;
+    &-content {
+      display: none;
+      &-show{
+        display: block;
+        background: #fff;
+      }
+    }
+    &:nth-child(3) {
+      .catalog{
+        &-link{
+          flex-direction: column;
+        }
+        &-img{
+          margin-left: auto;
+          margin-right: auto;
+        }
+        &-undertitle{
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+          padding-top: 0px;
+        }
+      }
+    }
+  }
+}
