@@ -51,12 +51,12 @@ $(document).ready(function() {
   if($('.contacts-move').hasClass('contacts-move-spb')) {
     $('#map-move-msc').css('display', 'none');
     $('#map-move-spb').css('display', 'block');
-    $('.contacts-content').prepend('<p class="contacts-title"><b>Set Service Group <br>в Санкт-Петербурге  </b></p><p class="contacts-info contacts-info-office"><b>Адрес офиса:</b> г. Санкт-Петербург, <br>ул. Ворошилова, 2, Деловой Центр "ОХТА"</p><p class="contacts-info contacts-info-warehouse"><b>Адрес склада:</b> г. Санкт-Петербург, <br>ул. Дорога на Петрославянку, д. 5</p><p class="contacts-info contacts-info-factory"><b>Адрес производства:</b> г. Санкт-Петербург, <br>Кингисепское ш., 53</p><p class="contacts-info contacts-info-telephone"><b>Телефон:</b> +7(812) 627-15-16</p>');
+    $('.contacts-content').prepend('<p class="contacts-title"><b>Set Service Group <br>в Санкт-Петербурге  </b></p><p class="contacts-info contacts-info-office"><b>Адрес офиса:</b> г. Санкт-Петербург, <br>ул. Ворошилова, 2, Деловой Центр "ОХТА"</p><p class="contacts-info contacts-info-warehouse"><b>Адрес склада:</b> г. Санкт-Петербург, <br>ул. Дорога на Петрославянку, д. 5</p><p class="contacts-info contacts-info-factory"><b>Адрес производства:</b> г. Санкт-Петербург, <br>Кингисепское ш., 53</p><p class="contacts-info contacts-info-telephone"><b>Телефон:</b> +7(812) 627-15-16</p><p class="contacts-info contacts-info-email"><b>E-mail:</b> info@setservice.ru</p>');
   }
   if($('.contacts-move').hasClass('contacts-move-msc')) {
     $('#map-move-spb').css('display', 'none');
     $('#map-move-msc').css('display', 'block');
-    $('.contacts-content').prepend('<p class="contacts-title"><b>Set Service Group <br>в Москве  </b></p><p class="contacts-info contacts-info-office"><b>Адрес офиса:</b> г. Москва, ул. Ленинская Слобода, д.19, БЦ "Омега Плаза"</p><p class="contacts-info contacts-info-warehouse"><b>Адрес склада:</b> г. Электросталь, Промышленный проезд, д.11, корпус 11. (Въезд с 9.00 до 16.30 ч.)</p><p class="contacts-info contacts-info-telephone"><b>Телефон:</b> +7 (495) 205-60-07</p>');
+    $('.contacts-content').prepend('<p class="contacts-title"><b>Set Service Group <br>в Москве  </b></p><p class="contacts-info contacts-info-office"><b>Адрес офиса:</b> г. Москва, ул. Ленинская Слобода, д.19, БЦ "Омега Плаза"</p><p class="contacts-info contacts-info-warehouse"><b>Адрес склада:</b> г. Электросталь, Промышленный проезд, д.11, корпус 11. (Въезд с 9.00 до 16.30 ч.)</p><p class="contacts-info contacts-info-telephone"><b>Телефон:</b> +7 (495) 205-60-07</p><p class="contacts-info contacts-info-email"><b>E-mail:</b> info@setservice.ru</p>');
   }
 });
 
@@ -70,7 +70,7 @@ $('.contacts-btns-big .btn-contacts-spb').click(function(){
       $('#map-move-spb .ymaps-image-with-content').css('display','none');
       $('.map .contacts-move').addClass('contacts-move-spb').removeClass('contacts-move-msc');
       $('.contacts-move-spb').fadeIn();
-      $('.contacts-content').empty().prepend('<p class="contacts-title"><b>Set Service Group <br>в Санкт-Петербурге  </b></p><p class="contacts-info contacts-info-office"><b>Адрес офиса:</b> г. Санкт-Петербург, <br>ул. Ворошилова, 2, Деловой Центр "ОХТА"</p><p class="contacts-info contacts-info-warehouse"><b>Адрес склада:</b> г. Санкт-Петербург, <br>ул. Дорога на Петрославянку, д. 5</p><p class="contacts-info contacts-info-factory"><b>Адрес производства:</b> г. Санкт-Петербург, <br>Кингисепское ш., 53</p><p class="contacts-info contacts-info-telephone"><b>Телефон:</b> +7(812) 627-15-16</p>');
+      $('.contacts-content').empty().prepend('<p class="contacts-title"><b>Set Service Group <br>в Санкт-Петербурге  </b></p><p class="contacts-info contacts-info-office"><b>Адрес офиса:</b> г. Санкт-Петербург, <br>ул. Ворошилова, 2, Деловой Центр "ОХТА"</p><p class="contacts-info contacts-info-warehouse"><b>Адрес склада:</b> г. Санкт-Петербург, <br>ул. Дорога на Петрославянку, д. 5</p><p class="contacts-info contacts-info-factory"><b>Адрес производства:</b> г. Санкт-Петербург, <br>Кингисепское ш., 53</p><p class="contacts-info contacts-info-telephone"><b>Телефон:</b> +7(812) 627-15-16</p><p class="contacts-info contacts-info-email"><b>E-mail:</b> info@setservice.ru</p>');
   }
 });
 $('.contacts-btns-big .btn-contacts-msc').click(function(){
@@ -82,7 +82,7 @@ $('.contacts-btns-big .btn-contacts-msc').click(function(){
     $('#map-move-msc .ymaps-image-with-content').css('display','none');
     $('.map .contacts-move').addClass('contacts-move-msc').removeClass('contacts-move-spb');
     $('.contacts-move-msc').fadeIn();
-    $('.contacts-content').empty().prepend('<p class="contacts-title"><b>Set Service Group <br>в Москве  </b></p><p class="contacts-info contacts-info-office"><b>Адрес офиса:</b> г. Москва, ул. Ленинская Слобода, д.19, БЦ "Омега Плаза"</p><p class="contacts-info contacts-info-warehouse"><b>Адрес склада:</b> г. Электросталь, Промышленный проезд, д.11, корпус 11. (Въезд с 9.00 до 16.30 ч.)</p><p class="contacts-info contacts-info-telephone"><b>Телефон:</b> +7 (495) 205-60-07</p>');
+    $('.contacts-content').empty().prepend('<p class="contacts-title"><b>Set Service Group <br>в Москве  </b></p><p class="contacts-info contacts-info-office"><b>Адрес офиса:</b> г. Москва, ул. Ленинская Слобода, д.19, БЦ "Омега Плаза"</p><p class="contacts-info contacts-info-warehouse"><b>Адрес склада:</b> г. Электросталь, Промышленный проезд, д.11, корпус 11. (Въезд с 9.00 до 16.30 ч.)</p><p class="contacts-info contacts-info-telephone"><b>Телефон:</b> +7 (495) 205-60-07</p><p class="contacts-info contacts-info-email"><b>E-mail:</b> info@setservice.ru</p>');
   }
 });
 

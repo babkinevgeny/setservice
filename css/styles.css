@@ -1102,7 +1102,7 @@ div.item img.item-img {
   top: 141px;
   margin-left: -200px;
   background: #fff;
-  z-index: 2;
+  z-index: 1;
   padding: 15px;
   padding-top: 35px;
   color: #282828;
@@ -1153,6 +1153,9 @@ div.item img.item-img {
   background: url('../img/icon-telephone.svg') no-repeat 5px center;
   height: 20px;
 }
+.contacts-move .contacts-info-email {
+  background: url('../img/icon-email.svg') no-repeat 5px center;
+}
 .contacts-content .contacts-title {
   margin-bottom: 15px;
 }
@@ -1174,6 +1177,9 @@ div.item img.item-img {
 .contacts-content .contacts-info-telephone {
   background: url('../img/icon-telephone.svg') no-repeat 5px center;
   height: 20px;
+}
+.contacts-content .contacts-info-email {
+  background: url('../img/icon-email.svg') no-repeat 5px center;
 }
 #map-move-spb .ymaps-image-with-content,
 #map-move-msc .ymaps-image-with-content {

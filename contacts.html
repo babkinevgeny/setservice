@@ -50,26 +50,49 @@
       </div>
     </div>
   </header>
+  <section class="contacts">
+      <div class="container">
+        <h2 class="title-section">Контакты</h2>
+      </div>
+  </section>
+  <section class="map">
+    <div class="contacts-btns-big">
+      <button class="btn btn-contacts btn-contacts-spb">Санкт-Петербург</button>
+      <button class="btn btn-contacts btn-contacts-msc">Москва</button>
+    </div>
+    <div id="map-move-spb"></div>
+    <div id="map-move-msc"></div>
+    <div class="contacts-move contacts-move-spb">
+      <div class="btn-content-close"></div>
+      <div class="contacts-content"></div>
+    </div>
+    </section>
+    <section class="popupform">
+      <div class="popupform-inner">
+        <div class="btn-form-close">
+        </div>
+        <h2 class="title-form">Сделайте заказ прямо сейчас</h2>
+        <p>Чтобы экономить ваше время, мы создали систему электронной подачи заказов. Заполните форму и наш специалист свяжится с вами в ближайшее время.</p>
+        <form enctype="multipart/form-data">
+          <!-- Hidden Required Fields -->
+      		<input type="hidden" name="project_name" value="setservice24.ru">
+      		<input type="hidden" name="admin_email" value="9290355@gmail.com">
+      		<input type="hidden" name="form_subject" value="Заявка с сайта setservice24.ru">
+      		<!-- END Hidden Required Fields -->
+
+      		<input type="text" name="Имя или организация" placeholder="Ваше имя или название организации *" required>
+      		<input type="text" name="E-mail" placeholder="Ваш E-mail *" required>
+      		<input type="text" name="Телефон" placeholder="Ваш телефон *" required>
+          <textarea name="Текст заявки" id="" cols="30" rows="10" placeholder="Текст заявки"></textarea>
+      		<button>Отправить</button>
+        </form>
+      </div>
+    </section>
+  <script src="js/jquery-3.3.1.min.js"></script>
   <section class="team">
     <h2 class="title-section">Наша команда</h2>
     <p class="text"> Команда <b>Set Service Group</b> – это прежде всего профессионалы своего дела, <br>которые всегда готовы помочь Вам и предложить оптимальное решение для вашей задачи.</p>
-
-      <ul class="questions" style="margin: 0px">
-        <li class="questions-item">
-          <div class="questions-title"><div class="container">Генеральный директор</div></div>
-            <div class="container">
-              <div class="questions-item-content">
-                <ul class="workers">
-                  <li class="workers-item">
-                    <img src="img/Бубла Вячеслав.jpg" alt="" class="workers-img">
-                    <div class="workers-name">Бубла Вячеслав Викторович</div>
-                    <div class="workers-position">Генеральный директор</div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </li>
+      <ul class="questions">
         <li class="questions-item">
           <div class="questions-title"><div class="container">Отдел сбыта</div></div>
             <div class="container">
@@ -150,45 +173,6 @@
         </li>
       </ul>
     </section>
-  <section class="contacts">
-      <div class="container">
-        <h2 class="title-section">Контакты</h2>
-      </div>
-  </section>
-  <section class="map">
-    <div class="contacts-btns-big">
-      <button class="btn btn-contacts btn-contacts-spb">Санкт-Петербург</button>
-      <button class="btn btn-contacts btn-contacts-msc">Москва</button>
-    </div>
-    <div id="map-move-spb"></div>
-    <div id="map-move-msc"></div>
-    <div class="contacts-move contacts-move-spb">
-      <div class="btn-content-close"></div>
-      <div class="contacts-content"></div>
-    </div>
-    </section>
-    <section class="popupform">
-      <div class="popupform-inner">
-        <div class="btn-form-close">
-        </div>
-        <h2 class="title-form">Сделайте заказ прямо сейчас</h2>
-        <p>Чтобы экономить ваше время, мы создали систему электронной подачи заказов. Заполните форму и наш специалист свяжится с вами в ближайшее время.</p>
-        <form enctype="multipart/form-data">
-          <!-- Hidden Required Fields -->
-      		<input type="hidden" name="project_name" value="setservice24.ru">
-      		<input type="hidden" name="admin_email" value="9290355@gmail.com">
-      		<input type="hidden" name="form_subject" value="Заявка с сайта setservice24.ru">
-      		<!-- END Hidden Required Fields -->
-
-      		<input type="text" name="Имя или организация" placeholder="Ваше имя или название организации *" required>
-      		<input type="text" name="E-mail" placeholder="Ваш E-mail *" required>
-      		<input type="text" name="Телефон" placeholder="Ваш телефон *" required>
-          <textarea name="Текст заявки" id="" cols="30" rows="10" placeholder="Текст заявки"></textarea>
-      		<button>Отправить</button>
-        </form>
-      </div>
-    </section>
-  <script src="js/jquery-3.3.1.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
   <script src="js/common.js"></script>
   <script src="js/contacts.js"></script>
