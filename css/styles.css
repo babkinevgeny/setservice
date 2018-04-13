@@ -1494,6 +1494,24 @@ div.item img.item-img {
   max-height: 600px;
   margin: auto;
 }
+.popupform-thanks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: none;
+  background: #fff;
+}
+.popupform-thanks-content {
+  margin: auto;
+  max-width: 600px;
+  padding: 20px;
+}
+.popupform-thanks-content h2.title-form {
+  font-size: 30px;
+}
 .popupform .btn-form-close {
   position: absolute;
   display: block;
@@ -1593,6 +1611,24 @@ div.item img.item-img {
 }
 .popupform button:focus {
   outline: none;
+}
+.mark {
+  width: 200px;
+  margin: 0 auto;
+}
+.mark .checkmark {
+  stroke: #ffee00;
+  stroke-dashoffset: 745.74853515625;
+  stroke-dasharray: 745.74853515625;
+  animation: dash 2s ease-out forwards;
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 745.74853515625;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 @media screen and (max-width: 768px) {
   .popupform .title-form {

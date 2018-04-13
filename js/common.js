@@ -167,11 +167,13 @@ $(document).ready(function() {
       url: "/mail.php", //Change
       data: th.serialize()
     }).done(function() {
-      alert("Спасибо за заявку. Наш специалист свяжестся с вами в ближайшее время.");
+      $('.popupform-thanks').fadeIn().css('display', 'flex');
       setTimeout(function() {
         // Done Functions
         th.trigger("reset");
-      }, 1000);
+        $('.popupform-thanks').css('display','none');
+        $('.popupform').fadeOut();
+      }, 3000);
     });
     return false;
   });
