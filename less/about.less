@@ -454,15 +454,29 @@ ul.catalog{
     cursor: pointer;
     color: lighten(@color-btn, 20%);
     transition: .25s;
+    position: relative;
     &:hover{
       transition: .25s;
       color: @color-btn;
+    }
+    .container{
+      position: relative;
+      .dropdown-title-icon{
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: url('../img/minus.svg') no-repeat center center;
+        position: absolute;
+        top: 50%;
+        margin-top: -7.5px;
+        left: -5px;
+      }
     }
   }
   &-item{
     list-style-type: none;
     &-content {
-      display: none;
+      display: block;
       &-show{
         display: block;
         background: #fff;

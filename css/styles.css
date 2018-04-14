@@ -830,16 +830,30 @@ ul.catalog {
   cursor: pointer;
   color: #9b9b9b;
   transition: .25s;
+  position: relative;
 }
 .dropdown-title:hover {
   transition: .25s;
   color: #686868;
 }
+.dropdown-title .container {
+  position: relative;
+}
+.dropdown-title .container .dropdown-title-icon {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: url('../img/minus.svg') no-repeat center center;
+  position: absolute;
+  top: 50%;
+  margin-top: -7.5px;
+  left: -5px;
+}
 .dropdown-item {
   list-style-type: none;
 }
 .dropdown-item-content {
-  display: none;
+  display: block;
 }
 .dropdown-item-content-show {
   display: block;
@@ -1845,5 +1859,11 @@ div.item img.item-img {
   }
   .services .btn-more {
     display: block;
+  }
+  .dropdown-title {
+    font-size: 18px;
+  }
+  .dropdown-title .container {
+    padding: 0 20px;
   }
 }
