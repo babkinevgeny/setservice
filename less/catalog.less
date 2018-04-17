@@ -116,12 +116,17 @@
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap;
   &-item{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    width: 20%;
     &-link{
       display: block;
-      margin: 0 20px;
+      margin: auto;
+      margin-bottom: 20px;
       width: 180px;
       height: 220px;
       background: #fff;
@@ -140,8 +145,8 @@
       display: block;
       margin: 0 auto;
       margin-bottom: 10px;
-      width: 120px;
-      height: 100px;
+      width: 132px;
+      height: 110px;
     }
     &-name{
       display: block;

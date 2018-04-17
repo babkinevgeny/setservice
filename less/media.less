@@ -43,6 +43,11 @@
   .title-header {
     font-size: 30pt;
   }
+  .category{
+    &-item{
+      width: 25%;
+    }
+  }
 }
 
 @media screen and (min-width: 667px) and (max-width: 768px) {
@@ -140,6 +145,12 @@
       display: none;
     }
   }
+
+  .category {
+    &-item {
+      width: 50%;
+    }
+  }
 }
 
 @media screen and (max-width: 420px){
@@ -174,6 +185,11 @@
       &::after{
         display: none;
       }
+    }
+  }
+  .category {
+    &-item {
+      width: 100%;
     }
   }
 }

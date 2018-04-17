@@ -351,6 +351,7 @@ ul.catalog{
     display: flex;
     justify-content: space-between;
     text-decoration: none;
+    flex-direction: column;
     color: #000;
     &:hover{
       .catalog-img{
@@ -368,19 +369,17 @@ ul.catalog{
     height: 80px;
     opacity: .5;
     transition: .5s;
-    margin-right: 15px;
-    float: left;
+    margin: auto;
   }
   &-undertitle {
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     font-weight: normal;
     font-size: 14px;
-    text-align: left;
+    text-align: center;
     padding-top: 25px;
     color: lighten(#282828, 20%);
     transition: .5s;
-    margin-right: auto;
   }
 }
 
@@ -389,20 +388,10 @@ ul.catalog{
     &-item {
       width: 180px;
     }
-    &-link{
-      flex-direction: column;
-    }
-    &-img {
-      margin: auto;
-    }
-    &-undertitle {
-      margin: auto;
-      text-align: center;
-    }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 420px) and (max-width: 768px) {
   .container {
     padding: 0 5px;
   }
@@ -419,23 +408,25 @@ ul.catalog{
       padding-right: 5px;
     }
   }
-  .catalog {
-    &-row{
-      flex-wrap: wrap;
-      justify-content: space-around;
+  .catalog{
+    &-item{
+      width: 50%;
     }
-    &-item {
-      width: 180px;
-    }
-    &-link{
-      flex-direction: column;
-    }
-    &-img {
-      margin: auto;
-    }
-    &-undertitle {
-      margin: auto;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .questions{
+    &-title{
       text-align: center;
+      font-size: 18px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+  .catalog{
+    &-item{
+      width: 100%;
     }
   }
 }
