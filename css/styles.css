@@ -2018,4 +2018,15 @@ div.item img.item-img {
   .dropdown-title .container {
     padding: 0 20px;
   }
+  .goods-item .container {
+    flex-direction: column !important;
+  }
+  .goods-img-wrapper {
+    width: 100%;
+  }
+  .goods-content {
+    padding: 0 20px;
+    width: 100%;
+    text-align: center;
+  }
 }
