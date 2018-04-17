@@ -1390,7 +1390,7 @@ div.item img.item-img {
   margin: 0 20px;
   width: 180px;
   height: 220px;
-  background: #fffab3;
+  background: #fff;
   margin-bottom: 20px;
   padding: 10px;
   transition: .25s;
@@ -1398,7 +1398,7 @@ div.item img.item-img {
   color: #282828;
 }
 .category-item-link:hover {
-  background: #fff34d;
+  background: #eee;
   transition: .25s;
   color: #000;
 }
@@ -1406,7 +1406,7 @@ div.item img.item-img {
   display: block;
   margin: 0 auto;
   margin-bottom: 10px;
-  width: 100px;
+  width: 120px;
   height: 100px;
 }
 .category-item-name {
