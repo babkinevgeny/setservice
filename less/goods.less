@@ -1,0 +1,48 @@
+.goods{
+  &-item{
+    padding: 50px 0;
+    border-bottom: 1px solid #eee;
+    .container {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-between;
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+    &:nth-child(odd) {
+      .container {
+        flex-direction: row-reverse;
+        text-align: right;
+      }
+
+    }
+  }
+  &-title{
+    font-size: 36px;
+  }
+  .btn-more{
+    display: inline-block;
+    background: lighten(@yellow, 35%);
+    color: @color-btn;
+    &:hover{
+      color: #000;
+      background: @yellow;
+      border-top: 2px solid @yellow;
+      border-bottom: 2px solid @yellow;
+    }
+  }
+  &-content {
+    width: 60%;
+  }
+  &-img-wrapper{
+    width: 35%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+  }
+  &-img{
+    margin: auto;
+  }
+}

@@ -13,9 +13,8 @@
   <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <div id="fsvs-body">
-    <header class="page-header homepage-hero-module onepage-scroll">
+<body style="overflow-x: hidden;">
+  <header class="page-header homepage-hero-module">
       <nav class="navigation">
         <ul class="navigation-list">
           <div class="btn btn-nav-close"></div>
@@ -78,7 +77,7 @@
           </div>
         </div>
     </header>
-    <section class="products onepage-scroll">
+  <section class="products">
   	  <h2 class="title-section">Каталог продукции</h2>
   		<ul class="products-list">
   			<li class="products-item">
@@ -120,7 +119,58 @@
   		</ul>
       <a href="catalog.html" class="btn-text btn-more">Подробнее</a>
   	</section>
-    <section class="about">
+  <section class="goods">
+      <h2 class="title-section wow fadeInUp">Услуги</h2>
+      <div class="goods-item wow fadeInLeft">
+        <div class="container">
+          <div class="goods-img-wrapper">
+            <img src="img/kmd.png" alt="Разработка КМД" class="goods-img">
+          </div>
+          <div class="goods-content">
+            <div class="goods-title">Разработка КМД</div>
+            <p class="goods-text">Разработка КМД в СПб в конструкторском отделе Set Service Group станет залогом возведения надежных металлоконструкций. Становитесь нашим постоянным партнером, чтобы убедиться в этом!</p>
+            <a href="#" class="btn-text btn-more">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="goods-item wow fadeInRight">
+        <div class="container">
+          <div class="goods-img-wrapper">
+            <img src="img/zhelezka.png" alt="Производство металлоконструкций" class="goods-img">
+          </div>
+          <div class="goods-content">
+            <div class="goods-title">Производство металлоконструкций</div>
+            <p class="goods-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ipsam sint dolor, veniam, optio ea perspiciatis tempore ipsum reprehenderit, provident obcaecati officia quos praesentium velit, tenetur aliquam soluta deserunt repudiandae.</p>
+            <a href="#" class="btn-text btn-more">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="goods-item wow fadeInLeft">
+        <div class="container">
+          <div class="goods-img-wrapper">
+            <img src="img/kaska2.png" alt="Монтажные и демонтажные работы" class="goods-img">
+          </div>
+          <div class="goods-content">
+            <div class="goods-title">Монтажные / Демонтажные работы</div>
+            <p class="goods-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt fugit perspiciatis nemo dicta impedit molestiae temporibus praesentium id velit deserunt placeat, iure cum vel, architecto similique pariatur consequatur, totam nam!</p>
+            <a href="#" class="btn-text btn-more">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="goods-item wow fadeInRight">
+        <div class="container">
+          <div class="goods-img-wrapper">
+            <img src="img/dostavka.png" alt="Транспортные услуги" class="goods-img">
+          </div>
+          <div class="goods-content">
+            <div class="goods-title">Транспортные услуги</div>
+            <p class="goods-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta amet vero reiciendis repellat cumque ea, nostrum consequuntur sed obcaecati atque quidem eum exercitationem, voluptates, sapiente quis velit perferendis iure aperiam.</p>
+            <a href="#" class="btn-text btn-more">Подробнее</a>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section class="about">
       <div class="container">
         <h2 class="title-section">О компании</h2>
         <p class="text"><b>Set Service Group</b> – это российская производственная компания, успешно занимающаяся изготовлением металлоконструкций уже более 5 лет. Своим трудом мы доказали, что нам можно доверять решение задач любой сложности.</p>
@@ -172,7 +222,7 @@
         </div>
       </div>
     </section>
-    <section class="recomend onepage-scroll-section">
+  <section class="recomend">
       <div class="container">
       <h1 class="title-section">Нас рекомендуют</h1>
       <div class="flex-outer">
@@ -229,7 +279,7 @@
       </div>
       </div>
   	</section>
-    <section class="map">
+  <section class="map">
       <div id="map-spb"></div>
       <div id="map-msc"></div>
       <div class="container">
@@ -243,7 +293,7 @@
         </div>
       </div>
     </section>
-    <section class="popupform">
+  <section class="popupform">
       <div class="popupform-inner">
         <div class="btn-form-close">
         </div>
@@ -274,18 +324,23 @@
         </div>
       </div>
     </section>
-  </div>
 
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.magnific-popup.js"></script>
-  <!-- <script src="js/fsvs.js"></script>
-  <script src="js/bundle.js"></script> -->
-  <!-- <script src="js/jquery.onepage-scroll.min.js"></script> -->
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
   <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
   <script src="js/map.js"></script>
   <script src="js/main.js"></script>
   <script src="js/common.js"></script>
+  <script>
+    // $(document).ready(function () {
+    //   $('.goods .title-section').animated("fadeInDown");
+    // });
+  </script>
 </body>
 </html>

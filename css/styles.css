@@ -38,6 +38,73 @@ body {
 section {
   border-bottom: 2px solid #eee;
 }
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.fadeOutLeft {
+  animation-name: fadeOutLeft;
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+.fadeOutRight {
+  animation-name: fadeOutRight;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+}
 .homepage-hero-module {
   border-right: none;
   border-left: none;
@@ -421,6 +488,49 @@ section {
   font-weight: bold;
   margin: 10px 0;
   line-height: 1;
+}
+.goods-item {
+  padding: 50px 0;
+  border-bottom: 1px solid #eee;
+}
+.goods-item .container {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.goods-item:last-child {
+  border-bottom: none;
+}
+.goods-item:nth-child(odd) .container {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.goods-title {
+  font-size: 36px;
+}
+.goods .btn-more {
+  display: inline-block;
+  background: #fffab3;
+  color: #686868;
+}
+.goods .btn-more:hover {
+  color: #000;
+  background: #ffee00;
+  border-top: 2px solid #ffee00;
+  border-bottom: 2px solid #ffee00;
+}
+.goods-content {
+  width: 60%;
+}
+.goods-img-wrapper {
+  width: 35%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.goods-img {
+  margin: auto;
 }
 .about .btn-more {
   background: #fff899;
@@ -1206,6 +1316,9 @@ div.item img.item-img {
   padding-left: 40px;
   margin: 10px 0;
   color: #666;
+}
+.contacts-content .contacts-info-schedule {
+  background: url('../img/icon-schedule.svg') no-repeat 5px center;
 }
 .contacts-content .contacts-info-office {
   background: url('../img/icon-office.svg') no-repeat 5px center;
