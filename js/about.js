@@ -8,10 +8,13 @@ $('.dropdown-title').click(function() {
   }
 });
 
-$('.questions-title .container').click(function() {
-  if($(this).parent().siblings('.container').children('.questions-item-content').hasClass('questions-item-content-show')) {
-    $(this).parent().siblings('.container').children('.questions-item-content').slideUp().removeClass('questions-item-content-show');
+
+$('.questions-title').click(function() {
+  if($(this).siblings('.container').children('.questions-item-content').hasClass('questions-item-content-show')) {
+    $(this).children('.container').children('.questions-title-icon').css('background', 'url("img/plus.svg") no-repeat center center');
+    $(this).siblings('.container').children('.questions-item-content').slideUp().removeClass('questions-item-content-show');
   } else {
-    $(this).parent().siblings('.container').children('.questions-item-content').slideDown().addClass('questions-item-content-show');
+    $(this).children('.container').children('.questions-title-icon').css('background', 'url("img/minus.svg") no-repeat center center');
+    $(this).siblings('.container').children('.questions-item-content').slideDown().addClass('questions-item-content-show');
   }
 });
