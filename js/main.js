@@ -117,7 +117,7 @@ $(document).ready(function(){
     },
     dots: false,
     center: true,
-    autoplay: false
+    autoplay: true
 })
 });
 
