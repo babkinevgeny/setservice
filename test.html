@@ -13,13 +13,15 @@
   <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="css/styles.css">
   <style>
-  /* .fix{
-    width: 100%;
-    height: 100vh;
-    background: #000;
-  } */
+    .fix{
+      width: 100%;
+      height: 100vh;
+      background: #000;
+    }
     .goods-item{
-      display: none;
+      visibility: hidden;
+      opacity: 0;
+      transition-duration: .8s;
     }
 
     .goods-item:nth-child(odd) .goods-img-wrapper,
@@ -58,7 +60,7 @@
         <p style="text-align:center; margin: 0 0 10px 0; color: #fff;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         <p style="text-align:center; margin: 0 0 10px 0; color: #fff;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       </div>
-      <div class="goods-item wow fadeInLeft">
+      <div class="goods-item" id="qwe">
         <div class="container">
           <div class="goods-img-wrapper">
             <img src="img/kmd.png" alt="Разработка КМД" class="goods-img">
@@ -70,7 +72,7 @@
           </div>
         </div>
       </div>
-      <div class="goods-item wow fadeInRight">
+      <div class="goods-item" id="rty">
         <div class="container">
           <div class="goods-img-wrapper">
             <img src="img/zhelezka.png" alt="Производство металлоконструкций" class="goods-img">
@@ -82,7 +84,7 @@
           </div>
         </div>
       </div>
-      <div class="goods-item wow fadeInLeft">
+      <div class="goods-item">
         <div class="container">
           <div class="goods-img-wrapper">
             <img src="img/kaska2.png" alt="Монтажные и демонтажные работы" class="goods-img">
@@ -94,7 +96,7 @@
           </div>
         </div>
       </div>
-      <div class="goods-item wow fadeInRight">
+      <div class="goods-item">
         <div class="container">
           <div class="goods-img-wrapper">
             <img src="img/dostavka.png" alt="Транспортные услуги" class="goods-img">
@@ -108,22 +110,19 @@
       </div>
   </section>
   <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="../wow.js"></script>
   <script>
-    // $(document).scroll(function () {
-    //   console.log('скролим');
-    //   if($('.goods').offset().top >= $(window).height() ) {
-    //     $('.goods-item').fadeIn();
-    //     $('.btn-text').css('left', '0px');
-    //     $('.btn-text').parent().children('.goods-text, .goods-title').css('left', '0px');
-    //     $('.btn-text').parent().siblings('.goods-img-wrapper').css('left', '0px');
-    //   }
-    // });
-    $(document).ready(function () {
-      $('.goods-item').fadeIn();
-      $('.btn-text').css('left', '0px');
-      $('.btn-text').parent().children('.goods-text, .goods-title').css('left', '0px');
-      $('.btn-text').parent().siblings('.goods-img-wrapper').css('left', '0px');
-    })
+    $(window).scroll( function () {
+      var arrGoods = $('.goods-item');
+      var tops = [];
+      for (var i = 0; i < arrGoods.length; i++) {
+        if ( $(window).scrollTop() > arrGoods.eq(i).offset().top + arrGoods.eq(i).height()- $(window).height() ) {
+          arrGoods.eq(i).css("visibility", "visible").css('opacity', '1');
+          arrGoods.eq(i).children('.container').children('.goods-img-wrapper').css('left', '0px');
+          arrGoods.eq(i).children('.container').children('.goods-content').children('.goods-text, .goods-title, .btn-text').css('left', '0px');
+        }
+      }
+    });
   </script>
 </body>
 </html>
