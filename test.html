@@ -110,16 +110,15 @@
       </div>
   </section>
   <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="../wow.js"></script>
   <script>
     $(window).scroll( function () {
       var arrGoods = $('.goods-item');
-      var tops = [];
       for (var i = 0; i < arrGoods.length; i++) {
-        if ( $(window).scrollTop() > arrGoods.eq(i).offset().top + arrGoods.eq(i).height()- $(window).height() ) {
-          arrGoods.eq(i).css("visibility", "visible").css('opacity', '1');
-          arrGoods.eq(i).children('.container').children('.goods-img-wrapper').css('left', '0px');
-          arrGoods.eq(i).children('.container').children('.goods-content').children('.goods-text, .goods-title, .btn-text').css('left', '0px');
+        var good = arrGoods.eq(i);
+        if ( $(window).scrollTop() > good.offset().top + good.height()- $(window).height() ) {
+          good.css("visibility", "visible").css('opacity', '1');
+          good.children('.container').children('.goods-img-wrapper').css('left', '0px');
+          good.children('.container').children('.goods-content').children('.goods-text, .goods-title, .btn-text').css('left', '0px');
         }
       }
     });

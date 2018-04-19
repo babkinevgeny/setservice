@@ -129,7 +129,7 @@
         <p style="text-align:center; margin: 0 0 10px 0; color: #fff;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         <p style="text-align:center; margin: 0 0 10px 0; color: #fff;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       </div>
-      <div class="goods-item wow fadeInLeft">
+      <div class="goods-item">
         <div class="container">
           <div class="goods-img-wrapper">
             <img src="img/kmd.png" alt="Разработка КМД" class="goods-img">
@@ -141,7 +141,7 @@
           </div>
         </div>
       </div>
-      <div class="goods-item wow fadeInRight">
+      <div class="goods-item">
         <div class="container">
           <div class="goods-img-wrapper">
             <img src="img/zhelezka.png" alt="Производство металлоконструкций" class="goods-img">
@@ -153,7 +153,7 @@
           </div>
         </div>
       </div>
-      <div class="goods-item wow fadeInLeft">
+      <div class="goods-item">
         <div class="container">
           <div class="goods-img-wrapper">
             <img src="img/kaska2.png" alt="Монтажные и демонтажные работы" class="goods-img">
@@ -165,7 +165,7 @@
           </div>
         </div>
       </div>
-      <div class="goods-item wow fadeInRight">
+      <div class="goods-item">
         <div class="container">
           <div class="goods-img-wrapper">
             <img src="img/dostavka.png" alt="Транспортные услуги" class="goods-img">
@@ -346,9 +346,17 @@
   <script src="js/main.js"></script>
   <script src="js/common.js"></script>
   <script>
-    // $(document).ready(function () {
-    //   $('.goods .title-section').animated("fadeInDown");
-    // });
+    $(window).scroll( function () {
+      var arrGoods = $('.goods-item');
+      for (var i = 0; i < arrGoods.length; i++) {
+        var good = arrGoods.eq(i);
+        if ( $(window).scrollTop() > good.offset().top + good.height()- $(window).height() ) {
+          good.css("visibility", "visible").css('opacity', '1');
+          good.children('.container').children('.goods-img-wrapper').css('left', '0px');
+          good.children('.container').children('.goods-content').children('.goods-text, .goods-title, .btn-text').css('left', '0px');
+        }
+      }
+    });
   </script>
 </body>
 </html>
