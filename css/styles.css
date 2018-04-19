@@ -1019,12 +1019,6 @@ ul.catalog {
   margin-top: -7.5px;
   left: -5px;
 }
-.dropdown-title .container .btn-text {
-  display: inline;
-  position: absolute;
-  right: 0;
-  top: -24px;
-}
 .dropdown-item {
   list-style-type: none;
 }
@@ -2044,10 +2038,6 @@ div.item img.item-img {
   }
   .category-item {
     width: 50%;
-  }
-  .dropdown-title .container .btn-text {
-    top: -30px;
-    font-size: 18px;
   }
 }
 @media screen and (max-width: 420px) {
