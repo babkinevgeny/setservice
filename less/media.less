@@ -12,6 +12,74 @@
     }
   }
 
+  .parallax{
+    .info{
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      margin-bottom: 10px;
+      padding-top: 60px;
+      padding-bottom: 40px;
+      &-item:first-child{
+        width: 50%;
+      }
+      &-item:nth-child(2){
+        width: 50%;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-direction: column;
+        span:nth-child(1){
+          font-weight: bold;
+          color: #fff;
+          font-size: 180px;
+          line-height: 140px;
+          span {
+            font-size: 110px;
+            margin-left: 10px;
+          }
+        }
+        span:nth-child(2){
+          padding-left: 70px;
+          text-align: left;
+          color: #fff;
+          font-size: 36px;
+          line-height: 40px;
+        }
+      }
+    }
+    .numbers {
+      list-style: none;
+      padding: 0;
+      padding-top: 60px;
+      margin: 0;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-around;
+      &-item{
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-direction: column;
+      }
+      &-number{
+        color: #fff;
+        font-size: 60px;
+        line-height: 60px;
+        padding-bottom: 15px;
+        font-weight: bold;
+      }
+      &-undertitle{
+        color: #fff;
+        font-size: 22px;
+        line-height: 27px;
+        text-align: left;
+        padding-left: 10px;
+      }
+    }
+  }
+
 }
 
 @media screen and (min-width: 768px) and (max-width:1200px) {
@@ -151,6 +219,33 @@
       width: 50%;
     }
   }
+
+
+  .parallax{
+    .info{
+      &-item:first-child{
+        display: none;
+      }
+      &-item:nth-child(2){
+        width: 255px;
+        margin: auto;
+      }
+    }
+    .numbers{
+      flex-wrap: wrap;
+      &-item{
+        width: 50%;
+        margin-bottom: 20px;
+        span{
+          margin: auto;
+        }
+      }
+      &-undertitle{
+        text-align: center;
+      }
+    }
+  }
+
 }
 
 @media screen and (max-width: 420px){
@@ -192,6 +287,33 @@
       width: 100%;
     }
   }
+
+  .parallax{
+    .info{
+      &-item:first-child{
+        display: none;
+      }
+      &-item:nth-child(2){
+        width: 255px;
+        margin: auto;
+      }
+    }
+    .numbers{
+      flex-wrap: wrap;
+      &-item{
+        width: 100%;
+        margin-bottom: 40px;
+        span{
+          margin: auto;
+        }
+      }
+      &-undertitle{
+        text-align: center;
+      }
+    }
+  }
+
+
 }
 
 @media screen and (max-width: 768px) {

@@ -178,60 +178,29 @@
         </div>
       </div>
   </section>
-  <section class="about">
+  <section class="parallax">
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img/welding.jpg">
       <div class="container">
-        <h2 class="title-section">О компании</h2>
-        <p class="text"><b>Set Service Group</b> – это российская производственная компания, успешно занимающаяся изготовлением металлоконструкций уже более 5 лет. Своим трудом мы доказали, что нам можно доверять решение задач любой сложности.</p>
-        <div class="statistic onepage-scroll-section">
-          <h2 class="title-section">Мы в цифрах</h2>
-          <div class="flex-outer">
-            <div class="flex-inner">
-              <div class="statistic-wrapper">
-              <div class="statistic-block">
-                <div class="statistic-chart-first statistic-chart">
-                  <div class="statistic-tag">5 <span class="statistic-tag-small">лет</span></div>
-                </div>
-                <span class="statistic-undertitle">Успешной <br>работы</span>
-              </div>
-              <div class="statistic-block">
-                <div class="statistic-chart-second statistic-chart">
-                  <div class="statistic-tag">>659</div>
-                </div>
-                <span class="statistic-undertitle">Довольных <br>клиентов</span>
-               </div>
-              <div class="statistic-block">
-                <div class="statistic-chart-third statistic-chart">
-                  <div class="statistic-tag">>1325</div>
-                </div>
-                <span class="statistic-undertitle">Выполненных <br>проектов</span>
-               </div>
-              <div class="statistic-block">
-                <div class="statistic-chart-fourth statistic-chart">
-                  <div class="statistic-tag">>3,5Г<span class="statistic-tag-small">а</span></div>
-                </div>
-                <span class="statistic-undertitle">Производственных <br>площадей</span>
-               </div>
-              <div class="statistic-block">
-                <div class="statistic-chart-fifth statistic-chart">
-                  <div class="statistic-tag">192%</div>
-                </div>
-                <span class="statistic-undertitle">Рост выручки <br>за год</span>
-               </div>
-              <div class="statistic-block">
-                <div class="statistic-chart-sixth statistic-chart">
-                  <div class="statistic-tag">300<span class="statistic-tag-small">т</span></div>
-                </div>
-                <span class="statistic-undertitle">Ежемесячное<br>производство</span>
-              </div>
-              </div>
-            </div>
-          </div>
-          <a href="about.html" class="btn-text btn-more">Подробнее</a>
+        <div class="animate-block wow fadeInUp" data-wow-offset="170">
+          <h2 class="title-section">Компания в цифрах</h2>
+          <p class="text"><b>Set Service Group</b> – это российская производственная компания, успешно занимающаяся изготовлением металлоконструкций уже более 5 лет. Своим трудом мы доказали, что нам можно доверять решение задач любой сложности.</p>
         </div>
+        <div class="info wow fadeIn" data-wow-offset="170">
+          <div class="info-item"></div>
+          <div class="info-item"><span>5<span>лет</span></span><span>успешной <br>работы</span></div>
+        </div>
+        <ul class="numbers">
+          <li class="numbers-item wow fadeIn" data-wow-offset="90"><span class="numbers-number">659+</span><span class="numbers-undertitle">довольных <br>клиентов</span></li>
+          <li class="numbers-item wow fadeIn" data-wow-offset="90"><span class="numbers-number">1325+</span><span class="numbers-undertitle">выполненных <br>проектов</span></li>
+          <li class="numbers-item wow fadeIn" data-wow-offset="90"><span class="numbers-number">>3,5Га</span><span class="numbers-undertitle">производственных <br>площадей</span></li>
+          <li class="numbers-item wow fadeIn" data-wow-offset="90"><span class="numbers-number">192%</span><span class="numbers-undertitle">рост выручки <br>за год</span></li>
+          <li class="numbers-item wow fadeIn" data-wow-offset="90"><span class="numbers-number">300т</span><span class="numbers-undertitle">ежемесячное <br>производство</span></li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </section>
   <section class="recomend">
-      <div class="container">
+    <div class="container">
       <h1 class="title-section">Нас рекомендуют</h1>
       <div class="flex-outer">
   		  <div class="owl-carousel owl-theme flex-inner">
@@ -239,7 +208,7 @@
 			      <a href="img/recomend-baltmontazh.jpg" class="item-link">
 			        <img class="item-img" src="img/recomend-baltmontazh.jpg" alt="">
 			      </a>
-			    <div class="item-undertitle">ООО "Балт Монтаж</div>
+			      <div class="item-undertitle">ООО "Балт Монтаж</div>
 			    </div>
 			    <div class="item">
 			      <a href="img/recomend-impuls.jpg" class="item-link">
@@ -285,8 +254,8 @@
 			    </div>
   			</div>
       </div>
-      </div>
-  	</section>
+    </div>
+  </section>
   <section class="map">
       <div id="map-spb"></div>
       <div id="map-msc"></div>
@@ -345,6 +314,7 @@
   <script src="js/map.js"></script>
   <script src="js/main.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/parallax.min.js"></script>
   <script>
     $(window).scroll( function () {
       var arrGoods = $('.goods-item');

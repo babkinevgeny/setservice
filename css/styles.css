@@ -1042,6 +1042,82 @@ ul.catalog {
   text-align: center;
   padding-top: 0px;
 }
+.parallax-window {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 50px 0 65px 0;
+}
+.parallax .title-section {
+  color: #fff;
+  letter-spacing: 0px;
+  text-transform: none;
+  font-weight: normal;
+  font-size: 40px;
+  padding: 0;
+  margin: 15px 0;
+}
+.parallax .text {
+  color: #fff;
+}
+.parallax .info {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin-bottom: 10px;
+  padding-top: 60px;
+}
+.parallax .info-item:first-child {
+  width: 50%;
+}
+.parallax .info-item:nth-child(2) {
+  width: 50%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+.parallax .info-item:nth-child(2) span:nth-child(1) {
+  font-weight: bold;
+  color: #fff;
+  font-size: 150px;
+  line-height: 100px;
+}
+.parallax .info-item:nth-child(2) span:nth-child(1) span {
+  font-size: 90px;
+  margin-left: 10px;
+}
+.parallax .info-item:nth-child(2) span:nth-child(2) {
+  padding-left: 70px;
+  text-align: left;
+  color: #fff;
+  font-size: 24px;
+}
+.parallax .numbers {
+  list-style: none;
+  padding: 0;
+  padding-top: 60px;
+  margin: 0;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+}
+.parallax .numbers-item {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+.parallax .numbers-number {
+  color: #fff;
+  font-size: 48px;
+  font-weight: bold;
+}
+.parallax .numbers-undertitle {
+  color: #fff;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: left;
+}
 .recomend {
   padding: 0 30px;
   margin: 0 auto;
@@ -1922,6 +1998,71 @@ div.item img.item-img {
   .page-header .mouse {
     bottom: 200px;
   }
+  .parallax .info {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    margin-bottom: 10px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  .parallax .info-item:first-child {
+    width: 50%;
+  }
+  .parallax .info-item:nth-child(2) {
+    width: 50%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+  }
+  .parallax .info-item:nth-child(2) span:nth-child(1) {
+    font-weight: bold;
+    color: #fff;
+    font-size: 180px;
+    line-height: 140px;
+  }
+  .parallax .info-item:nth-child(2) span:nth-child(1) span {
+    font-size: 110px;
+    margin-left: 10px;
+  }
+  .parallax .info-item:nth-child(2) span:nth-child(2) {
+    padding-left: 70px;
+    text-align: left;
+    color: #fff;
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .parallax .numbers {
+    list-style: none;
+    padding: 0;
+    padding-top: 60px;
+    margin: 0;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-around;
+  }
+  .parallax .numbers-item {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+  }
+  .parallax .numbers-number {
+    color: #fff;
+    font-size: 60px;
+    line-height: 60px;
+    padding-bottom: 15px;
+    font-weight: bold;
+  }
+  .parallax .numbers-undertitle {
+    color: #fff;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: left;
+    padding-left: 10px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .menu-fixed {
@@ -2039,6 +2180,26 @@ div.item img.item-img {
   .category-item {
     width: 50%;
   }
+  .parallax .info-item:first-child {
+    display: none;
+  }
+  .parallax .info-item:nth-child(2) {
+    width: 255px;
+    margin: auto;
+  }
+  .parallax .numbers {
+    flex-wrap: wrap;
+  }
+  .parallax .numbers-item {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  .parallax .numbers-item span {
+    margin: auto;
+  }
+  .parallax .numbers-undertitle {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 420px) {
   .title-header {
@@ -2068,6 +2229,26 @@ div.item img.item-img {
   }
   .category-item {
     width: 100%;
+  }
+  .parallax .info-item:first-child {
+    display: none;
+  }
+  .parallax .info-item:nth-child(2) {
+    width: 255px;
+    margin: auto;
+  }
+  .parallax .numbers {
+    flex-wrap: wrap;
+  }
+  .parallax .numbers-item {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .parallax .numbers-item span {
+    margin: auto;
+  }
+  .parallax .numbers-undertitle {
+    text-align: center;
   }
 }
 @media screen and (max-width: 768px) {
