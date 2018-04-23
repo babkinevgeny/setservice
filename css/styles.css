@@ -324,11 +324,14 @@ section {
   color: #b8a17f;
 }
 .hamburger {
-  width: 33%;
+  width: 120px;
   height: 50px;
   padding: 9px 0 0 9px;
   cursor: pointer;
   position: relative;
+}
+.hamburger-wrapper {
+  width: 33%;
 }
 .hamburger::after {
   content: "Меню";
@@ -378,7 +381,7 @@ section {
   text-align: right;
 }
 .contacts-block .btn-text-send {
-  width: 190px;
+  width: 218px;
   margin-left: auto;
 }
 .btn-text {
@@ -1618,7 +1621,7 @@ div.item img.item-img {
   transition: .25s;
 }
 .catalog-worker {
-  margin-bottom: 20px;
+  margin: 20px 0;
   border-bottom: 2px solid #eee;
   padding-bottom: 20px;
   padding-top: 20px;
@@ -1628,6 +1631,8 @@ div.item img.item-img {
   padding-bottom: 0px;
   padding-top: 0px;
   margin-bottom: 20px;
+  padding: 0;
+  font-size: 16px;
 }
 .catalog-worker-img {
   display: block;
@@ -1686,7 +1691,7 @@ div.item img.item-img {
   display: block;
   margin: auto;
   width: 180px;
-  height: 220px;
+  height: 250px;
   background: #fff;
   margin-bottom: 20px;
   padding: 10px;
@@ -1703,8 +1708,8 @@ div.item img.item-img {
   display: block;
   margin: 0 auto;
   margin-bottom: 10px;
-  width: 132px;
-  height: 110px;
+  width: 160px;
+  height: 130px;
 }
 .category-item-name {
   display: block;
