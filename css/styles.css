@@ -214,6 +214,9 @@ section {
   padding: 13px 12px 17px 12px;
   z-index: 2;
 }
+.menu-fixed .hamburger {
+  width: 33%;
+}
 .menu-fixed .hamburger::after {
   color: #282828;
   top: 13px;
