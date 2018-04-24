@@ -883,19 +883,6 @@ section {
   display: block;
   background: #fff;
 }
-.questions-item:nth-child(3) .catalog-link {
-  flex-direction: column;
-}
-.questions-item:nth-child(3) .catalog-img {
-  margin-left: auto;
-  margin-right: auto;
-}
-.questions-item:nth-child(3) .catalog-undertitle {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding-top: 0px;
-}
 ul.catalog {
   flex-direction: column;
 }
@@ -926,19 +913,9 @@ ul.catalog {
   flex-direction: column;
   color: #000;
 }
-.catalog-link:hover .catalog-img {
-  opacity: 1;
-  transition: .5s;
-}
-.catalog-link:hover .catalog-undertitle {
-  color: #282828;
-  transition: .5s;
-}
 .catalog-img {
   width: 80px;
   height: 80px;
-  opacity: .5;
-  transition: .5s;
   margin: auto;
 }
 .catalog-undertitle {
@@ -949,7 +926,14 @@ ul.catalog {
   text-align: center;
   padding-top: 25px;
   color: #5b5b5b;
-  transition: .5s;
+}
+.catalog-description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  color: #5b5b5b;
+  margin-top: 15px;
 }
 @media screen and (min-width: 768px) and (max-width: 1125px) {
   .catalog-item {
