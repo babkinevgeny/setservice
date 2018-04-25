@@ -1,12 +1,9 @@
 $('.hamburger').click(function() {
-    setTimeout(function() { $('.navigation').fadeIn(100) }, 100);
-    $('.navigation-list').animate({left: 0},500);
+  $('.navigation').slideDown();
 });
 
 $('.btn-nav-close').click(function() {
-    $('.navigation-list').animate({left: -324},500);
-    setTimeout(function() { $('.navigation').fadeOut(100) }, 400);
-    //
+  $('.navigation').slideUp();
 });
 
 $('.link-logo').click(function () {
