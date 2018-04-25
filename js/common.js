@@ -1,5 +1,5 @@
 $('.hamburger').click(function() {
-  $('.navigation').slideDown();
+  $('.navigation').slideDown().css('display','flex');
 });
 
 $('.btn-nav-close').click(function() {

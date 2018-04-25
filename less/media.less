@@ -360,3 +360,37 @@
     }
   }
 }
+
+
+
+
+@media screen and (max-width: 1101px) {
+  .navigation{
+    &-item{
+      display: inline-block;
+      margin-right: 40px;
+      position: relative;
+      &:nth-child(2) a:after,
+      &:nth-child(3) a:after,
+      &:nth-child(5) a:after{
+        content: '';
+        position: absolute;
+        top: 38px;
+        right: -28px;
+        width: 10px;
+        height: 10px;
+        background: lighten(#282828, 20%);
+        border-radius: 50%;
+      }
+      &:nth-child(3){
+        margin-right: 0;
+      }
+      &:nth-child(4){
+        margin-left: 40px;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}

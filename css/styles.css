@@ -282,24 +282,32 @@ section {
   z-index: 3;
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../img/welding1.jpg");
   background-size: cover;
+  flex-direction: column;
 }
 .navigation .container {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  flex-direction: column;
+  height: 33%;
 }
-.navigation img {
+.navigation .img-wrapper {
+  height: 33%;
+  padding-top: 25px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.navigation .img-wrapper img {
+  margin: auto;
   width: 200px;
   height: 240px;
-  margin: 25px auto 30px auto;
 }
 .navigation-list {
   list-style: none;
-  margin: 0 auto;
   padding: 0;
   text-align: center;
   width: 65%;
+  margin: auto;
 }
 .navigation-item {
   display: inline-block;
@@ -2308,5 +2316,33 @@ div.item img.item-img {
     padding: 0 20px;
     width: 100%;
     text-align: center;
+  }
+}
+@media screen and (max-width: 1101px) {
+  .navigation-item {
+    display: inline-block;
+    margin-right: 40px;
+    position: relative;
+  }
+  .navigation-item:nth-child(2) a:after,
+  .navigation-item:nth-child(3) a:after,
+  .navigation-item:nth-child(5) a:after {
+    content: '';
+    position: absolute;
+    top: 38px;
+    right: -28px;
+    width: 10px;
+    height: 10px;
+    background: #5b5b5b;
+    border-radius: 50%;
+  }
+  .navigation-item:nth-child(3) {
+    margin-right: 0;
+  }
+  .navigation-item:nth-child(4) {
+    margin-left: 40px;
+  }
+  .navigation-item:last-child {
+    margin-right: 0;
   }
 }
