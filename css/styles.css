@@ -2027,6 +2027,10 @@ div.item img.item-img {
   .page-header .mouse {
     bottom: 200px;
   }
+  .navigation .img-wrapper img {
+    height: 295px;
+    width: 247px;
+  }
   .parallax .info {
     display: -webkit-flex;
     display: -ms-flex;
