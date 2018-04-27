@@ -1782,7 +1782,8 @@ div.item img.item-img {
   flex-wrap: wrap;
 }
 .category-technology,
-.category-loading {
+.category-loading,
+.category-warehouse {
   justify-content: space-around;
 }
 .category-item {
