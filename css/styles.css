@@ -306,7 +306,7 @@ section {
   list-style: none;
   padding: 0;
   text-align: center;
-  width: 65%;
+  width: 73%;
   margin: auto;
 }
 .navigation-item {
@@ -315,7 +315,7 @@ section {
   position: relative;
 }
 .navigation-item:nth-child(1) a:after,
-.navigation-item:nth-child(2) a:after,
+.navigation-item:nth-child(3) a:after,
 .navigation-item:nth-child(4) a:after {
   content: '';
   position: absolute;
@@ -326,10 +326,10 @@ section {
   background: #5b5b5b;
   border-radius: 50%;
 }
-.navigation-item:nth-child(3) {
+.navigation-item:nth-child(2) {
   margin-right: 0;
 }
-.navigation-item:nth-child(4) {
+.navigation-item:nth-child(3) {
   margin-left: 40px;
 }
 .navigation-item:last-child {
