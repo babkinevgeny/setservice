@@ -492,7 +492,7 @@ section {
 .products {
   background: #fff;
   width: 100%;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   text-align: center;
 }
 .products-list {
@@ -506,7 +506,7 @@ section {
 }
 .products-item {
   width: 50%;
-  height: 320px;
+  height: 350px;
   text-align: center;
 }
 .products-item:nth-child(1),
@@ -565,12 +565,18 @@ section {
   margin: 10px 0;
   line-height: 1;
 }
+.goods > .container {
+  width: 80%;
+  margin: 0 auto;
+}
 .goods-item {
   padding: 50px 0;
   border-bottom: 1px solid #eee;
   visibility: hidden;
   opacity: 0;
   transition-duration: .8s;
+  width: 80%;
+  margin: 0 auto;
 }
 .goods-item .container {
   display: -webkit-flex;
@@ -630,6 +636,78 @@ section {
   display: flex;
 }
 .goods-img {
+  margin: auto;
+}
+.services {
+  border-bottom: none;
+}
+.services > .container {
+  width: 80%;
+  margin: 0 auto;
+}
+.services-item {
+  padding: 50px 0;
+  border-bottom: 1px solid #eee;
+  visibility: visible;
+  opacity: 1;
+  transition-duration: .8s;
+  width: 80%;
+  margin: 0 auto;
+}
+.services-item .container {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.services-item:last-child {
+  border-bottom: none;
+}
+.services-item:nth-child(odd) .services-img-wrapper,
+.services-item:nth-child(odd) .services-title,
+.services-item:nth-child(odd) .services-text,
+.services-item:nth-child(odd) .services-content .btn-text {
+  position: relative;
+  left: 0px;
+  transition-duration: .8s;
+}
+.services-item:nth-child(even) .services-img-wrapper,
+.services-item:nth-child(even) .services-title,
+.services-item:nth-child(even) .services-text,
+.services-item:nth-child(even) .services-content .btn-text {
+  position: relative;
+  left: 0px;
+  transition-duration: .8s;
+}
+.services-title {
+  font-size: 36px;
+  transition-delay: .05s;
+}
+.services-text {
+  transition-delay: .1s;
+}
+.services .btn-more {
+  display: inline-block;
+  background: #fffab3;
+  color: #686868;
+  transition-delay: .15s;
+}
+.services .btn-more:hover {
+  color: #000;
+  background: #ffee00;
+  border-top: 2px solid #ffee00;
+  border-bottom: 2px solid #ffee00;
+}
+.services-content {
+  width: 64%;
+}
+.services-img-wrapper {
+  width: 35%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.services-img {
   margin: auto;
 }
 .about .btn-more {
@@ -1348,6 +1426,9 @@ div.item img.item-img {
   font-weight: 300;
   color: #666;
 }
+.map .contacts a:first-child {
+  margin-bottom: 20px;
+}
 .map .contacts-title {
   margin-top: 0;
   text-align: center;
@@ -1816,51 +1897,6 @@ div.item img.item-img {
   top: 50%;
   margin-top: -2px;
   left: 30px;
-}
-.services {
-  border-bottom: none;
-}
-.services-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.services-item {
-  padding: 50px 15px 50px 400px;
-  border-bottom: 2px solid #eee;
-}
-.services-item:nth-child(1) {
-  background: url('../img/kmd.png');
-  background-repeat: no-repeat;
-  background-position: 70px 35px;
-}
-.services-item:nth-child(2) {
-  background: url('../img/zhelezka.png');
-  background-repeat: no-repeat;
-  background-position: 82px 35px;
-}
-.services-item:nth-child(3) {
-  background: url('../img/kaska2.png');
-  background-repeat: no-repeat;
-  background-position: 82px 35px;
-}
-.services-item:nth-child(4) {
-  background: url('../img/dostavka.png');
-  background-repeat: no-repeat;
-  background-position: 70px 33px;
-  border-bottom: none;
-}
-.services-title {
-  font-size: 36px;
-}
-.services .btn-more {
-  display: inline-block;
-  color: #686868;
-  background: #fff899;
-}
-.services .btn-more:hover {
-  background: #ffee00;
-  color: #000;
 }
 .popupform {
   display: none;
