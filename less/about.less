@@ -461,9 +461,6 @@ ul.catalog{
       transition: .25s;
       color: @color-btn;
     }
-    + .container{
-      position: relative;
-    }
     .container{
       position: relative;
       .dropdown-title-icon{
@@ -479,6 +476,7 @@ ul.catalog{
     }
   }
   &-item{
+    position: relative;
     list-style-type: none;
     &-content {
       display: block;
@@ -507,6 +505,6 @@ ul.catalog{
   }
   &-anchor{
     position: absolute;
-    bottom: 75px;
+    top: -75px;
   }
 }

@@ -1112,9 +1112,6 @@ ul.catalog {
   transition: .25s;
   color: #686868;
 }
-.dropdown-title + .container {
-  position: relative;
-}
 .dropdown-title .container {
   position: relative;
 }
@@ -1129,6 +1126,7 @@ ul.catalog {
   left: -5px;
 }
 .dropdown-item {
+  position: relative;
   list-style-type: none;
 }
 .dropdown-item-content {
@@ -1153,7 +1151,7 @@ ul.catalog {
 }
 .dropdown-anchor {
   position: absolute;
-  bottom: 75px;
+  top: -75px;
 }
 .parallax-window {
   background: rgba(0, 0, 0, 0.55);
