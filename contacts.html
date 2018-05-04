@@ -177,7 +177,8 @@
       $('.form').height(windowHeight - 75);
       $('#map-move-spb').height(windowHeight - 75 - 84 - 75);
       $('#map-move-msc').height(windowHeight - 75 - 84 - 75);
-
+      var marginOfContactsMove = (windowHeight - 75*2)/2 - 84;
+      $('.contacts-move').css('top', marginOfContactsMove);
       $(".form form").submit(function() { //Change
         var th = $(this);
         $.ajax({
@@ -201,6 +202,8 @@
       $('.form').height(windowHeight - 75);
       $('#map-move-spb').height(windowHeight - 75 - 84 - 75);
       $('#map-move-msc').height(windowHeight - 75 - 84 - 75);
+      var marginOfContactsMove = (windowHeight - 75*2)/2 - 84;
+      $('.contacts-move').css('top', marginOfContactsMove);
     });
   </script>
 </body>
