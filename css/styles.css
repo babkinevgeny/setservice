@@ -1112,6 +1112,9 @@ ul.catalog {
   transition: .25s;
   color: #686868;
 }
+.dropdown-title + .container {
+  position: relative;
+}
 .dropdown-title .container {
   position: relative;
 }
@@ -1147,6 +1150,10 @@ ul.catalog {
   margin-right: auto;
   text-align: center;
   padding-top: 0px;
+}
+.dropdown-anchor {
+  position: absolute;
+  bottom: 75px;
 }
 .parallax-window {
   background: rgba(0, 0, 0, 0.55);
