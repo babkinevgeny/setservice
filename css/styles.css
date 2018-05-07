@@ -1456,10 +1456,14 @@ div.item img.item-img {
 #map-move-msc {
   width: 100%;
 }
+#map-spb,
+#map-msc {
+  height: 600px;
+}
 .map {
   min-width: 100%;
   position: relative;
-  border-top: 2px solid #ffee00;
+  border-top: 2px solid #eee;
 }
 .map .container {
   width: 100%;
