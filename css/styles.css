@@ -1125,6 +1125,12 @@ ul.catalog {
   margin-top: -7.5px;
   left: -5px;
 }
+.dropdown-title .container .switch {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -15px;
+}
 .dropdown-item {
   position: relative;
   list-style-type: none;
@@ -1152,6 +1158,45 @@ ul.catalog {
 .dropdown-anchor {
   position: absolute;
   top: -75px;
+}
+.switch {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  padding: 2px;
+  width: 60px;
+  height: 30px;
+  background-color: #dddddd;
+  border-radius: 60px;
+}
+.switch-bg,
+.switch-btn {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+}
+.switch-bg {
+  right: 1px;
+  background-color: #f1f1f1;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+.switch-btn {
+  width: 28px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s;
+}
+.switch-checked .switch-bg {
+  background-color: #fff899;
+}
+.switch-checked .switch-btn {
+  transform: translateX(30px);
 }
 .parallax-window {
   background: rgba(0, 0, 0, 0.55);
@@ -2550,7 +2595,10 @@ div.item img.item-img {
     font-size: 18px;
   }
   .dropdown-title .container {
-    padding: 0 20px;
+    padding: 0px;
+  }
+  .dropdown-title .container .switch {
+    right: 0px;
   }
   .goods-item .container {
     flex-direction: column !important;

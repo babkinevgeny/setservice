@@ -1,12 +1,14 @@
 $('.dropdown-title').click(function() {
   if($(this).siblings('.container').children('.dropdown-item-content').is(':visible')) {
-    $(this).children('.container').children('.dropdown-title-icon').css('background', 'url("img/plus.svg") no-repeat center center');
+    $(this).children('.container').children('.switch').removeClass('switch-checked');
     $(this).siblings('.container').children('.dropdown-item-content').slideUp();
   } else {
-    $(this).children('.container').children('.dropdown-title-icon').css('background', 'url("img/minus.svg") no-repeat center center');
+    $(this).children('.container').children('.switch').addClass('switch-checked');
     $(this).siblings('.container').children('.dropdown-item-content').slideDown();
   }
 });
+
+
 
 
 $('.questions-title').click(function() {
