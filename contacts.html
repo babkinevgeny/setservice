@@ -86,20 +86,18 @@
       <form enctype="multipart/form-data" action="mail1.php" method="post" id="form">
         <div class="form-row">
           <div class="form-block">
-            <input type="text" name="organization" placeholder="Ваше имя или название организации *" required>
-            <input type="text" name="email" placeholder="Ваш E-mail *" required>
-            <input type="text" name="tel" placeholder="Ваш телефон *" required>
+            <input type="text" name="organization" placeholder="Ваше имя или название организации">
+            <input type="text" name="email" placeholder="Ваш E-mail">
+            <input type="text" name="tel" placeholder="Ваш телефон ">
           </div>
           <div class="form-block">
             <textarea name="message" cols="30" placeholder="Текст заявки"></textarea>
-            <label class="btn-file" for="input-file">
-              Загрузить файл
-              <input type="file" multiple name="file" id="input-file">
-            </label>
+            <label class="btn-file" for="input-file">Загрузить файл</label>
+            <input type="file" name="file" id="input-file">
           </div>
         </div>
         <!-- <input type="submit" value="Отправить" class="btn-text" class="g-recaptcha" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj"> -->
-        <button type="submit" class="g-recaptcha" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doFormSubmit">Отправить</button>
+        <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doFormSubmit">Отправить</button>
       </form>
     </div>
     <div class="thanks">
@@ -210,6 +208,10 @@
 
   </script>
   <script>
+  $('#input-file').change(function() {
+    if ($(this).val() != '') $(this).prev().text('Файл загружен');
+    else $(this).prev().text('Загрузить файл');
+  });
   var doFormSubmit = function(){
     $("#form").ajaxSubmit({
       type:"POST",

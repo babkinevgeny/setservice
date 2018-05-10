@@ -29,7 +29,6 @@
       $email = $_POST['email'];
       $tel = $_POST['tel'];
       $message = $_POST['message'];
-      $file = $_POST['file'];
 	    //Recipients
 	    $mail->setFrom($_POST['email']);
 	    $mail->addAddress('babkinevgeny@gmail.com');     // Add a recipient
