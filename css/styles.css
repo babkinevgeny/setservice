@@ -1100,12 +1100,11 @@ ul.catalog {
 }
 .dropdown-title {
   width: 100%;
-  background: #f5f5f5;
+  background: #fff;
   margin: 0;
   text-align: left;
   font-size: 30px;
-  padding: 15px;
-  border-bottom: 2px solid #ddd;
+  padding: 0px 15px;
   cursor: pointer;
   color: #9b9b9b;
   transition: .25s;
@@ -1117,6 +1116,33 @@ ul.catalog {
 }
 .dropdown-title .container {
   position: relative;
+  border-bottom: 2px solid #ddd;
+  line-height: 67px;
+  padding-left: 70px;
+}
+.dropdown-title .container .dropdown-icon {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  left: 15px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+}
+.dropdown-title .container .dropdown-icon:nth-child(1) {
+  background: url('../img/3.png') center no-repeat;
+  background-size: cover;
+}
+.dropdown-title .container .dropdown-icon:after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 5px;
+  background: #fff;
+  position: absolute;
+  top: 53px;
+  left: -15px;
 }
 .dropdown-title .container .dropdown-title-icon {
   display: block;
@@ -1196,7 +1222,7 @@ ul.catalog {
   transition: all 0.4s;
 }
 .switch-checked .switch-bg {
-  background-color: #fff899;
+  background-color: #43E879;
 }
 .switch-checked .switch-btn {
   transform: translateX(30px);
