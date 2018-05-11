@@ -14,6 +14,12 @@
     .page-header {
       height: 75px;
     }
+    .dropdown-item-content{
+      display: none;
+    }
+    .dropdown-item .container {
+      padding-left: 20px;
+    }
   </style>
 </head>
 <body>
@@ -82,172 +88,177 @@
           </div>
         </ul>
       </div>
-      <ul class="questions">
-        <li class="questions-item">
-          <div class="questions-title"><div class="container"><div class="questions-title-icon"></div>Какие услуги мы предоставляем?</div></div>
-            <div class="container">
-              <div class="questions-item-content">
-                <ul class="catalog">
-                  <div class="catalog-row">
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/резка.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Резка <br>металла</span>
-                      </div>
-                    </li>
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/гибка.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Гибка <br>металла</span>
-                      </div>
-                    </li>
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/сварка.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Сварочные <br>работы</span>
-                      </div>
-                    </li>
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/монтаж.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Слесарная <br>сборка</span>
-                      </div>
-                    </li>
-                  </div>
-                </ul>
-              </div>
-            </div>
+      <ul class="dropdown">
+        <li class="dropdown-item">
+          <div class="dropdown-title">
+            <div class="container"><div class="switch"><span class="switch-bg"></span><span class="switch-btn"></span></div>Какие услуги мы предоставляем?</div>
           </div>
-        </li>
-        <li class="questions-item">
-          <div class="questions-title"><div class="container"><div class="questions-title-icon"></div>Какую продукцию мы производим?</div></div>
-            <div class="container">
-              <div class="questions-item-content">
-                <ul class="catalog">
-                  <div class="catalog-row">
-                    <li class="catalog-item">
+          <div class="container">
+            <div class="dropdown-item-content">
+              <ul class="catalog">
+                <div class="catalog-row">
+                  <li class="catalog-item">
                     <div class="catalog-link">
-                        <img src="img/3.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Строительные <br>металлоконструкции</span>
+                      <img src="img/резка.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Резка <br>металла</span>
                     </div>
-                    </li>
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/гидравлические столы.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Гидравлические <br>столы</span>
-                      </div>
-                    </li>
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/самонесущие склады.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Самонесущие <br>склады</span>
-                      </div>
-                    </li>
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/стиллажи.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Стиллажи</span>
-                      </div>
-                    </li>
-                  </div>
-                  <div class="catalog-row">
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/технологические металлоконструкции.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Технологические <br>металлоконструкции</span>
-                      </div>
-                    </li>
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/навесное оборудование для погрузчиков.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Навесное <br>оборудование <br>для погрузчиков</span>
-                      </div>
-                    </li>
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/погрузо-разгрузочные платформы.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Погрузочно-<br>разгрузочные <br>платформы</span>
-                      </div>
-                    </li>
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/погрузочные эстакады.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Погрузочные <br>эстакады</span>
-                      </div>
-                    </li>
-                  </div>
-                </ul>
-              </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-link">
+                      <img src="img/гибка.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Гибка <br>металла</span>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-link">
+                      <img src="img/сварка.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Сварочные <br>работы</span>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-link">
+                      <img src="img/монтаж.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Слесарная <br>сборка</span>
+                    </div>
+                  </li>
+                </div>
+              </ul>
             </div>
           </div>
         </li>
-        <li class="questions-item">
-          <div class="questions-title"><div class="container"><div class="questions-title-icon"></div>Почему стоит выбрать именно нас?</div></div>
-            <div class="container">
-              <div class="questions-item-content">
-                <ul class="catalog">
-                  <div class="catalog-row">
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/широкий спектр.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Широкий спектр <br>выпускаемой продукции</span>
-                        <span class="catalog-description">Разнородность выпускаемой продукции дает возможность сотрудничества с разными отраслями промышленности от  единичных операций до проектов "под ключ".</span>
-                      </div>
-                    </li>
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/оптимизация проектов.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Оптимизация <br>проектов</span>
-                        <span class="catalog-description">Выявление завыщенных требований к изделию на стадии расчета проекта, а так же подбор аналогов материалов и минимизация отходов помогает экономить время и деньги наших клиентов.</span>
-                      </div>
-                    </li>
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/эффективная логистика.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Эффективная <br>логистика</span>
-                        <span class="catalog-description">Наши отлаженные действия в области логистики помогут Вам избавиться от ненужных перемещений, звонков и затрат.</span>
-                      </div>
-                    </li>
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/гарантия качества.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Гарантия <br>высокого качества</span>
-                        <span class="catalog-description">Вся продукция, которую производит Set Service Group проходит входной контроль качества. Мы дорожим нашей репутацией, поэтому со всей ответственностью подходим к каждому заказу.</span>
-                      </div>
-                    </li>
+        <li class="dropdown-item">
+          <div class="dropdown-anchor" id="technological"></div>
+          <div class="dropdown-title">
+            <div class="container"><div class="switch"><span class="switch-bg"></span><span class="switch-btn"></span></div>Какую продукцию мы производим?</div>
+          </div>
+          <div class="container">
+            <div class="dropdown-item-content">
+              <ul class="catalog">
+                <div class="catalog-row">
+                  <li class="catalog-item">
+                  <div class="catalog-link">
+                      <img src="img/3.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Строительные <br>металлоконструкции</span>
                   </div>
-                  <div class="catalog-row">
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/оперативная обработка.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Оперативная <br>обработка заказов</span>
-                        <span class="catalog-description">Мы дорожим Вашим временем, поэтому следим за тем, чтобы вы получали ценовое предложение в течении суток.</span>
-                      </div>
-                    </li>
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/комфортный сервис.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Комфортный сервис <br>полного цикла</span>
-                        <span class="catalog-description">Главной задачей перед собой мы ставим сервис высокого уровня на всех этапах взаимодействия с клиентом. Мы работаем для Вас 24/7.</span>
-                      </div>
-                    </li>
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/индивидуальный подход.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Индивидуальный <br>подход к клиенту</span>
-                        <span class="catalog-description">Наш важный принцип, согласно которому в работе с клиентами учитываются индивидуальные особенности не только бизнеса клиента, но и индивидуальные особенности каждого человека, общающегося с нашей компанией.</span>
-                      </div>
-                    </li>
-                    <li class="catalog-item">
-                      <div class="catalog-link">
-                        <img src="img/юридическая прозрачность.png" alt="" class="catalog-img">
-                        <span class="catalog-undertitle">Честность и юридическая прозрачность</span>
-                        <span class="catalog-description">Честность и прозрачность в отношении с клиентами и коллегами являются настолько редкими, что они стали конкуретным преимуществом.</span>
-                      </div>
-                    </li>
-                  </div>
-                </ul>
-              </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-link">
+                      <img src="img/гидравлические столы.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Гидравлические <br>столы</span>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-link">
+                      <img src="img/самонесущие склады.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Самонесущие <br>склады</span>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-link">
+                      <img src="img/стиллажи.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Стиллажи</span>
+                    </div>
+                  </li>
+                </div>
+                <div class="catalog-row">
+                  <li class="catalog-item">
+                    <div class="catalog-link">
+                      <img src="img/технологические металлоконструкции.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Технологические <br>металлоконструкции</span>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-link">
+                      <img src="img/навесное оборудование для погрузчиков.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Навесное <br>оборудование <br>для погрузчиков</span>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-link">
+                      <img src="img/погрузо-разгрузочные платформы.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Погрузочно-<br>разгрузочные <br>платформы</span>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-link">
+                      <img src="img/погрузочные эстакады.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Погрузочные <br>эстакады</span>
+                    </div>
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="dropdown-item">
+          <div class="dropdown-anchor" id="social"></div>
+          <div class="dropdown-title">
+            <div class="container"><div class="switch"><span class="switch-bg"></span><span class="switch-btn"></span></div>Почему стоит выбрать именно нас?</div>
+          </div>
+          <div class="container">
+            <div class="dropdown-item-content">
+              <ul class="catalog">
+                <div class="catalog-row">
+                  <li class="catalog-item">
+                    <div class="catalog-link">
+                      <img src="img/широкий спектр.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Широкий спектр <br>выпускаемой продукции</span>
+                      <span class="catalog-description">Разнородность выпускаемой продукции дает возможность сотрудничества с разными отраслями промышленности от  единичных операций до проектов "под ключ".</span>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-link">
+                      <img src="img/оптимизация проектов.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Оптимизация <br>проектов</span>
+                      <span class="catalog-description">Выявление завыщенных требований к изделию на стадии расчета проекта, а так же подбор аналогов материалов и минимизация отходов помогает экономить время и деньги наших клиентов.</span>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-link">
+                      <img src="img/эффективная логистика.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Эффективная <br>логистика</span>
+                      <span class="catalog-description">Наши отлаженные действия в области логистики помогут Вам избавиться от ненужных перемещений, звонков и затрат.</span>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-link">
+                      <img src="img/гарантия качества.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Гарантия <br>высокого качества</span>
+                      <span class="catalog-description">Вся продукция, которую производит Set Service Group проходит входной контроль качества. Мы дорожим нашей репутацией, поэтому со всей ответственностью подходим к каждому заказу.</span>
+                    </div>
+                  </li>
+                </div>
+                <div class="catalog-row">
+                  <li class="catalog-item">
+                    <div class="catalog-link">
+                      <img src="img/оперативная обработка.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Оперативная <br>обработка заказов</span>
+                      <span class="catalog-description">Мы дорожим Вашим временем, поэтому следим за тем, чтобы вы получали ценовое предложение в течении суток.</span>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-link">
+                      <img src="img/комфортный сервис.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Комфортный сервис <br>полного цикла</span>
+                      <span class="catalog-description">Главной задачей перед собой мы ставим сервис высокого уровня на всех этапах взаимодействия с клиентом. Мы работаем для Вас 24/7.</span>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-link">
+                      <img src="img/индивидуальный подход.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Индивидуальный <br>подход к клиенту</span>
+                      <span class="catalog-description">Наш важный принцип, согласно которому в работе с клиентами учитываются индивидуальные особенности не только бизнеса клиента, но и индивидуальные особенности каждого человека, общающегося с нашей компанией.</span>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-link">
+                      <img src="img/юридическая прозрачность.png" alt="" class="catalog-img">
+                      <span class="catalog-undertitle">Честность и юридическая прозрачность</span>
+                      <span class="catalog-description">Честность и прозрачность в отношении с клиентами и коллегами являются настолько редкими, что они стали конкуретным преимуществом.</span>
+                    </div>
+                  </li>
+                </div>
+              </ul>
             </div>
           </div>
         </li>
@@ -303,74 +314,80 @@
     <section class="team" style="border-bottom: none;">
       <h2 class="title-section">Наша команда</h2>
       <p class="text"> Команда <b>Set Service Group</b> – это прежде всего профессионалы своего дела, <br>которые всегда готовы помочь Вам и предложить оптимальное решение для вашей задачи.</p>
-        <ul class="questions">
-          <li class="questions-item">
-            <div class="questions-title"><div class="container"><div class="questions-title-icon"></div>Отдел сбыта</div></div>
-              <div class="container">
-                <div class="questions-item-content">
-                  <ul class="workers">
-                    <li class="workers-item">
-                      <img src="img/Морозов Роман.jpg" alt="" class="workers-img">
-                      <div class="workers-name">Морозов Роман</div>
-                      <div class="workers-position">Ведущий менеджер по продажам</div>
-                      <div class="workers-phone">+7 (812) 627-15-16 (доб. 102)</div>
-                    </li>
-                    <li class="workers-item">
-                      <img src="img/Хафизова Екатерина.jpg" alt="" class="workers-img">
-                      <div class="workers-name">Хафизова Екатерина</div>
-                      <div class="workers-position">Менеджер по продажам</div>
-                      <div class="workers-phone">+7 (812) 627-15-16 (доб. 107)</div>
-                    </li>
-                    <li class="workers-item">
-                      <img src="img/Травка Светлана.jpg" alt="" class="workers-img">
-                      <div class="workers-name">Травка Светлана</div>
-                      <div class="workers-position">Менеджер по закупкам и логистике</div>
-                      <div class="workers-phone">+7 (812) 627-15-16 (доб. 103)</div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+      <ul class="dropdown">
+        <li class="dropdown-item">
+          <div class="dropdown-anchor" id="technological"></div>
+          <div class="dropdown-title">
+            <div class="container"><div class="switch"><span class="switch-bg"></span><span class="switch-btn"></span></div>Отдел сбыта</div>
+          </div>
+          <div class="container">
+            <div class="dropdown-item-content">
+              <ul class="workers">
+                <li class="workers-item">
+                  <img src="img/Морозов Роман.jpg" alt="" class="workers-img">
+                  <div class="workers-name">Морозов Роман</div>
+                  <div class="workers-position">Ведущий менеджер по продажам</div>
+                  <div class="workers-phone">+7 (812) 627-15-16 (доб. 102)</div>
+                </li>
+                <li class="workers-item">
+                  <img src="img/Хафизова Екатерина.jpg" alt="" class="workers-img">
+                  <div class="workers-name">Хафизова Екатерина</div>
+                  <div class="workers-position">Менеджер по продажам</div>
+                  <div class="workers-phone">+7 (812) 627-15-16 (доб. 107)</div>
+                </li>
+                <li class="workers-item">
+                  <img src="img/Травка Светлана.jpg" alt="" class="workers-img">
+                  <div class="workers-name">Травка Светлана</div>
+                  <div class="workers-position">Менеджер по закупкам и логистике</div>
+                  <div class="workers-phone">+7 (812) 627-15-16 (доб. 103)</div>
+                </li>
+              </ul>
             </div>
-          </li>
-          <li class="questions-item">
-            <div class="questions-title"><div class="container"><div class="questions-title-icon"></div>Производственно-технический отдел</div></div>
-              <div class="container">
-                <div class="questions-item-content">
-                  <ul class="workers">
-                    <li class="workers-item">
-                      <img src="img/Рахимов Юнир.jpg" alt="" class="workers-img">
-                      <div class="workers-name">Рахимов Юнир</div>
-                      <div class="workers-position">Руководитель проекта</div>
-                      <div class="workers-phone">+7 (812) 627-15-16 (доб. 106)</div>
-                    </li>
-                    <li class="workers-item">
-                      <img src="img/Трубачев Станислав.jpg" alt="" class="workers-img">
-                      <div class="workers-name">Трубачев Станислав</div>
-                      <div class="workers-position">Руководитель проекта</div>
-                      <div class="workers-phone">+7 (812) 627-15-16 (доб. 105)</div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+          </div>
+        </li>
+        <li class="dropdown-item">
+          <div class="dropdown-title">
+            <div class="container"><div class="switch"><span class="switch-bg"></span><span class="switch-btn"></span></div>Производственно-технический отдел</div>
+          </div>
+          <div class="container">
+            <div class="dropdown-item-content">
+              <ul class="workers">
+                <li class="workers-item">
+                  <img src="img/Рахимов Юнир.jpg" alt="" class="workers-img">
+                  <div class="workers-name">Рахимов Юнир</div>
+                  <div class="workers-position">Руководитель проекта</div>
+                  <div class="workers-phone">+7 (812) 627-15-16 (доб. 106)</div>
+                </li>
+                <li class="workers-item">
+                  <img src="img/Трубачев Станислав.jpg" alt="" class="workers-img">
+                  <div class="workers-name">Трубачев Станислав</div>
+                  <div class="workers-position">Руководитель проекта</div>
+                  <div class="workers-phone">+7 (812) 627-15-16 (доб. 105)</div>
+                </li>
+              </ul>
             </div>
-          </li>
-          <li class="questions-item">
-            <div class="questions-title"><div class="container"><div class="questions-title-icon"></div>Административный отдел</div></div>
-              <div class="container">
-                <div class="questions-item-content">
-                  <ul class="workers">
-                    <li class="workers-item">
-                      <img src="img/Кирпичева Елена.jpg" alt="" class="workers-img">
-                      <div class="workers-name">Кирпичева Елена</div>
-                      <div class="workers-position">Главный Бухгалтер</div>
-                      <div class="workers-phone">+7 (812) 309-17-40</div>
-                    </li>
-                    <li class="workers-item">
-                      <img src="img/Михедова Татьяна.jpg" alt="" class="workers-img">
-                      <div class="workers-name">Михедова Татьяна</div>
-                      <div class="workers-position">Бухгалтер</div>
-                      <div class="workers-phone">+7 (812) 309-17-40 (доб. 105)</div>
-                    </li>
+          </div>
+        </li>
+        <li class="dropdown-item">
+          <div class="dropdown-anchor" id="social"></div>
+          <div class="dropdown-title">
+            <div class="container"><div class="switch"><span class="switch-bg"></span><span class="switch-btn"></span></div>Административный отдел</div>
+          </div>
+          <div class="container">
+            <div class="dropdown-item-content">
+              <ul class="workers">
+                <li class="workers-item">
+                  <img src="img/Кирпичева Елена.jpg" alt="" class="workers-img">
+                  <div class="workers-name">Кирпичева Елена</div>
+                  <div class="workers-position">Главный Бухгалтер</div>
+                  <div class="workers-phone">+7 (812) 309-17-40</div>
+                </li>
+                <li class="workers-item">
+                  <img src="img/Михедова Татьяна.jpg" alt="" class="workers-img">
+                  <div class="workers-name">Михедова Татьяна</div>
+                  <div class="workers-position">Бухгалтер</div>
+                  <div class="workers-phone">+7 (812) 309-17-40 (доб. 105)</div>
+                </li>
                 <li class="workers-item">
                   <img src="img/Амелина Мария.jpg" alt="" class="workers-img">
                   <div class="workers-name">Амелина Мария</div>
@@ -380,9 +397,8 @@
               </ul>
             </div>
           </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
   </section>
   <section class="popupform">
     <div class="popupform-inner">
