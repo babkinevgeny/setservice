@@ -1867,7 +1867,7 @@ div.item img.item-img {
 .main-block .catalog-wrapper .catalog-title .switch {
   position: absolute;
   top: 50%;
-  left: 0;
+  right: 0;
   margin-top: -10px;
   cursor: pointer;
   outline: none;
@@ -1907,10 +1907,10 @@ div.item img.item-img {
 }
 .main-block .catalog-wrapper .catalog-title-inner {
   display: inline-block;
-  padding: 10px 20px 10px 50px;
+  padding: 10px 20px 10px 0px;
   width: 100%;
   font-size: 16px;
-  color: #9b9b9b;
+  color: #000;
   font-weight: 500;
   cursor: pointer;
   transition: .25s;
@@ -1935,12 +1935,12 @@ div.item img.item-img {
   width: 100%;
   text-decoration: none;
   color: #000;
-  padding: 10px 20px 10px 50px;
+  padding: 10px 20px 10px 20px;
   color: #9b9b9b;
-  font-weight: 500;
   cursor: pointer;
   transition: .25s;
   position: relative;
+  font-weight: lighter;
 }
 .main-block .catalog-wrapper .catalog-title .inner-link:hover {
   color: #686868;
@@ -1959,7 +1959,7 @@ div.item img.item-img {
   position: absolute;
   top: 50%;
   margin-top: -2px;
-  left: 30px;
+  left: 8px;
 }
 .popupform {
   display: none;
