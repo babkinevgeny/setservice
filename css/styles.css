@@ -1850,6 +1850,9 @@ div.item img.item-img {
 .main-block {
   padding: 20px 0;
 }
+.main-block .article-wrapper {
+  max-width: 1000px;
+}
 .main-block .catalog-wrapper {
   padding: 20px;
 }
@@ -1861,18 +1864,50 @@ div.item img.item-img {
   border-bottom: 2px solid #eee;
   position: relative;
 }
-.main-block .catalog-wrapper .catalog-title-icon {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
+.main-block .catalog-wrapper .catalog-title .switch {
   position: absolute;
-  top: 22px;
-  left: 13px;
-  background: url('../img/plus.svg') no-repeat center;
+  top: 50%;
+  left: 0;
+  margin-top: -10px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  padding: 2px;
+  width: 40px;
+  height: 20px;
+  background-color: #dddddd;
+  border-radius: 60px;
+}
+.main-block .catalog-wrapper .catalog-title .switch-bg,
+.main-block .catalog-wrapper .catalog-title .switch-btn {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+}
+.main-block .catalog-wrapper .catalog-title .switch-bg {
+  right: 1px;
+  background-color: #f1f1f1;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+.main-block .catalog-wrapper .catalog-title .switch-btn {
+  width: 18px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s;
+}
+.main-block .catalog-wrapper .catalog-title .switch-checked .switch-bg {
+  background-color: #43E879;
+}
+.main-block .catalog-wrapper .catalog-title .switch-checked .switch-btn {
+  transform: translateX(20px);
 }
 .main-block .catalog-wrapper .catalog-title-inner {
   display: inline-block;
-  padding: 10px 20px 10px 40px;
+  padding: 10px 20px 10px 50px;
   width: 100%;
   font-size: 16px;
   color: #9b9b9b;
