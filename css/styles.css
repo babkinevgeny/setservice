@@ -1851,10 +1851,14 @@ div.item img.item-img {
   padding: 20px 0;
 }
 .main-block .article-wrapper {
+  margin-left: 324px;
   max-width: 1000px;
 }
 .main-block .catalog-wrapper {
   padding: 20px;
+  position: fixed;
+  top: 95px;
+  background: #fff;
 }
 .main-block .catalog-wrapper > .title-section {
   text-align: left;
