@@ -194,7 +194,7 @@
           </ul>
         </li>
         <!-- <li class="catalog-title">
-          <div class="catalog-title-inner">Складское <br>оборудование</div>
+          <div class="catalog-title-inner"><div class="switch"><span class="switch-bg"></span><span class="switch-btn"></span></div>Складское <br>оборудование</div>
           <ul class="inner-list">
             <li class="inner-title"><a href="/storage-equipment/lockers-and-containers.html" class="inner-link">Шкафы и контейнеры</a></li>
             <li class="inner-title"><a href="/storage-equipment/roll-containers.html" class="inner-link">Ролл контейнеры</a></li>
@@ -348,27 +348,6 @@
         }
     }
   })
-  </script>
-  <script>
-    $( document ).ready(function() {
-      $('.catalog-title-active').children(".inner-list").css("display", "block");
-        $('.catalog-title-active').children(".catalog-title-icon").css("background", "url('../img/minus.svg') no-repeat center");
-    });
-  </script>
-
-  <script>
-    $('.catalog-title-inner').click( function () {
-      if($(this).hasClass('catalog-title-inner-active')) {
-        $(this).removeClass('catalog-title-inner-active');
-        $(this).siblings(".catalog-title-icon").css("background", "url('../img/plus.svg') no-repeat center");
-        $(this).siblings(".inner-list").slideUp();
-
-      } else {
-        $(this).addClass('catalog-title-inner-active');
-        $(this).siblings(".catalog-title-icon").css("background", "url('../img/minus.svg') no-repeat center");
-        $(this).siblings(".inner-list").slideDown();
-      }
-    });
   </script>
 </body>
 </html>

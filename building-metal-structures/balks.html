@@ -145,7 +145,7 @@
       <h2 class="title-section">Каталог продукции</h2>
       <ul class="catalog-list">
         <li class="catalog-title catalog-title-active">
-                    <div class="catalog-title-inner catalog-title-inner-active">Строительные <br>металлоконструкции</div>
+          <div class="catalog-title-inner catalog-title-inner-active"><div class="switch switch-checked"><span class="switch-bg"></span><span class="switch-btn"></span></div>Строительные <br>металлоконструкции</div>
           <ul class="inner-list">
             <li class="inner-title"><a href="/building-metal-structures/prefabricated-building.html" class="inner-link">Быстровозводимые здания</a></li>
             <li class="inner-title"><a href="/building-metal-structures/hangar.html" class="inner-link">Ангары из металлоконструкций</a></li>
@@ -159,7 +159,7 @@
           </ul>
         </li>
         <li class="catalog-title">
-                    <div class="catalog-title-inner">Технологические <br>металлоконструкции</div>
+          <div class="catalog-title-inner"><div class="switch"><span class="switch-bg"></span><span class="switch-btn"></span></div>Технологические <br>металлоконструкции</div>
           <ul class="inner-list">
             <li class="inner-title"><a href="/technological-metal-structures/technological-pipelines.html" class="inner-link">Технологические трубопроводы</a></li>
             <li class="inner-title"><a href="/technological-metal-structures/pipeline-supports.html" class="inner-link">Опоры трубопроводов</a></li>
@@ -168,7 +168,7 @@
           </ul>
         </li>
         <li class="catalog-title">
-                    <div class="catalog-title-inner">Социальные <br>металлоконструкции</div>
+          <div class="catalog-title-inner"><div class="switch"><span class="switch-bg"></span><span class="switch-btn"></span></div>Социальные <br>металлоконструкции</div>
           <ul class="inner-list">
             <li class="inner-title"><a href="/social-metal-structures/lawn-and-metal-fences.html" class="inner-link">Газонные ограждения, Металлические заборы</a></li>
             <li class="inner-title"><a href="/social-metal-structures/stair-fences.html" class="inner-link">Лестничные ограждения</a></li>
@@ -177,22 +177,31 @@
             <li class="inner-title"><a href="/social-metal-structures/metal-canopies.html" class="inner-link">Металлические навесы</a></li>
           </ul>
         </li>
-        <li class="catalog-title">
-                    <div class="catalog-title-inner">Складское <br>оборудование</div>
+        <!-- <li class="catalog-title">
+          <div class="catalog-title-inner"><div class="switch"><span class="switch-bg"></span><span class="switch-btn"></span></div>Складское <br>оборудование</div>
           <ul class="inner-list">
             <li class="inner-title"><a href="/storage-equipment/lockers-and-containers.html" class="inner-link">Шкафы и контейнеры</a></li>
             <li class="inner-title"><a href="/storage-equipment/roll-containers.html" class="inner-link">Ролл контейнеры</a></li>
             <li class="inner-title"><a href="/storage-equipment/metal-pallets.html" class="inner-link">Поддоны и паллеты металлические, Ограждения для поддонов (паллет)</a></li>
             <li class="inner-title"><a href="/storage-equipment/mobile-platforms-and-stairs.html" class="inner-link">Помосты - рабочие площадки, Лестницы передвижные</a></li>
           </ul>
-        </li>
+        </li> -->
         <li class="catalog-title">
-                    <div class="catalog-title-inner">Погрузочное <br>оборудование</div>
+          <div class="catalog-title-inner"><div class="switch"><span class="switch-bg"></span><span class="switch-btn"></span></div>Погрузочное <br>оборудование</div>
           <ul class="inner-list">
             <li class="inner-title"><a href="/loading-equipment/loading-racks.html" class="inner-link">Погрузочные эстакады</a></li>
             <li class="inner-title"><a href="/loading-equipment/attachments-for-forklifts.html" class="inner-link">Навесное оборудование для погрузчиков</a></li>
             <li class="inner-title"><a href="/loading-equipment/modular-platform.html" class="inner-link">Модульная погрузочно-разгрузочная платформа</a></li>
             <li class="inner-title"><a href="/loading-equipment/lifting-equipment.html" class="inner-link">Грузоподъемное оборудование</a></li>
+          </ul>
+        </li>
+        <li class="catalog-title">
+          <div class="catalog-title-inner"><div class="switch"><span class="switch-bg"></span><span class="switch-btn"></span></div>Услуги</div>
+          <ul class="inner-list">
+            <li class="inner-title"><a href="/services/development-of-kmd.html" class="inner-link">Разработка КМД</a></li>
+            <li class="inner-title"><a href="/services/production.html" class="inner-link">Производство металлоконструкций</a></li>
+            <li class="inner-title"><a href="/services/instalation.html" class="inner-link">Монтажные / Демонтажные работы</a></li>
+            <li class="inner-title"><a href="/services/delivery.html" class="inner-link">Транспортные услуги</a></li>
           </ul>
         </li>
       </ul>
@@ -304,26 +313,6 @@
         }
     }
   })
-  </script>
-  <script>
-    $( document ).ready(function() {
-      $('.catalog-title-active').children(".inner-list").css("display", "block");
-        $('.catalog-title-active').children(".catalog-title-icon").css("background", "url('../img/minus.svg') no-repeat center");
-    });
-  </script>
-  <script>
-    $('.catalog-title-inner').click( function () {
-      if($(this).hasClass('catalog-title-inner-active')) {
-        $(this).removeClass('catalog-title-inner-active');
-        $(this).siblings(".catalog-title-icon").css("background", "url('../img/plus.svg') no-repeat center");
-        $(this).siblings(".inner-list").slideUp();
-
-      } else {
-        $(this).addClass('catalog-title-inner-active');
-        $(this).siblings(".catalog-title-icon").css("background", "url('../img/minus.svg') no-repeat center");
-        $(this).siblings(".inner-list").slideDown();
-      }
-    });
   </script>
 </body>
 </html>
