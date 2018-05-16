@@ -176,3 +176,20 @@ $(document).ready(function() {
   });
 
 });
+
+$( document ).ready(function() {
+  $('.catalog-title-active').children(".inner-list").css("display", "block");
+});
+$('.catalog-title-inner').click( function () {
+  if( $(this).hasClass('catalog-title-inner-active') ) {
+    $(this).removeClass('catalog-title-inner-active');
+    $(this).siblings(".inner-list").slideUp();
+    $(this).children('.switch').removeClass('switch-checked');
+  } else {
+    $('.catalog-title-inner.catalog-title-inner-active').siblings(".inner-list").slideUp();
+    $('.catalog-title-inner.catalog-title-inner-active').children('.switch').removeClass('switch-checked');
+    $('.catalog-title-inner.catalog-title-inner-active').removeClass('catalog-title-inner-active');
+    $(this).addClass('catalog-title-inner-active').siblings(".inner-list").slideDown();
+    $(this).children(".switch").addClass('switch-checked');
+  }
+});
