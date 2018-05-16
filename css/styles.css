@@ -16,6 +16,11 @@ body {
   padding: 0;
   font-family: Ubuntu, sans-serif;
 }
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
 .link {
   text-decoration: none;
   color: #fff;
@@ -2121,19 +2126,19 @@ div.item img.item-img {
   margin: auto;
 }
 .form .form-row + .form-text {
-  font-size: 18px;
+  font-size: 24px;
 }
 .form-row {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   justify-content: space-around;
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   flex-wrap: wrap;
 }
 .form-block {
-  width: 400px;
+  width: 450px;
   text-align: center;
   padding: 20px;
 }
@@ -2143,15 +2148,16 @@ div.item img.item-img {
 .form-text {
   text-align: center;
   color: #fff;
+  font-size: 22px;
 }
 .form-link {
   text-decoration: none;
   color: #fff;
-  font-size: 37px;
-  line-height: 37px;
+  font-size: 45px;
+  line-height: 45px;
   display: inline-block;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   transition: .15s;
 }
 .form-link:hover {
@@ -2163,6 +2169,12 @@ div.item img.item-img {
 }
 .form form {
   margin-top: 20px;
+}
+.form form .form-row .form-block:first-child {
+  padding-right: 10px;
+}
+.form form .form-row .form-block:last-child {
+  padding-left: 10px;
 }
 .form input,
 .form textarea {
@@ -2184,26 +2196,27 @@ div.item img.item-img {
   outline: none;
 }
 .form input {
-  height: 40px;
+  height: 50px;
 }
 .form input[type="file"] {
   display: none;
 }
 .form textarea {
-  height: 100px;
+  height: 120px;
   margin-bottom: 17px;
 }
 .form .btn-file {
   display: block;
   width: 100%;
-  height: 40px;
+  height: 50px;
   font-size: 16px;
   background: #fff899;
-  line-height: 40px;
+  line-height: 50px;
   border-radius: 4px;
   color: #686868;
   cursor: pointer;
   transition: .15s;
+  margin-bottom: 20px;
 }
 .form .btn-file:hover {
   background: #ffee00;

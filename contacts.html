@@ -61,7 +61,7 @@
         <h2 class="title-section">Контакты</h2>
       </div>
   </section> -->
-  <section class="form">
+  <section class="form clearfix">
     <div class="container">
       <div class="form-row">
         <div class="form-block">
@@ -80,7 +80,7 @@
       </div>
       <br>
       <div class="form-text">
-        Мы работаем ежедневно с понедельника по пятницу<br>
+        <br>Мы работаем ежедневно с понедельника по пятницу<br>
         Часы работы: с 9:00 до 18:00
       </div>
       <form enctype="multipart/form-data" action="mail1.php" method="post" id="form">
@@ -173,7 +173,12 @@
   <script>
     $(document).ready(function() {
       var windowHeight = $(window).height();
-      $('.form').height(windowHeight - 75);
+      console.log($(window).width());
+      if ($(window).width() > 1368) {
+        $('.form').height(windowHeight - 75 - 170);
+      } else {
+        $('.form').height(windowHeight + 75);
+      }
       $('#map-move-spb').height(windowHeight - 75 - 84 - 75);
       $('#map-move-msc').height(windowHeight - 75 - 84 - 75);
       // var marginOfContactsMove = (windowHeight - 75*2)/2 - 84;
@@ -199,7 +204,11 @@
     });
     $(window).resize(function(){
       var windowHeight = $(window).height();
-      $('.form').height(windowHeight - 75);
+      if ($(window).width() > 1368) {
+        $('.form').height(windowHeight - 75 - 170);
+      } else {
+        $('.form').height(windowHeight + 25);
+      }
       $('#map-move-spb').height(windowHeight - 75 - 84 - 75);
       $('#map-move-msc').height(windowHeight - 75 - 84 - 75);
       var marginOfContactsMove = ( $('#map-move-spb').height() - $('.contacts-move').height() + 84 ) / 2;
