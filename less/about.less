@@ -407,49 +407,28 @@ ul.catalog{
       position: relative;
       border-bottom: 2px solid #ddd;
       line-height: 67px;
-      padding-left: 70px;
-      .dropdown-icon{
-        position: absolute;
-        top: 50%;
-        margin-top: -20px;
-        left: 15px;
-        display: block;
-        width: 40px;
-        height: 40px;
-        background: #fff;
-        background-size: cover;
-        &:after{
-          content: '';
-          display: block;
-          width: 70px;
-          height: 5px;
-          background: #fff;
-          position: absolute;
-          top:53px;
-          left: -15px;
-        }
-      }
-      .dropdown-title-icon{
-        display: block;
-        width: 15px;
-        height: 15px;
-        background: url('../img/minus.svg') no-repeat center center;
-        position: absolute;
-        top: 50%;
-        margin-top: -7.5px;
-        left: -5px;
-      }
+      padding: 0;
       .switch{
         position: absolute;
-        right:20px;
+        right:0;
         top:50%;
         margin-top:-15px;
       }
+    }
+    & + .container {
+      border-bottom: 2px solid #ddd;
     }
   }
   &-item{
     position: relative;
     list-style-type: none;
+    &:first-child{
+      .dropdown-title{
+        .container{
+          border-top: 2px solid #ddd;
+        }
+      }
+    }
     &-content {
       display: block;
       &-show{

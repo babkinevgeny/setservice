@@ -2,9 +2,11 @@ $('.dropdown-title').click(function() {
   if($(this).siblings('.container').children('.dropdown-item-content').is(':visible')) {
     $(this).children('.container').children('.switch').removeClass('switch-checked');
     $(this).siblings('.container').children('.dropdown-item-content').slideUp();
+    $(this).siblings('.container').css('border-bottom', 'none');
   } else {
     $(this).children('.container').children('.switch').addClass('switch-checked');
     $(this).siblings('.container').children('.dropdown-item-content').slideDown();
+    $(this).siblings('.container').css('border-bottom', '2px solid #ddd');
   }
 });
 
