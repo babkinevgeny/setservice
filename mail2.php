@@ -22,12 +22,13 @@
 	use PHPMailer\PHPMailer\Exception;
 
 
-	$mail = new PHPMailer(true);                         // Passing `true` enables exceptions
+  $mail = new PHPMailer(true);                         // Passing `true` enables exceptions
 	try {
 
       $organization = $_POST['organization'];
       $tel = $_POST['tel'];
 	    //Recipients
+	    $mail->setFrom('justsomeemail@gmail.com');
 	    $mail->addAddress('babkinevgeny@gmail.com');     // Add a recipient
 
 	    //Content
