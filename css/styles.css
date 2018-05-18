@@ -199,6 +199,20 @@ section {
 .page-header {
   height: 100vh;
   text-align: center;
+  position: relative;
+}
+.page-header-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -600px;
+  min-width: 1200px;
+}
+.page-header-block .btn-more {
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  min-width: 150px;
 }
 .menu {
   display: -webkit-flex;
@@ -299,16 +313,21 @@ section {
   height: 33%;
 }
 .navigation .img-wrapper {
-  height: 33%;
+  height: 44%;
   padding-top: 25px;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
+  position: relative;
 }
 .navigation .img-wrapper img {
   margin: auto;
   width: 200px;
   height: 240px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -100px;
 }
 .navigation-list {
   list-style: none;
@@ -458,16 +477,19 @@ section {
   color: #fff;
 }
 .title-header {
-  font-size: 36pt;
+  font-size: 54pt;
+  line-height: 54px;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   text-align: center;
   color: #fff;
   font-weight: 400;
+  margin-bottom: 50px;
+  margin-top: 0;
 }
 .mouse {
   position: absolute;
-  bottom: 50px;
+  bottom: 0px;
   left: 50%;
   margin-left: -16px;
   width: 32px;
@@ -2330,15 +2352,20 @@ div.item img.item-img {
 }
 @media screen and (min-height: 900px) {
   .page-header .title-header {
-    margin-top: 165px;
-    font-size: 60pt;
-  }
-  .page-header .mouse {
-    bottom: 200px;
+    font-size: 72pt;
+    line-height: 72pt;
+    margin-top: -50px;
   }
   .navigation .img-wrapper img {
     height: 295px;
-    width: 247px;
+    width: 246px;
+    margin-left: -123px;
+  }
+  .navigation-list {
+    width: 93%;
+  }
+  .navigation-link {
+    font-size: 60px;
   }
   .parallax .info {
     display: -webkit-flex;

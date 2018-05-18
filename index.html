@@ -77,23 +77,21 @@
           <button class="btn-text btn-text-send">Отправить заявку</button>
         </div>
       </div>
-      <!-- <div class="title-header-outer">
-        <div class="title-header-inner"> -->
-          <h1 class="title title-header">Изготовление металлоконструкций <br>любой сложности</h1>
-          <a href="catalog.html" class="btn-text btn-more" style="display: inline-block; min-width: 150px; margin: 0 auto;">Подробнее</a>
-        <!-- </div> -->
-      <!-- </div> -->
-      <div class="mouse"><span class="mouse-dot"></span></div>
-        <div class="video-container">
-          <div class="filter"></div>
-          <video autoplay loop class="fillWidth">
-            <source src="video/setservice.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-            <source src="PATH_TO_WEBM" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
-          </video>
-          <div class="poster hidden">
-            <img src="PATH_TO_JPEG" alt="">
-          </div>
+      <div class="page-header-block">
+        <h1 class="title title-header">Металлоконструкции</h1>
+        <a href="catalog.html" class="btn-text btn-more">Подробнее</a>
+        <div class="mouse"><span class="mouse-dot"></span></div>
+      </div>
+      <div class="video-container">
+        <div class="filter"></div>
+        <video autoplay loop class="fillWidth">
+          <source src="video/setservice.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+          <source src="PATH_TO_WEBM" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+        <div class="poster hidden">
+          <img src="PATH_TO_JPEG" alt="">
         </div>
+      </div>
   </header>
   <section class="products">
       <div class="title-outer wow fadeInUp" style="padding-bottom:25px">
@@ -358,6 +356,13 @@
           good.children('.container').children('.goods-content').children('.goods-text, .goods-title, .btn-text').css('left', '0px');
         }
       }
+    });
+
+    $(document).ready(function(){
+      var heightOfHeaderBlock = $('.page-header-block').height();
+      var widthOfHeaderBlock = $('.page-header-block').width();
+      
+);
     });
   </script>
 </body>
