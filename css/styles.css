@@ -2264,6 +2264,82 @@ div.item img.item-img {
   stroke-dasharray: 745.74853515625;
   animation: dash 2s ease-out forwards;
 }
+.article-form {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.article-form input[type="text"],
+.article-form input[type="email"],
+.article-form textarea {
+  display: inline-block;
+  margin: 0 auto;
+  min-width: 310px;
+  font-size: 18px;
+  line-height: 18px;
+  height: 50px;
+  padding: 13px 20px;
+  border: 2px solid #ddd;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  border-radius: 6px;
+  outline: 0;
+  margin-bottom: 20px;
+  height: 48px;
+  color: #5b5b5b;
+  background: #fff;
+  font-family: Ubuntu, Arial, sans-serif;
+}
+.article-form input[type="text"]:hover,
+.article-form input[type="email"]:hover,
+.article-form textarea:hover {
+  border: 2px solid #fff566;
+}
+.article-form input[type="text"]:focus,
+.article-form input[type="email"]:focus,
+.article-form textarea:focus {
+  color: #282828;
+  border: 2px solid #ffee00;
+}
+.article-form textarea {
+  height: 130px;
+  font-family: Arial, sans-serif;
+}
+.article-form button {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  border-radius: 6px;
+  height: 48px;
+  display: inline-block;
+  margin: 0 auto;
+  min-width: 310px;
+  text-align: center;
+  text-decoration: none;
+  font-family: Ubuntu, sans-serif;
+  font-size: 20px;
+  padding: 8px;
+  font-weight: 500;
+  border: none;
+  border-top: 2px solid #ffee00;
+  border-bottom: 2px solid #ffee00;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: .25s;
+  color: #686868;
+  background: #fff899;
+  margin-bottom: 20px;
+}
+.article-form button:hover {
+  background: #ffee00;
+  color: #282828;
+}
+.article-form button:focus {
+  outline: none;
+}
 @keyframes dash {
   0% {
     stroke-dashoffset: 745.74853515625;

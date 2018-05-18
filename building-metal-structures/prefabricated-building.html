@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../css/owl.theme.default.min.css">
   <link rel="stylesheet" href="../css/magnific-popup.css">
   <link rel="stylesheet" href="../css/styles.css">
+  <script src='https://www.google.com/recaptcha/api.js'></script>
   <style>
     .clearfix::after{
       display: table;
@@ -233,6 +234,11 @@
       <p class="article-text" style="margin-bottom: 40px;">
         Быстровозводимые здания на заказ являются малозатратным и короткосрочным способом возведения любых видов сооружений. <b>Set Service Group</b> производит быстровозводимые здания на заказ в СПб и Ленинградской области по вашим чертежам.
       </p>
+      <form class="article-form" action="../mail1.php" method="post">
+        <input type="text" name="organization" placeholder="Имя или название организации">
+        <input type="text" name="tel" placeholder="Телефон">
+        <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doFormSubmit">Отправить заявку</button>
+      </form>
       <div class="container-row" style="border-top: 2px solid #eee">
         <h3 class="title-section" style="margin-top: 20px;">Использование быстровозводимых зданий</h3>
         <div class="container-block clearfix">
@@ -354,7 +360,24 @@
             items:3
         }
     }
-  })
+  });
+
+  var doFormSubmit = function(){
+    $(".article-form").ajaxSubmit({
+      type:"POST",
+      data: $(".article-form").serialize(),
+      url:"../mail1.php",
+      success: function() {
+        $('.thanks').fadeIn().css('display', 'flex');
+        setTimeout(function() {
+          $('.thanks').fadeOut();
+        }, 3000);
+      },
+      error: function() {
+        alert("Error");
+      }
+    });
+  }
   </script>
 </body>
 </html>
