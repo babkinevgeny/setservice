@@ -2115,7 +2115,6 @@ div.item img.item-img {
   animation: dash 2s ease-out forwards;
 }
 .form {
-  background-image: linear-gradient(rgba(70, 70, 70, 0.6), rgba(70, 70, 70, 0.6)), url('../img/form-background.jpg');
   background-size: cover;
   display: -webkit-flex;
   display: -ms-flex;
@@ -2427,6 +2426,10 @@ div.item img.item-img {
   transition: .15s;
 }
 @media screen and (min-height: 900px) {
+  .page-header-block {
+    min-width: 1500px;
+    margin-left: -750px;
+  }
   .page-header .title-header {
     font-size: 72pt;
     line-height: 72pt;

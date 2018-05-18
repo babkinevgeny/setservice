@@ -46,14 +46,16 @@ $(document).ready(function (){
 
 });
 
-/* Заполнение адресов карт в contacts.html*/
+/* Заполнение адресов карт и выставление фоновой картинки для .form в contacts.html*/
 $(document).ready(function() {
   if($('.contacts-move').hasClass('contacts-move-spb')) {
+    $('.form').css('background-image', 'linear-gradient(rgba(70, 70, 70, 0.6), rgba(70, 70, 70, 0.6)), url("img/спб.jpg")');
     $('#map-move-msc').css('display', 'none');
     $('#map-move-spb').css('display', 'block');
     $('.contacts-content').prepend('<p class="contacts-title"><b>Set Service Group <br>в Санкт-Петербурге  </b></p><p class="contacts-info contacts-info-office"><b>Адрес офиса:</b> г. Санкт-Петербург, <br>ул. Ворошилова, 2, Деловой Центр "ОХТА"</p><p class="contacts-info contacts-info-factory"><b>Адрес производства:</b> г. Санкт-Петербург, <br>Кингисепское ш., 53</p><p class="contacts-info contacts-info-telephone"><b>Телефон:</b> +7(812) 627-15-16</p><p class="contacts-info contacts-info-email"><b>E-mail:</b> info@setservice24.ru</p>');
   }
   if($('.contacts-move').hasClass('contacts-move-msc')) {
+    $('.form').css('background-image', 'linear-gradient(rgba(70, 70, 70, 0.6), rgba(70, 70, 70, 0.6)), url("img/мск.jpg")');
     $('#map-move-spb').css('display', 'none');
     $('#map-move-msc').css('display', 'block');
     $('.contacts-content').prepend('<p class="contacts-title"><b>Set Service Group <br>в Москве  </b></p><p class="contacts-info contacts-info-office"><b>Адрес офиса:</b> г. Москва, ул. Ленинская Слобода, д.19, БЦ "Омега Плаза"</p><p class="contacts-info contacts-info-telephone"><b>Телефон:</b> +7 (495) 205-60-07</p><p class="contacts-info contacts-info-email"><b>E-mail:</b> info@setservice24.ru</p>');
@@ -65,6 +67,7 @@ $('.contacts-btns-big .btn-contacts-spb').click(function(){
   if ($('.contacts-move').hasClass('contacts-move-spb')) {
     return;
   } else {
+      $('.form').css('background-image', 'linear-gradient(rgba(70, 70, 70, 0.6), rgba(70, 70, 70, 0.6)), url("img/спб.jpg")');
       $('#map-move-msc').css('display', 'none');
       $('#map-move-spb').fadeIn();
       $('#map-move-spb .ymaps-image-with-content').css('display','none');
@@ -77,6 +80,7 @@ $('.contacts-btns-big .btn-contacts-msc').click(function(){
   if ($('.contacts-move').hasClass('contacts-move-msc')) {
     return;
   } else {
+    $('.form').css('background-image', 'linear-gradient(rgba(70, 70, 70, 0.6), rgba(70, 70, 70, 0.6)), url("img/мск.jpg")');
     $('#map-move-spb').css('display', 'none');
     $('#map-move-msc').fadeIn();
     $('#map-move-msc .ymaps-image-with-content').css('display','none');
