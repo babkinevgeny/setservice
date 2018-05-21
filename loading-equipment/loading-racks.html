@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../css/owl.theme.default.min.css">
   <link rel="stylesheet" href="../css/magnific-popup.css">
   <link rel="stylesheet" href="../css/styles.css">
+  <script src='https://www.google.com/recaptcha/api.js'></script>
   <style>
     .clearfix::after{
       display: table;
@@ -242,6 +243,21 @@
       <p class="article-text">
         Погрузочные эстакады представляет собой конструкцию, которая заметно облегчает процесс погрузки и разгрузки фур и вагонов. Фактически передвижная подгрузочная эстакада представляет собой мост, по которому погрузчик будет привозить или отвозить груз в любых условиях. <b>Set Service Group</b> производит погрузочные эстакады на заказ в СПб и Ленинградской области.
       </p>
+      <form class="article-form" action="../mail2.php" method="post">
+        <input type="text" name="organization" placeholder="Имя или название организации">
+        <input type="text" name="tel" placeholder="Телефон">
+        <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doFormSubmit">Отправить заявку</button>
+        <div class="thanks">
+          <div class="thanks-content">
+            <div class="mark">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 98.5 98.5" enable-background="new 0 0 98.5 98.5" xml:space="preserve">
+                <path class="checkmark" fill="none" stroke-width="8" stroke-miterlimit="10" d="M81.7,17.8C73.5,9.3,62,4,49.2,4C24.3,4,4,24.3,4,49.2s20.3,45.2,45.2,45.2s45.2-20.3,45.2-45.2c0-8.6-2.4-16.6-6.5-23.4l0,0L45.6,68.2L24.7,47.3"/>
+              </svg>
+            </div>
+            <h2 class="title-form">Спасибо за заявку. <br>Наш специалист свяжется с вами в ближайшее время.</h2>
+          </div>
+        </div>
+      </form>
       <h3 class="title-section">Классификация погрузочных эстакад</h3>
       <div class="container-block clearfix">
         <div class="container-block">
@@ -359,7 +375,24 @@
               items:3
           }
       }
-    })
+    });
+
+    var doFormSubmit = function(){
+      $(".article-form").ajaxSubmit({
+        type:"POST",
+        data: $(".article-form").serialize(),
+        url:"../mail2.php",
+        success: function() {
+          $('.thanks').fadeIn().css('display', 'flex');
+          setTimeout(function() {
+            $('.thanks').fadeOut();
+          }, 3000);
+        },
+        error: function() {
+          alert("Error");
+        }
+      });
+    };
   </script>
 </body>
 </html>
