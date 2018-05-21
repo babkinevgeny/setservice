@@ -300,6 +300,9 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 20px 0;
   input[type="text"],
   input[type="email"],
   textarea {
@@ -316,7 +319,6 @@
     -ms-border-radius: 6px;
     border-radius: 6px;
     outline: 0;
-    margin-bottom: 20px;
     height: 48px;
     color: lighten(#282828, 20%);
     background: #fff;
@@ -356,7 +358,6 @@
     transition: .25s;
     color: @color-btn;
     background: @background-btn;
-    margin-bottom: 20px;
       &:hover{
         background: @yellow;
         color: #282828;

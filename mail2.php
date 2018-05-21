@@ -29,7 +29,7 @@
       $tel = $_POST['tel'];
 	    //Recipients
 	    $mail->setFrom('justsomeemail@gmail.com');
-	    $mail->addAddress('babkinevgeny@gmail.com');     // Add a recipient
+	    $mail->addAddress('9290355@gmail.com');     // Add a recipient
 
 	    //Content
 	    $mail->isHTML(true);

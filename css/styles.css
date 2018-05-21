@@ -2269,6 +2269,9 @@ div.item img.item-img {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 .article-form input[type="text"],
 .article-form input[type="email"],
@@ -2286,7 +2289,6 @@ div.item img.item-img {
   -ms-border-radius: 6px;
   border-radius: 6px;
   outline: 0;
-  margin-bottom: 20px;
   height: 48px;
   color: #5b5b5b;
   background: #fff;
@@ -2330,7 +2332,6 @@ div.item img.item-img {
   transition: .25s;
   color: #686868;
   background: #fff899;
-  margin-bottom: 20px;
 }
 .article-form button:hover {
   background: #ffee00;
