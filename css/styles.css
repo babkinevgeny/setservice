@@ -1132,6 +1132,7 @@ ul.catalog {
   border-top: 1px solid #ddd;
 }
 .dropdown-item-content {
+  box-sizing: border-box;
   display: block;
 }
 .dropdown-item-content-show {
