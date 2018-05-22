@@ -405,18 +405,25 @@ ul.catalog{
     }
     .container{
       position: relative;
-      border-bottom: 2px solid #ddd;
+      border-bottom: 1px solid #ddd;
       line-height: 67px;
       padding: 0;
       .switch{
         position: absolute;
-        right:0;
+        right:10%;
         top:50%;
         margin-top:-15px;
+        box-sizing: border-box;
       }
     }
+    & > .container {
+      box-sizing: content-box;
+      padding: 0 10%;
+    }
     & + .container {
-      border-bottom: 2px solid #ddd;
+      box-sizing: content-box;
+      padding: 0 10%;
+      border-bottom: 1px solid #ddd;
     }
   }
   &-item{
@@ -425,7 +432,7 @@ ul.catalog{
     &:first-child{
       .dropdown-title{
         .container{
-          border-top: 2px solid #ddd;
+          border-top: 1px solid #ddd;
         }
       }
     }

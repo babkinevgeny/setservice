@@ -1104,25 +1104,32 @@ ul.catalog {
 }
 .dropdown-title .container {
   position: relative;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 1px solid #ddd;
   line-height: 67px;
   padding: 0;
 }
 .dropdown-title .container .switch {
   position: absolute;
-  right: 0;
+  right: 10%;
   top: 50%;
   margin-top: -15px;
+  box-sizing: border-box;
+}
+.dropdown-title > .container {
+  box-sizing: content-box;
+  padding: 0 10%;
 }
 .dropdown-title + .container {
-  border-bottom: 2px solid #ddd;
+  box-sizing: content-box;
+  padding: 0 10%;
+  border-bottom: 1px solid #ddd;
 }
 .dropdown-item {
   position: relative;
   list-style-type: none;
 }
 .dropdown-item:first-child .dropdown-title .container {
-  border-top: 2px solid #ddd;
+  border-top: 1px solid #ddd;
 }
 .dropdown-item-content {
   display: block;
@@ -2537,12 +2544,22 @@ div.item img.item-img {
     margin-right: 0;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1000px) {
+@media screen and (min-width: 900px) and (max-width: 1126px) {
   .title-header {
     font-size: 30pt;
   }
   .category-item {
     width: 25%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .category-item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .category-item {
+    width: 100%;
   }
 }
 @media screen and (min-width: 667px) and (max-width: 768px) {
@@ -2626,9 +2643,6 @@ div.item img.item-img {
   .menu-fixed .btn-text-send {
     display: none;
   }
-  .category-item {
-    width: 50%;
-  }
   .parallax .info-item:first-child {
     display: none;
   }
@@ -2675,9 +2689,6 @@ div.item img.item-img {
   }
   .menu-fixed .hamburger::after {
     display: none;
-  }
-  .category-item {
-    width: 100%;
   }
   .parallax .info-item:first-child {
     display: none;

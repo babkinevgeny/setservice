@@ -6,7 +6,7 @@ $('.dropdown-title').click(function() {
   } else {
     $(this).children('.container').children('.switch').addClass('switch-checked');
     $(this).siblings('.container').children('.dropdown-item-content').slideDown();
-    $(this).siblings('.container').css('border-bottom', '2px solid #ddd');
+    $(this).siblings('.container').css('border-bottom', '1px solid #ddd');
   }
 });
 

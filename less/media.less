@@ -125,13 +125,27 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1000px) {
+@media screen and (min-width: 900px) and (max-width: 1126px) {
   .title-header {
     font-size: 30pt;
   }
   .category{
     &-item{
       width: 25%;
+    }
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .category {
+    &-item {
+      width: 50%;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .category {
+    &-item {
+      width: 100%;
     }
   }
 }
@@ -232,13 +246,6 @@
     }
   }
 
-  .category {
-    &-item {
-      width: 50%;
-    }
-  }
-
-
   .parallax{
     .info{
       &-item:first-child{
@@ -298,11 +305,6 @@
       &::after{
         display: none;
       }
-    }
-  }
-  .category {
-    &-item {
-      width: 100%;
     }
   }
 
