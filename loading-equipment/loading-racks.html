@@ -243,8 +243,9 @@
       <p class="article-text">
         Погрузочные эстакады представляет собой конструкцию, которая заметно облегчает процесс погрузки и разгрузки фур и вагонов. Фактически передвижная подгрузочная эстакада представляет собой мост, по которому погрузчик будет привозить или отвозить груз в любых условиях. <b>Set Service Group</b> производит погрузочные эстакады на заказ в СПб и Ленинградской области.
       </p>
-      <form class="article-form" action="../mail2.php" method="post">
+      <form class="article-form" action="../mail1.php" method="post">
         <input type="text" name="organization" placeholder="Имя или название организации">
+        <input type="text" name="email" placeholder="E-mail">
         <input type="text" name="tel" placeholder="Телефон">
         <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doFormSubmit">Отправить заявку</button>
         <div class="thanks">
@@ -382,7 +383,7 @@
       $(".article-form").ajaxSubmit({
         type:"POST",
         data: $(".article-form").serialize(),
-        url:"../mail2.php",
+        url:"../mail1.php",
         success: function() {
           $('.thanks').fadeIn().css('display', 'flex');
           setTimeout(function() {

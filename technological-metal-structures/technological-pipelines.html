@@ -232,8 +232,9 @@
     <article class="article-wrapper">
       <h2 class="title-section">Технологические трубопроводы</h2>
       <p class="article-text">Технологический трубопровод – это промежуточное звено в работе промышленного оборудования, предназначенное для транспортировки, переработки или получения конечных, исходных или промежуточных продуктов производства, смазки и других технологических жидкостей или газов, участвующих в работе оборудования. <b>Set Service Group</b> занимается производством технологических трубопроводов в СПб и Ленинградской области на заказ по вашим чертежам.</p>
-      <form class="article-form" action="../mail2.php" method="post">
+      <form class="article-form" action="../mail1.php" method="post">
         <input type="text" name="organization" placeholder="Имя или название организации">
+        <input type="text" name="email" placeholder="E-mail">
         <input type="text" name="tel" placeholder="Телефон">
         <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doFormSubmit">Отправить заявку</button>
         <div class="thanks">
@@ -362,7 +363,7 @@
     $(".article-form").ajaxSubmit({
       type:"POST",
       data: $(".article-form").serialize(),
-      url:"../mail2.php",
+      url:"../mail1.php",
       success: function() {
         $('.thanks').fadeIn().css('display', 'flex');
         setTimeout(function() {

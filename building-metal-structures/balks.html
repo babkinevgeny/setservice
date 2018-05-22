@@ -228,8 +228,9 @@
     <article class="article-wrapper">
           <h2 class="title-section">Сварные подкрановые балки из металлоконструкций</h2>
           <p class="article-text">Металлическая подкрановая балка представляет собой металлоконструкцию состоящую из трех полос стали, которые сварены по всей своей длине со всех сторон. При этом между полками подкрановой балки ввариваются ребра жесткости, которые увеличивают выдерживаемую подкрановой балкой нагрузку. <b>Set Service Group</b> занимается производством и монтажом подкрановых сварных балок любой сложности по вашему заказу. </p>
-          <form class="article-form" action="../mail2.php" method="post">
+          <form class="article-form" action="../mail1.php" method="post">
             <input type="text" name="organization" placeholder="Имя или название организации">
+            <input type="text" name="email" placeholder="E-mail">
             <input type="text" name="tel" placeholder="Телефон">
             <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doFormSubmit">Отправить заявку</button>
             <div class="thanks">
@@ -342,7 +343,7 @@
     $(".article-form").ajaxSubmit({
       type:"POST",
       data: $(".article-form").serialize(),
-      url:"../mail2.php",
+      url:"../mail1.php",
       success: function() {
         $('.thanks').fadeIn().css('display', 'flex');
         setTimeout(function() {

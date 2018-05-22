@@ -303,16 +303,47 @@
   max-width: 1160px;
   margin: 0 auto;
   padding: 20px 0;
+  .article-form-block{
+    max-width: 310px;
+    &:first-child{
+      margin-left: auto;
+      margin-right: 10px;
+      text-align: right;
+    }
+    &:nth-child(2){
+      margin-left: 10px;
+      margin-right: auto;
+      text-align: left;
+    }
+    input[type="text"]{
+      height: 50px;
+    }
+    input[type="text"],
+    textarea{
+      margin-bottom: 20px;
+      width: 300px;
+    }
+    textarea{
+      height: 120px;
+      resize: none;
+      overflow: auto;
+    }
+    button {
+      margin-top: -3px;
+      width: 100%;
+      height: 50px;
+    }
+  }
   input[type="text"],
   input[type="email"],
   textarea {
     display: inline-block;
     margin: 0 auto;
-    min-width: 310px;
+    max-width: 300px;
     font-size: 18px;
     line-height: 18px;
     height: 50px;
-    padding: 13px 20px;
+    padding: 13px 10px;
     border: 2px solid #ddd;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -333,7 +364,6 @@
   }
   textarea {
     height: 130px;
-    font-family: Arial, sans-serif;
   }
   button {
     -webkit-border-radius: 6px;
@@ -343,7 +373,7 @@
     height: 48px;
     display: inline-block;
     margin: 0 auto;
-    min-width: 310px;
+    width: 200px;
     text-align: center;
     text-decoration: none;
     font-family: Ubuntu, sans-serif;

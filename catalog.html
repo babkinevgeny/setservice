@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script src='https://www.google.com/recaptcha/api.js'></script>
   <style>
     .page-header {
       height: 75px;
@@ -296,10 +297,21 @@
       </li> -->
     </ul>
   </section>
-  <form class="article-form" action="mail2.php" method="post">
-    <input type="text" name="organization" placeholder="Имя или название организации">
-    <input type="text" name="tel" placeholder="Телефон">
-    <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doFormSubmit">Отправить заявку</button>
+  <h2 class="title-section">Связаться со специалистом</h2>
+  <div class="form-text" style="color: #282828;">
+    Задайте ваш вопрос или кратко опишите ситуацию.<br>
+    Мы очень быстро свяжемся с вами :)
+  </div>
+  <form class="article-form" action="mail1.php" method="post">
+    <div class="article-form-block">
+      <input type="text" name="organization" placeholder="Имя или название организации">
+      <input type="text" name="email" placeholder="E-mail">
+      <input type="text" name="tel" placeholder="Телефон">
+    </div>
+    <div class="article-form-block">
+      <textarea name="message" cols="30" placeholder="Текст заявки"></textarea>
+      <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doFormSubmit">Отправить заявку</button>
+    </div>
     <div class="thanks">
       <div class="thanks-content">
         <div class="mark">
@@ -363,7 +375,7 @@
     $(".article-form").ajaxSubmit({
       type:"POST",
       data: $(".article-form").serialize(),
-      url:"mail2.php",
+      url:"mail1.php",
       success: function() {
         $('.thanks').fadeIn().css('display', 'flex');
         setTimeout(function() {

@@ -233,8 +233,9 @@
       <h2 class="title-section">Закладные детали</h2>
       <p class="article-text">Закладная деталь— это металлическая конструкция различной конфигурации, которую заливают в бетон или вставляют в кирпичную кладку. Она состоит из металлической пластины и арматуры или анкеров, которые скрепляется между собой с помощью сварки.
 Пластина может иметь самую различную толщину в зависимости от целей использования данной детали. <b>Set Service Group</b> производит закладные детали в СПб и Ленинградской области различных конфигураций на заказ.</p>
-      <form class="article-form" action="../mail2.php" method="post">
+      <form class="article-form" action="../mail1.php" method="post">
         <input type="text" name="organization" placeholder="Имя или название организации">
+        <input type="text" name="email" placeholder="E-mail">
         <input type="text" name="tel" placeholder="Телефон">
         <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doFormSubmit">Отправить заявку</button>
         <div class="thanks">
@@ -369,7 +370,7 @@
     $(".article-form").ajaxSubmit({
       type:"POST",
       data: $(".article-form").serialize(),
-      url:"../mail2.php",
+      url:"../mail1.php",
       success: function() {
         $('.thanks').fadeIn().css('display', 'flex');
         setTimeout(function() {

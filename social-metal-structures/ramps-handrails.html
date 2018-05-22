@@ -234,8 +234,9 @@
       <p class="article-text">
         Изготовление пандусов и поручней с помощью металлоконструкций позволяет решить проблему доступности без сложных работ по изготовлению железобетонных сооружений. Изготовление металлических пандусов более универсально, имеет меньше ограничений по месту размещения, возможно в любое время года. <b>Set Service Group</b> производит  пандусы на заказ и поручни на заказ в СПб и Ленинградской области.
       </p>
-      <form class="article-form" action="../mail2.php" method="post">
+      <form class="article-form" action="../mail1.php" method="post">
         <input type="text" name="organization" placeholder="Имя или название организации">
+        <input type="text" name="email" placeholder="E-mail">
         <input type="text" name="tel" placeholder="Телефон">
         <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doFormSubmit">Отправить заявку</button>
         <div class="thanks">
@@ -383,7 +384,7 @@
     $(".article-form").ajaxSubmit({
       type:"POST",
       data: $(".article-form").serialize(),
-      url:"../mail2.php",
+      url:"../mail1.php",
       success: function() {
         $('.thanks').fadeIn().css('display', 'flex');
         setTimeout(function() {

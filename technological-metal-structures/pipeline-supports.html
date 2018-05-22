@@ -232,8 +232,9 @@
     <article class="article-wrapper">
       <h2 class="title-section">Опоры трубопроводов</h2>
       <p class="article-text">Опоры трубопроводов представляют собой металлоконструкции, которые переводя осевые, поперечные, вертикальные нагрузки, а также крутящиеся моменты на грунт или на несущие конструкции. Опоры трубопроводов используются при закладке трубопроводных магистралей различного назначения. Set Service Group занимается опор для трубопроводов на заказ в СПб и Ленинградской области.</p>
-      <form class="article-form" action="../mail2.php" method="post">
+      <form class="article-form" action="../mail1.php" method="post">
         <input type="text" name="organization" placeholder="Имя или название организации">
+        <input type="text" name="email" placeholder="E-mail">
         <input type="text" name="tel" placeholder="Телефон">
         <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doFormSubmit">Отправить заявку</button>
         <div class="thanks">
@@ -356,7 +357,7 @@
     $(".article-form").ajaxSubmit({
       type:"POST",
       data: $(".article-form").serialize(),
-      url:"../mail2.php",
+      url:"../mail1.php",
       success: function() {
         $('.thanks').fadeIn().css('display', 'flex');
         setTimeout(function() {
