@@ -2038,14 +2038,14 @@ div.item img.item-img {
   font-size: 50px;
   text-align: center;
   margin-bottom: 15px;
-  margin-top: 15px;
+  margin-top: 0px;
   color: #000;
   text-transform: uppercase;
   font-weight: normal;
 }
 .popupform p {
   display: block;
-  max-width: 520px;
+  max-width: 915px;
   padding: 0 15px;
   margin: 0 auto;
   text-align: center;
@@ -2090,6 +2090,32 @@ div.item img.item-img {
 .popupform textarea {
   height: 130px;
   font-family: Arial, sans-serif;
+}
+.popupform input[type="file"] {
+  display: none;
+}
+.popupform .btn-file {
+  display: block;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  background: #fff899;
+  line-height: 50px;
+  border-radius: 4px;
+  color: #686868;
+  cursor: pointer;
+  transition: .15s;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.popupform .btn-file:hover {
+  background: #ffee00;
+  transition: .15s;
+  color: #282828;
+}
+.popupform .btn-file:active,
+.popupform .btn-file:focus {
+  outline: none;
 }
 .popupform button {
   display: block;
