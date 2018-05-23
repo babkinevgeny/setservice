@@ -1,3 +1,8 @@
+$('#input-file').change(function() {
+  if ($(this).val() != '') $(this).prev().text('Файл загружен');
+  else $(this).prev().text('Загрузить файл');
+});
+
 $('.hamburger').click(function() {
   $('.navigation').slideDown().css('display','flex');
 });

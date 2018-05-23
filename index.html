@@ -305,7 +305,7 @@
         <textarea name="message" cols="30" placeholder="Текст заявки"></textarea>
         <label class="btn-file" for="input-file">Загрузить файл</label>
         <input type="file" name="file" id="input-file">
-        <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doFormSubmit">Отправить заявку</button>
+        <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doPopupFormSubmit">Отправить заявку</button>
       </form>
     </div>
     <div class="popupform-thanks">
@@ -372,11 +372,7 @@
     });
   </script>
   <script>
-    $('#input-file').change(function() {
-      if ($(this).val() != '') $(this).prev().text('Файл загружен');
-      else $(this).prev().text('Загрузить файл');
-    });
-    var doFormSubmit = function(){
+    var doPopupFormSubmit = function(){
       $(".popupform form").ajaxSubmit({
         type:"POST",
         data: $(".popupform form").serialize(),
@@ -391,7 +387,7 @@
           alert("Error");
         }
       });
-    }
+    };
   </script>
 
   <!-- Yandex.Metrika counter -->

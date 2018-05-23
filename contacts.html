@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script src='https://www.google.com/recaptcha/api.js'></script>
   <style>
     .page-header {
       height: 75px;
@@ -104,7 +105,7 @@
           </div>
         </div>
         <!-- <input type="submit" value="Отправить" class="btn-text" class="g-recaptcha" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj"> -->
-        <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doFormSubmit">Отправить</button>
+        <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit">Отправить</button>
       </form>
     </div>
     <div class="thanks">
@@ -135,18 +136,14 @@
       <div class="btn-form-close"></div>
       <h2 class="title-form">Сделайте заказ прямо сейчас</h2>
       <p>Чтобы экономить ваше время, мы создали систему электронной подачи заказов. Заполните форму и наш специалист свяжится с вами в ближайшее время.</p>
-      <form enctype="multipart/form-data">
-        <!-- Hidden Required Fields -->
-      	<input type="hidden" name="project_name" value="setservice24.ru">
-      	<input type="hidden" name="admin_email" value="9290355@gmail.com">
-      	<input type="hidden" name="form_subject" value="Заявка с сайта setservice24.ru">
-      	<!-- END Hidden Required Fields -->
-
-      	<input type="text" name="Имя или организация" placeholder="Ваше имя или название организации *" required>
-      	<input type="text" name="E-mail" placeholder="Ваш E-mail *" required>
-      	<input type="text" name="Телефон" placeholder="Ваш телефон *" required>
-        <textarea name="Текст заявки" id="" cols="30" rows="10" placeholder="Текст заявки"></textarea>
-      	<button>Отправить</button>
+      <form enctype="multipart/form-data" action="mail1.php" method="post">
+        <input type="text" name="organization" placeholder="Ваше имя или название организации">
+        <input type="text" name="email" placeholder="Ваш E-mail">
+        <input type="text" name="tel" placeholder="Ваш телефон ">
+        <textarea name="message" cols="30" placeholder="Текст заявки"></textarea>
+        <label class="btn-file" for="input-file">Загрузить файл</label>
+        <input type="file" name="file" id="input-file">
+        <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doPopupFormSubmit">Отправить заявку</button>
       </form>
     </div>
     <div class="popupform-thanks">
@@ -159,7 +156,7 @@
         <h2 class="title-form">Спасибо за заявку. <br>Наш специалист свяжется с вами в ближайшее время.</h2>
       </div>
     </div>
-    </section>
+  </section>
   <footer class="page-footer">
     <div class="page-footer-block">
       <!-- Yandex.Metrika informer -->
@@ -232,11 +229,7 @@
 
   </script>
   <script>
-  $('#input-file').change(function() {
-    if ($(this).val() != '') $(this).prev().text('Файл загружен');
-    else $(this).prev().text('Загрузить файл');
-  });
-  var doFormSubmit = function(){
+  var doArticleFormSubmit = function(){
     $("#form").ajaxSubmit({
       type:"POST",
       data: $("#form").serialize(),
@@ -251,7 +244,23 @@
         alert("Error");
       }
     });
-  }
+  };
+  var doPopupFormSubmit = function(){
+    $(".popupform form").ajaxSubmit({
+      type:"POST",
+      data: $(".popupform form").serialize(),
+      url:"mail1.php",
+      success: function() {
+        $('.popupform-thanks').fadeIn().css('display', 'flex');
+        setTimeout(function() {
+          $('.popupform-thanks').fadeOut();
+        }, 3000);
+      },
+      error: function() {
+        alert("Error");
+      }
+    });
+  };
   </script>
   <!-- Yandex.Metrika counter-->
   <script type="text/javascript" >
