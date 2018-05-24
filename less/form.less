@@ -115,7 +115,7 @@
     color: @color-btn;
     cursor: pointer;
     transition: .15s;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     text-align: center;
     &:hover{
       background: @yellow;
@@ -126,6 +126,9 @@
     &:focus{
       outline: none;
     }
+  }
+  .confidentiality {
+    margin: 6px 0;
   }
   button {
     display: block;
@@ -421,6 +424,23 @@
       &:focus{
         outline: none;
       }
+  }
+}
+
+.confidentiality {
+  font-size: 9px;
+  text-align: center;
+  color: lighten(#282828, 30%);
+  a{
+    text-decoration: underline;
+    color: lighten(#282828, 30%);
+    transition: .2s;
+    &:hover,
+    &:active,
+    {
+      color: #282828;
+      transition: .2s;
+    }
   }
 }
 

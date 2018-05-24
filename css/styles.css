@@ -2105,7 +2105,7 @@ div.item img.item-img {
   color: #686868;
   cursor: pointer;
   transition: .15s;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   text-align: center;
 }
 .popupform .btn-file:hover {
@@ -2116,6 +2116,9 @@ div.item img.item-img {
 .popupform .btn-file:active,
 .popupform .btn-file:focus {
   outline: none;
+}
+.popupform .confidentiality {
+  margin: 6px 0;
 }
 .popupform button {
   display: block;
@@ -2408,6 +2411,21 @@ div.item img.item-img {
 }
 .article-form button:focus {
   outline: none;
+}
+.confidentiality {
+  font-size: 9px;
+  text-align: center;
+  color: #757575;
+}
+.confidentiality a {
+  text-decoration: underline;
+  color: #757575;
+  transition: .2s;
+}
+.confidentiality a:hover,
+.confidentiality a:active {
+  color: #282828;
+  transition: .2s;
 }
 @keyframes dash {
   0% {
