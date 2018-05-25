@@ -333,16 +333,14 @@
   margin: 0 auto;
   padding: 20px 0;
   .article-form-block{
-    max-width: 310px;
+    width: 50%;
     &:first-child{
-      margin-left: auto;
-      margin-right: 10px;
       text-align: right;
+      padding-right: 10px;
     }
     &:nth-child(2){
-      margin-left: 10px;
-      margin-right: auto;
       text-align: left;
+      padding-left: 10px;
     }
     input[type="text"]{
       height: 50px;
@@ -350,7 +348,7 @@
     input[type="text"],
     textarea{
       margin-bottom: 20px;
-      width: 300px;
+      width: 420px;
     }
     textarea{
       height: 120px;
@@ -359,7 +357,7 @@
     }
     button {
       margin-top: -3px;
-      width: 100%;
+      width: 420px;
       height: 50px;
     }
   }
@@ -442,6 +440,11 @@
       transition: .2s;
     }
   }
+}
+
+.section-form{
+  padding: 20px 0;
+  border-bottom: none;
 }
 
 @keyframes dash {

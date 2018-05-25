@@ -2321,17 +2321,15 @@ div.item img.item-img {
   padding: 20px 0;
 }
 .article-form .article-form-block {
-  max-width: 310px;
+  width: 50%;
 }
 .article-form .article-form-block:first-child {
-  margin-left: auto;
-  margin-right: 10px;
   text-align: right;
+  padding-right: 10px;
 }
 .article-form .article-form-block:nth-child(2) {
-  margin-left: 10px;
-  margin-right: auto;
   text-align: left;
+  padding-left: 10px;
 }
 .article-form .article-form-block input[type="text"] {
   height: 50px;
@@ -2339,7 +2337,7 @@ div.item img.item-img {
 .article-form .article-form-block input[type="text"],
 .article-form .article-form-block textarea {
   margin-bottom: 20px;
-  width: 300px;
+  width: 420px;
 }
 .article-form .article-form-block textarea {
   height: 120px;
@@ -2348,7 +2346,7 @@ div.item img.item-img {
 }
 .article-form .article-form-block button {
   margin-top: -3px;
-  width: 100%;
+  width: 420px;
   height: 50px;
 }
 .article-form input[type="text"],
@@ -2432,6 +2430,10 @@ div.item img.item-img {
   color: #282828;
   transition: .2s;
 }
+.section-form {
+  padding: 20px 0;
+  border-bottom: none;
+}
 @keyframes dash {
   0% {
     stroke-dashoffset: 745.74853515625;
@@ -2459,7 +2461,7 @@ div.item img.item-img {
 }
 .page-footer-block {
   color: #777;
-  width: 33%;
+  width: 33.33%;
 }
 .page-footer-block:first-child {
   text-align: left;
