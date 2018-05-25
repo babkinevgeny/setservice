@@ -2318,7 +2318,7 @@ div.item img.item-img {
   flex-wrap: wrap;
   max-width: 1160px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding-top: 20px;
 }
 .article-form .article-form-block {
   width: 50%;
@@ -2414,6 +2414,9 @@ div.item img.item-img {
 }
 .article-form button:focus {
   outline: none;
+}
+.article-form .confidentiality {
+  margin: 16px 0;
 }
 .confidentiality {
   font-size: 9px;
