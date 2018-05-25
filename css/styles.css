@@ -1723,6 +1723,9 @@ div.item img.item-img {
   letter-spacing: 0;
   text-align: center;
 }
+.catalog-wrapper > .title-section {
+  padding-top: 11px;
+}
 .catalog-wrapper .btn-text-send {
   display: block;
   margin: 0 auto;
@@ -1765,10 +1768,8 @@ div.item img.item-img {
   transition: .25s;
 }
 .catalog-worker {
-  margin: 20px 0;
-  border-bottom: 2px solid #eee;
   padding-bottom: 20px;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 .catalog-worker .title-section {
   padding-left: 20px;
@@ -1776,7 +1777,10 @@ div.item img.item-img {
   padding-top: 0px;
   margin-bottom: 20px;
   padding: 0;
-  font-size: 16px;
+  font-size: 18px;
+  position: relative;
+  left: -20px;
+  width: 324px;
 }
 .catalog-worker-img {
   display: block;
@@ -1803,14 +1807,17 @@ div.item img.item-img {
   color: #686868;
   display: block;
   text-align: center;
-  font-size: 22px;
-  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.5em;
   transition: .25s;
 }
 .catalog-phone:hover,
 .catalog-email:hover {
   color: #000;
   transition: .25s;
+}
+.catalog-email {
+  margin-bottom: 20px;
 }
 .category {
   list-style: none;
@@ -1878,9 +1885,6 @@ div.item img.item-img {
   left: 0;
   top: 95px;
   background: #fff;
-}
-.main-block .catalog-wrapper > .title-section {
-  text-align: left;
 }
 .main-block .catalog-wrapper .catalog-title {
   padding: 0;

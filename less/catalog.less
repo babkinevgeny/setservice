@@ -14,6 +14,9 @@
       letter-spacing: 0;
       text-align: center;
     }
+    > .title-section {
+      padding-top: 11px;
+    }
     .btn-text-send{
       display: block;
       margin: 0 auto;
@@ -61,17 +64,18 @@
   &-content{
   }
   &-worker{
-    margin: 20px 0;
-    border-bottom: 2px solid #eee;
     padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 40px;
     .title-section {
       padding-left: 20px;
       padding-bottom: 0px;
       padding-top: 0px;
       margin-bottom: 20px;
       padding: 0;
-      font-size: 16px;
+      font-size: 18px;
+      position: relative;
+      left: -20px;
+      width: 324px;
     }
     &-img{
       display: block;
@@ -102,13 +106,16 @@
     color: @color-btn;
     display: block;
     text-align: center;
-    font-size: 22px;
-    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 1.5em;
     transition: .25s;
     &:hover{
       color: #000;
       transition: .25s;
     }
+  }
+  &-email{
+    margin-bottom: 20px;
   }
 }
 
@@ -178,9 +185,6 @@
     left: 0;
     top: 95px;
     background: #fff;
-    > .title-section {
-      text-align: left;
-    }
     .catalog-title{
       padding: 0;
       border-bottom: 2px solid #eee;
