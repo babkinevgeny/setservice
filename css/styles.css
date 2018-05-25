@@ -1873,6 +1873,7 @@ div.item img.item-img {
 }
 .main-block .catalog-wrapper {
   padding: 20px;
+  margin-bottom: 20px;
   position: absolute;
   left: 0;
   top: 95px;
