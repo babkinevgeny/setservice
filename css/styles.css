@@ -2055,7 +2055,7 @@ div.item img.item-img {
   margin: 0 auto;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .popupform form {
   max-width: 430px;
@@ -2123,7 +2123,7 @@ div.item img.item-img {
   outline: none;
 }
 .popupform .confidentiality {
-  margin: 6px 0;
+  margin: 16px 0;
 }
 .popupform button {
   display: block;
