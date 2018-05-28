@@ -127,9 +127,6 @@
       outline: none;
     }
   }
-  .confidentiality {
-    margin: 16px 0;
-  }
   button {
     display: block;
     margin: 0 auto;
@@ -155,6 +152,9 @@
       &:focus{
         outline: none;
       }
+  }
+  .confidentiality {
+    margin: 10px 0;
   }
 }
 
@@ -327,11 +327,21 @@
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   max-width: 1160px;
   margin: 0 auto;
   padding-top: 20px;
+  &-field{
+    position: relative;
+    label{
+      position: absolute;
+      top: -16px;
+      left: 0;
+      font-size: 12px;
+      color: red;
+    }
+  }
   .article-form-block{
     width: 50%;
     &:first-child{
@@ -365,7 +375,6 @@
   input[type="email"],
   textarea {
     display: inline-block;
-    margin: 0 auto;
     width: 230px;
     font-size: 18px;
     line-height: 18px;
@@ -392,6 +401,9 @@
   textarea {
     height: 130px;
   }
+  input + div {
+    display: none;
+  }
   button {
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -399,8 +411,7 @@
     border-radius: 6px;
     height: 48px;
     display: inline-block;
-    margin: 0 auto;
-    width: 200px;
+    width: 230px;
     text-align: center;
     text-decoration: none;
     font-family: Ubuntu, sans-serif;
@@ -424,12 +435,14 @@
       }
   }
   .confidentiality{
-    margin: 16px 0;
+    margin: 10px 0;
+    text-align: left;
+    width: 100%;
   }
 }
 
 .confidentiality {
-  font-size: 9px;
+  font-size: 11px;
   text-align: center;
   color: lighten(#282828, 30%);
   a{

@@ -1772,15 +1772,10 @@ div.item img.item-img {
   padding-top: 40px;
 }
 .catalog-worker .title-section {
-  padding-left: 20px;
-  padding-bottom: 0px;
   padding-top: 0px;
   margin-bottom: 20px;
   padding: 0;
-  font-size: 18px;
-  position: relative;
-  left: -20px;
-  width: 324px;
+  font-size: 16px;
 }
 .catalog-worker-img {
   display: block;
@@ -2122,9 +2117,6 @@ div.item img.item-img {
 .popupform .btn-file:focus {
   outline: none;
 }
-.popupform .confidentiality {
-  margin: 16px 0;
-}
 .popupform button {
   display: block;
   margin: 0 auto;
@@ -2150,6 +2142,9 @@ div.item img.item-img {
 }
 .popupform button:focus {
   outline: none;
+}
+.popupform .confidentiality {
+  margin: 10px 0;
 }
 .mark {
   width: 200px;
@@ -2314,11 +2309,21 @@ div.item img.item-img {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   max-width: 1160px;
   margin: 0 auto;
   padding-top: 20px;
+}
+.article-form-field {
+  position: relative;
+}
+.article-form-field label {
+  position: absolute;
+  top: -16px;
+  left: 0;
+  font-size: 12px;
+  color: red;
 }
 .article-form .article-form-block {
   width: 50%;
@@ -2353,7 +2358,6 @@ div.item img.item-img {
 .article-form input[type="email"],
 .article-form textarea {
   display: inline-block;
-  margin: 0 auto;
   width: 230px;
   font-size: 18px;
   line-height: 18px;
@@ -2384,6 +2388,9 @@ div.item img.item-img {
 .article-form textarea {
   height: 130px;
 }
+.article-form input + div {
+  display: none;
+}
 .article-form button {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -2391,8 +2398,7 @@ div.item img.item-img {
   border-radius: 6px;
   height: 48px;
   display: inline-block;
-  margin: 0 auto;
-  width: 200px;
+  width: 230px;
   text-align: center;
   text-decoration: none;
   font-family: Ubuntu, sans-serif;
@@ -2416,10 +2422,12 @@ div.item img.item-img {
   outline: none;
 }
 .article-form .confidentiality {
-  margin: 16px 0;
+  margin: 10px 0;
+  text-align: left;
+  width: 100%;
 }
 .confidentiality {
-  font-size: 9px;
+  font-size: 11px;
   text-align: center;
   color: #757575;
 }
@@ -2608,6 +2616,11 @@ div.item img.item-img {
     line-height: 27px;
     text-align: left;
     padding-left: 10px;
+  }
+  .article-form input[type='text'],
+  .article-form textarea,
+  .article-form button {
+    width: 250px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {

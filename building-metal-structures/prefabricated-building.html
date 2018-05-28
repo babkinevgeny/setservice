@@ -250,11 +250,20 @@
             <li>административные и общественные здания</li>
           </ul>
         </div>
-        <form class="article-form" action="../mail1.php" method="post">
-          <input type="text" name="organization" placeholder="Название организации">
-          <input type="text" name="email" placeholder="E-mail">
-          <input type="text" name="tel" placeholder="Телефон">
-          <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit">Отправить заявку</button>
+        <form class="article-form" action="../mail1.php" method="post" id="article-form">
+          <div class="article-form-field">
+            <input type="text" name="organization" placeholder="Название организации">
+          </div>
+          <div class="article-form-field">
+            <input type="text" name="email" placeholder="E-mail">
+          </div>
+          <div class="article-form-field">
+            <input type="text" name="tel" placeholder="Телефон">
+          </div>
+          <div class="article-form-field">
+            <input type="submit" value="Submit" name="submit">
+          </div>
+          <!-- <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit">Отправить заявку</button> -->
           <div class="confidentiality">Нажимая кнопку «Отправить заявку», Вы соглашаетесь на <a href="/confidentiality.html">обработку персональных данных</a></div>
           <div class="thanks">
             <div class="thanks-content">
@@ -356,6 +365,7 @@
   <script src="../js/jquery-3.3.1.min.js"></script>
   <script src="../js/owl.carousel.min.js"></script>
   <script src="../js/form.min.js"></script>
+  <script src="../js/jquery.validate.min.js"></script>
   <!--<script src="js/jquery.magnific-popup.js"></script> -->
   <script src="../js/common.js"></script>
   <script>
@@ -378,22 +388,61 @@
     }
   });
 
-  var doArticleFormSubmit = function(){
-    $(".article-form").ajaxSubmit({
-      type:"POST",
-      data: $(".article-form").serialize(),
-      url:"../mail1.php",
-      success: function() {
-        $('.thanks').fadeIn().css('display', 'flex');
-        setTimeout(function() {
-          $('.thanks').fadeOut();
-        }, 3000);
-      },
-      error: function() {
-        alert("Error");
-      }
-    });
-  };
+  // $("#article-form").validate({
+  //
+  //   rules: {
+  //     organization: {
+  //       required: true
+  //     },
+  //     email: {
+  //       required: true,
+  //       email: true
+  //     },
+  //     tel: {
+  //       required: true,
+  //       digits: true
+  //     }
+  //   }
+  // });
+
+
+
+  $(function(){
+
+      $('#article-form').validate({
+        rules: {
+          organization: {
+            required: true
+          },
+          email: {
+            required: true,
+            email: true
+          },
+          tel: {
+            required: true,
+            digits: true
+          }
+        },
+        submitHandler: function(form) {
+
+              $(form).ajaxSubmit({
+                type:"POST",
+                data: $(form).serialize(),
+                url:"../mail1.php",
+                success: function() {
+                  $('.thanks').fadeIn().css('display', 'flex');
+                  setTimeout(function() {
+                    $('.thanks').fadeOut();
+                  }, 3000);
+                },
+                error: function() {
+                  alert("Error");
+                }
+              });
+
+        }
+      });
+  });
 
   var doPopupFormSubmit = function(){
     $(".popupform form").ajaxSubmit({

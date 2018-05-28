@@ -31,7 +31,7 @@
       $message = $_POST['message'];
 	    //Recipients
 	    $mail->setFrom($_POST['email']);
-	    $mail->addAddress('9290355@gmail.com');     // Add a recipient
+	    $mail->addAddress('babkinevgeny@gmail.com');     // Add a recipient
 
 	    //Content
 	    $mail->isHTML(true);
