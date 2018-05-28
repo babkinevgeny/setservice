@@ -2388,10 +2388,7 @@ div.item img.item-img {
 .article-form textarea {
   height: 130px;
 }
-.article-form input + div {
-  display: none;
-}
-.article-form button {
+.article-form .btn-text {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
@@ -2414,11 +2411,11 @@ div.item img.item-img {
   color: #686868;
   background: #fff899;
 }
-.article-form button:hover {
+.article-form .btn-text:hover {
   background: #ffee00;
   color: #282828;
 }
-.article-form button:focus {
+.article-form .btn-text:focus {
   outline: none;
 }
 .article-form .confidentiality {

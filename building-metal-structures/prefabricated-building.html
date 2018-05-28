@@ -261,9 +261,10 @@
             <input type="text" name="tel" placeholder="Телефон">
           </div>
           <div class="article-form-field">
-            <input type="submit" value="Submit" name="submit">
+            <input type="submit" value="Отправить заявку" name="submit" class="btn-text">
+            <div class="g-recaptcha" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit" data-size="invisible" style="diplay:none;"></div>
           </div>
-          <!-- <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit">Отправить заявку</button> -->
+          <!-- <button type="submit" display="none;" class="g-recaptcha btn-text" data-sitekey="" data-callback="doArticleFormSubmit">Отправить заявку</button> -->
           <div class="confidentiality">Нажимая кнопку «Отправить заявку», Вы соглашаетесь на <a href="/confidentiality.html">обработку персональных данных</a></div>
           <div class="thanks">
             <div class="thanks-content">
@@ -406,6 +407,22 @@
   // });
 
 
+  var doArticleFormSubmit = function () {
+    $('#article-form').ajaxSubmit({
+      type:"POST",
+      data: $('#article-form').serialize(),
+      url:"../mail1.php",
+      success: function() {
+        $('.thanks').fadeIn().css('display', 'flex');
+        setTimeout(function() {
+          $('.thanks').fadeOut();
+        }, 3000);
+      },
+      error: function() {
+        alert("Error");
+      }
+    });
+  };
 
   $(function(){
 
@@ -424,22 +441,7 @@
           }
         },
         submitHandler: function(form) {
-
-              $(form).ajaxSubmit({
-                type:"POST",
-                data: $(form).serialize(),
-                url:"../mail1.php",
-                success: function() {
-                  $('.thanks').fadeIn().css('display', 'flex');
-                  setTimeout(function() {
-                    $('.thanks').fadeOut();
-                  }, 3000);
-                },
-                error: function() {
-                  alert("Error");
-                }
-              });
-
+          grecaptcha.execute();
         }
       });
   });
