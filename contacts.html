@@ -94,18 +94,26 @@
       <form enctype="multipart/form-data" action="/mail1.php" method="post" id="article-form">
         <div class="form-row">
           <div class="form-block">
-            <input type="text" name="organization" placeholder="Ваше имя или название организации">
-            <input type="text" name="email" placeholder="Ваш E-mail">
-            <input type="text" name="tel" placeholder="Ваш телефон ">
+            <div class="article-form-field">
+              <input type="text" name="organization" placeholder="Ваше имя или название организации*">
+            </div>
+            <div class="article-form-field">
+              <input type="text" name="email" placeholder="Ваш E-mail*">
+            </div>
+            <div class="article-form-field">
+              <input type="text" name="tel" placeholder="Ваш телефон*">
+            </div>
           </div>
           <div class="form-block">
-            <textarea name="message" cols="30" placeholder="Текст заявки"></textarea>
+            <div class="article-form-field">
+              <textarea name="message" cols="30" placeholder="Текст заявки*"></textarea>
+            </div>
             <label class="btn-file" for="input-file">Загрузить файл</label>
             <input type="file" name="file" id="input-file">
           </div>
         </div>
-        <!-- <input type="submit" value="Отправить" class="btn-text" class="g-recaptcha" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj"> -->
-        <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit">Отправить</button>
+        <input type="submit" value="Отправить заявку" name="submit" class="btn-text">
+        <div class="g-recaptcha" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit" data-size="invisible" style="diplay:none;"></div>
       </form>
     </div>
     <div class="thanks">

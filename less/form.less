@@ -196,9 +196,6 @@
     width: 450px;
     text-align: center;
     padding: 20px;
-    input:last-child{
-      margin-bottom: 0px;
-    }
   }
   &-text{
     text-align: center;
@@ -256,6 +253,7 @@
   }
   input{
     height: 50px;
+    margin-bottom: 20px;
   }
   input[type="file"]{
     display: none;
@@ -292,10 +290,25 @@
       outline: none;
     }
   }
-  button{
+  .btn-text{
     margin: 0px auto 20px;
     background: lighten(@yellow, 30%);
     color: @color-btn;
+    width: 218px;
+    display: block;
+    min-width: 150px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Ubuntu, sans-serif;
+    font-size: 20px;
+    padding: 8px;
+    font-weight: 500;
+    border: none;
+    border-top: 2px solid #ffee00;
+    border-bottom: 2px solid #ffee00;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: .25s;
     &:hover,
     &:focus{
       color: #282828;

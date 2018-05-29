@@ -2183,9 +2183,6 @@ div.item img.item-img {
   text-align: center;
   padding: 20px;
 }
-.form-block input:last-child {
-  margin-bottom: 0px;
-}
 .form-text {
   text-align: center;
   color: #fff;
@@ -2241,6 +2238,7 @@ div.item img.item-img {
 }
 .form input {
   height: 50px;
+  margin-bottom: 20px;
 }
 .form input[type="file"] {
   display: none;
@@ -2277,13 +2275,28 @@ div.item img.item-img {
 .form .btn-file:focus {
   outline: none;
 }
-.form button {
+.form .btn-text {
   margin: 0px auto 20px;
   background: #fff899;
   color: #686868;
+  width: 218px;
+  display: block;
+  min-width: 150px;
+  text-align: center;
+  text-decoration: none;
+  font-family: Ubuntu, sans-serif;
+  font-size: 20px;
+  padding: 8px;
+  font-weight: 500;
+  border: none;
+  border-top: 2px solid #ffee00;
+  border-bottom: 2px solid #ffee00;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: .25s;
 }
-.form button:hover,
-.form button:focus {
+.form .btn-text:hover,
+.form .btn-text:focus {
   color: #282828;
 }
 .thanks {
