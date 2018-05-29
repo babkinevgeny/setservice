@@ -250,7 +250,7 @@
             <li>административные и общественные здания</li>
           </ul>
         </div>
-        <form class="article-form" action="../mail1.php" method="post" id="article-form">
+        <form class="article-form" action="/mail1.php" method="post" id="article-form">
           <div class="article-form-field">
             <input type="text" name="organization" placeholder="Название организации">
           </div>
@@ -322,7 +322,7 @@
       <div class="btn-form-close"></div>
       <h2 class="title-form">Сделайте заказ прямо сейчас</h2>
       <p>Чтобы экономить ваше время, мы создали систему электронной подачи заказов. Заполните форму и наш специалист свяжится с вами в ближайшее время.</p>
-      <form enctype="multipart/form-data" action="mail1.php" method="post">
+      <form enctype="multipart/form-data" action="/mail1.php" method="post">
         <input type="text" name="organization" placeholder="Ваше имя или название организации">
         <input type="text" name="email" placeholder="Ваш E-mail">
         <input type="text" name="tel" placeholder="Ваш телефон ">
@@ -370,98 +370,24 @@
   <!--<script src="js/jquery.magnific-popup.js"></script> -->
   <script src="../js/common.js"></script>
   <script>
-  $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:false,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:4
-        },
-        1000:{
-            items:3
-        }
-    }
-  });
-
-  // $("#article-form").validate({
-  //
-  //   rules: {
-  //     organization: {
-  //       required: true
-  //     },
-  //     email: {
-  //       required: true,
-  //       email: true
-  //     },
-  //     tel: {
-  //       required: true,
-  //       digits: true
-  //     }
-  //   }
-  // });
-
-
-  var doArticleFormSubmit = function () {
-    $('#article-form').ajaxSubmit({
-      type:"POST",
-      data: $('#article-form').serialize(),
-      url:"../mail1.php",
-      success: function() {
-        $('.thanks').fadeIn().css('display', 'flex');
-        setTimeout(function() {
-          $('.thanks').fadeOut();
-        }, 3000);
-      },
-      error: function() {
-        alert("Error");
-      }
-    });
-  };
-
-  $(function(){
-
-      $('#article-form').validate({
-        rules: {
-          organization: {
-            required: true
+    $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:false,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      responsive:{
+          0:{
+              items:1
           },
-          email: {
-            required: true,
-            email: true
+          600:{
+              items:4
           },
-          tel: {
-            required: true,
-            digits: true
+          1000:{
+              items:3
           }
-        },
-        submitHandler: function(form) {
-          grecaptcha.execute();
-        }
-      });
-  });
-
-  var doPopupFormSubmit = function(){
-    $(".popupform form").ajaxSubmit({
-      type:"POST",
-      data: $(".popupform form").serialize(),
-      url:"../mail1.php",
-      success: function() {
-        $('.popupform-thanks').fadeIn().css('display', 'flex');
-        setTimeout(function() {
-          $('.popupform-thanks').fadeOut();
-        }, 3000);
-      },
-      error: function() {
-        alert("Error");
       }
     });
-  };
   </script>
   <!-- Yandex.Metrika counter-->
   <script type="text/javascript" >

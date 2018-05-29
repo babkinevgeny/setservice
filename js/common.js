@@ -210,3 +210,60 @@ $('.catalog-title-inner').click( function () {
 		}).scroll();
 	});
 })(jQuery);
+
+
+var doArticleFormSubmit = function () {
+  $('#article-form').ajaxSubmit({
+    type:"POST",
+    data: $('#article-form').serialize(),
+    url:"/mail1.php",
+    success: function() {
+      $('.thanks').fadeIn().css('display', 'flex');
+      setTimeout(function() {
+        $('.thanks').fadeOut();
+      }, 3000);
+    },
+    error: function() {
+      alert("Error");
+    }
+  });
+};
+
+$(function(){
+
+    $('#article-form').validate({
+      rules: {
+        organization: {
+          required: true
+        },
+        email: {
+          required: true,
+          email: true
+        },
+        tel: {
+          required: true,
+          digits: true
+        }
+      },
+      submitHandler: function(form) {
+        grecaptcha.execute();
+      }
+    });
+});
+
+var doPopupFormSubmit = function(){
+  $(".popupform form").ajaxSubmit({
+    type:"POST",
+    data: $(".popupform form").serialize(),
+    url:"/mail1.php",
+    success: function() {
+      $('.popupform-thanks').fadeIn().css('display', 'flex');
+      setTimeout(function() {
+        $('.popupform-thanks').fadeOut();
+      }, 3000);
+    },
+    error: function() {
+      alert("Error");
+    }
+  });
+};
