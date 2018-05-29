@@ -353,21 +353,24 @@
     }
   }
   .article-form-block{
-    width: 50%;
+    max-width: 420px;
     &:first-child{
       text-align: right;
-      padding-right: 10px;
+      margin-right: 10px;
+      margin-left: auto;
     }
     &:nth-child(2){
       text-align: left;
-      padding-left: 10px;
+      margin-left: 10px;
+      margin-right: auto;
+      position: relative;
     }
     input[type="text"]{
       height: 50px;
+      margin-bottom: 20px;
     }
     input[type="text"],
     textarea{
-      margin-bottom: 20px;
       width: 420px;
     }
     textarea{
@@ -375,10 +378,12 @@
       resize: none;
       overflow: auto;
     }
-    button {
-      margin-top: -3px;
+    .btn-text {
       width: 420px;
       height: 50px;
+      position: absolute;
+      top: 140px;
+      left: 0;
     }
   }
   input[type="text"],

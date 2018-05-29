@@ -413,13 +413,22 @@
     </div>
     <form class="article-form" id="article-form" action="/mail1.php" method="post">
       <div class="article-form-block">
-        <input type="text" name="organization" placeholder="Ваше имя или название организации*">
-        <input type="text" name="email" placeholder="E-mail*">
-        <input type="text" name="tel" placeholder="Телефон*">
+        <div class="article-form-field">
+          <input type="text" name="organization" placeholder="Ваше имя или название организации*">
+        </div>
+        <div class="article-form-field">
+          <input type="text" name="email" placeholder="E-mail*">
+        </div>
+        <div class="article-form-field">
+          <input type="text" name="tel" placeholder="Телефон*">
+        </div>
       </div>
       <div class="article-form-block">
-        <textarea name="message" cols="30" placeholder="Текст заявки*"></textarea>
-        <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit">Отправить заявку</button>
+        <div class="article-form-field">
+          <textarea name="message" cols="30" placeholder="Текст заявки*"></textarea>
+        </div>
+        <input type="submit" value="Отправить заявку" name="submit" class="btn-text">
+        <div class="g-recaptcha" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit" data-size="invisible" style="diplay:none;"></div>
       </div>
       <div class="thanks">
         <div class="thanks-content">

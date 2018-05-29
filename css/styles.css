@@ -2336,22 +2336,25 @@ div.item img.item-img {
   color: red;
 }
 .article-form .article-form-block {
-  width: 50%;
+  max-width: 420px;
 }
 .article-form .article-form-block:first-child {
   text-align: right;
-  padding-right: 10px;
+  margin-right: 10px;
+  margin-left: auto;
 }
 .article-form .article-form-block:nth-child(2) {
   text-align: left;
-  padding-left: 10px;
+  margin-left: 10px;
+  margin-right: auto;
+  position: relative;
 }
 .article-form .article-form-block input[type="text"] {
   height: 50px;
+  margin-bottom: 20px;
 }
 .article-form .article-form-block input[type="text"],
 .article-form .article-form-block textarea {
-  margin-bottom: 20px;
   width: 420px;
 }
 .article-form .article-form-block textarea {
@@ -2359,10 +2362,12 @@ div.item img.item-img {
   resize: none;
   overflow: auto;
 }
-.article-form .article-form-block button {
-  margin-top: -3px;
+.article-form .article-form-block .btn-text {
   width: 420px;
   height: 50px;
+  position: absolute;
+  top: 140px;
+  left: 0;
 }
 .article-form input[type="text"],
 .article-form input[type="email"],

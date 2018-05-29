@@ -243,6 +243,25 @@ $(function(){
         tel: {
           required: true,
           digits: true
+        },
+        message: {
+          required: true
+        }
+      },
+      messages: {
+        organization: {
+          required: 'Это поле обязательно для заполнения'
+        },
+        email:{
+          required: 'Это поле обязательно для заполнения',
+          email: 'Введите email в верном формате'
+        },
+        tel: {
+          required: 'Это поле обязательно для заполнения',
+          digits: 'Поле может содержать только цифры'
+        },
+        message: {
+          required: 'Это поле обязательно для заполнения'
         }
       },
       submitHandler: function(form) {
