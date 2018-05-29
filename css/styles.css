@@ -2067,8 +2067,8 @@ div.item img.item-img {
   line-height: 18px;
   height: 18px;
   padding: 13px 20px;
-  color: #82533b;
-  border: 2px solid #e6ddd8;
+  color: #5b5b5b;
+  border: 2px solid #ddd;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
@@ -2076,6 +2076,7 @@ div.item img.item-img {
   outline: 0;
   margin-bottom: 20px;
   height: 48px;
+  background: #FFF;
 }
 .popupform input[type="text"]:hover,
 .popupform input[type="email"]:hover,
@@ -2215,6 +2216,7 @@ div.item img.item-img {
 }
 .form form .form-row .form-block:last-child {
   padding-left: 10px;
+  position: relative;
 }
 .form input,
 .form textarea {
@@ -2229,6 +2231,8 @@ div.item img.item-img {
   font-family: Ubuntu, sans-serif;
   font-size: 16px;
   box-sizing: border-box;
+  background: #fff;
+  color: #5b5b5b;
 }
 .form input:focus,
 .form textarea:focus {
@@ -2242,12 +2246,18 @@ div.item img.item-img {
   display: none;
 }
 .form textarea {
+  display: inline-block;
   height: 120px;
-  margin-bottom: 17px;
+  margin-top: 0;
+  margin-bottom: 0;
+  resize: none;
 }
 .form .btn-file {
+  position: absolute;
+  top: 160px;
+  left: 10px;
   display: block;
-  width: 100%;
+  width: 420px;
   height: 50px;
   font-size: 16px;
   background: #fff899;
