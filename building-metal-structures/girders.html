@@ -232,11 +232,31 @@
     <article class="article-wrapper">
           <h2 class="title-section">Фермы из металлоконструкций</h2>
           <p class="article-text">Строительные фермы используются в том случае, когда проект предусматривает наличие безопорного пролета, превышающего 12 метров. <b>Set Service Group</b> производит строительные фермы на заказ любой сложности.</p>
-          <form class="article-form" action="../mail1.php" method="post">
-            <input type="text" name="organization" placeholder="Название организации">
-            <input type="text" name="email" placeholder="E-mail">
-            <input type="text" name="tel" placeholder="Телефон">
-            <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit">Отправить заявку</button>
+          <h3 class="title-section">Классификация металлических ферм</h3>
+          <p class="article-text">Классификация ферм из металлоконструкций базируется на форме поясов и типах решеток. Фермы могут быть:</p>
+          <img src="../img/ферма1.jpg" width="400" alt="" class="article-img article-img-right">
+          <ul class="article-list">
+            <li>с параллельными поясами;</li>
+            <li>односкатные фермы (трапецеидальные);</li>
+            <li>полигональные фермы;</li>
+            <li>фермы с треугольными поясами.</li>
+          </ul>
+          <p class="article-text">Set Service Group производит как плоские фермы, так и пространственные фермы. Плоская ферма — это металлоконструкция, все составные части которой находятся в одной плоскости. Пространственная ферма, в свою очередь, может выдерживать нагрузку, которая направлена одновременно на все плоскости. Каждая грань пространственной фермы является плоской фермой. </p>
+          <form class="article-form" action="/mail1.php" method="post" id="article-form">
+            <div class="article-form-field">
+              <input type="text" name="organization" placeholder="Название организации">
+            </div>
+            <div class="article-form-field">
+              <input type="text" name="email" placeholder="E-mail">
+            </div>
+            <div class="article-form-field">
+              <input type="text" name="tel" placeholder="Телефон">
+            </div>
+            <div class="article-form-field">
+              <input type="submit" value="Отправить заявку" name="submit" class="btn-text">
+              <div class="g-recaptcha" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit" data-size="invisible" style="diplay:none;"></div>
+            </div>
+            <div class="confidentiality">Нажимая кнопку «Отправить заявку», Вы соглашаетесь на <a href="/confidentiality.html">обработку персональных данных</a></div>
             <div class="thanks">
               <div class="thanks-content">
                 <div class="mark">
@@ -248,18 +268,7 @@
               </div>
             </div>
           </form>
-          <h3 class="title-section">Классификация металлических ферм</h3>
-          <p class="article-text">Классификация ферм из металлоконструкций базируется на форме поясов и типах решеток. Фермы могут быть:</p>
-          <img src="../img/ферма1.jpg" width="400" alt="" class="article-img article-img-right">
-          <ul class="article-list">
-            <li>с параллельными поясами;</li>
-            <li>односкатные фермы (трапецеидальные);</li>
-            <li>полигональные фермы;</li>
-            <li>фермы с треугольными поясами.</li>
-          </ul>
-          <p class="article-text">Set Service Group производит как плоские фермы, так и пространственные фермы. Плоская ферма — это металлоконструкция, все составные части которой находятся в одной плоскости. Пространственная ферма, в свою очередь, может выдерживать нагрузку, которая направлена одновременно на все плоскости. Каждая грань пространственной фермы является плоской фермой. </p>
-          <button class="btn-text btn-text-send">Связаться со специалистом</button>
-          <div class="container-row" style="border-top: 2px solid #eee">
+          <div class="container-row">
               <h3 class="title-section">Конструкция металлической фермы</h3>
               <div class="container-block clearfix">
                 <img src="../img/ферма.jpg" width="400" alt="" class="article-img article-img-right">
@@ -342,6 +351,7 @@
   <script src="../js/jquery-3.3.1.min.js"></script>
   <script src="../js/owl.carousel.min.js"></script>
   <script src="../js/form.min.js"></script>
+  <script src="../js/jquery.validate.min.js"></script>
   <!--<script src="js/jquery.magnific-popup.js"></script> -->
   <script src="../js/common.js"></script>
   <script>

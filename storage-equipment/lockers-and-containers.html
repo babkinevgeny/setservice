@@ -234,11 +234,30 @@
       <p class="article-text">
         Металлические контейнеры и шкафы на колёсах являются универсальным оборудованием для хранения различных товаров и транспортировки грузов на территории складов и в торговых залах. Данный вид продукции отличается высокой прочностью, долговечностью и удобством в эксплуатации. <b>Set Service Group</b> занимается производством металлических шкафов и контейнеров на заказ в СПб и Ленинградской области.
       </p>
-      <form class="article-form" action="../mail1.php" method="post">
-        <input type="text" name="organization" placeholder="Название организации">
-        <input type="text" name="email" placeholder="E-mail">
-        <input type="text" name="tel" placeholder="Телефон">
-        <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit">Отправить заявку</button>
+      <h3 class="title-section">Назначение шкафов и контейнеров</h3>
+      <div class="container-block clearfix">
+        <div class="container-block">
+          <img src="../img/шкафы и контейнеры1.jpg" width="400" alt="" class="article-img article-img-left">
+          <p class="article-text">
+            Металлические шкафы и контейнеры можно использовать для хранения практически любых видов продукции, включая документацию. По функциональным возможностям такие конструкции могут устанавливаться в торговых залах в качестве витрин для выкладки товаров. В металлических шкафах и контейнерах дверные створки открываются на 180 градусов. При необходимости их можно легко зафиксировать в нужном положении. Чтобы избежать кражи и нецелевого использования товаров, находящихся внутри конструкции, открывающиеся створки оснащены специальными проушинами для навесного замка.
+          </p>
+        </div>
+      </div>
+      <form class="article-form" action="/mail1.php" method="post" id="article-form">
+        <div class="article-form-field">
+          <input type="text" name="organization" placeholder="Название организации">
+        </div>
+        <div class="article-form-field">
+          <input type="text" name="email" placeholder="E-mail">
+        </div>
+        <div class="article-form-field">
+          <input type="text" name="tel" placeholder="Телефон">
+        </div>
+        <div class="article-form-field">
+          <input type="submit" value="Отправить заявку" name="submit" class="btn-text">
+          <div class="g-recaptcha" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit" data-size="invisible" style="diplay:none;"></div>
+        </div>
+        <div class="confidentiality">Нажимая кнопку «Отправить заявку», Вы соглашаетесь на <a href="/confidentiality.html">обработку персональных данных</a></div>
         <div class="thanks">
           <div class="thanks-content">
             <div class="mark">
@@ -250,17 +269,7 @@
           </div>
         </div>
       </form>
-      <h3 class="title-section">Назначение шкафов и контейнеров</h3>
-      <div class="container-block clearfix">
-        <div class="container-block">
-          <img src="../img/шкафы и контейнеры1.jpg" width="400" alt="" class="article-img article-img-left">
-          <p class="article-text">
-            Металлические шкафы и контейнеры можно использовать для хранения практически любых видов продукции, включая документацию. По функциональным возможностям такие конструкции могут устанавливаться в торговых залах в качестве витрин для выкладки товаров. В металлических шкафах и контейнерах дверные створки открываются на 180 градусов. При необходимости их можно легко зафиксировать в нужном положении. Чтобы избежать кражи и нецелевого использования товаров, находящихся внутри конструкции, открывающиеся створки оснащены специальными проушинами для навесного замка.
-          </p>
-        </div>
-      </div>
-      <button class="btn-text btn-text-send">Связаться со специалистом</button>
-      <div class="container-row" style="border-top: 2px solid #eee">
+      <div class="container-row">
         <h3 class="title-section">Преимущества шкафов и контейнеров</h3>
         <div class="container-block clearfix">
           <img src="../img/шкафы и контейнеры2.jpg" width="400" alt="" class="article-img article-img-right">
@@ -338,6 +347,7 @@
   <script src="../js/jquery-3.3.1.min.js"></script>
   <script src="../js/owl.carousel.min.js"></script>
   <script src="../js/form.min.js"></script>
+  <script src="../js/jquery.validate.min.js"></script>
   <!--<script src="js/jquery.magnific-popup.js"></script> -->
   <script src="../js/common.js"></script>
   <script>

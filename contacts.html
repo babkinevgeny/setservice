@@ -179,6 +179,7 @@
   </footer>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/form.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
   <script src="js/common.js"></script>
   <script src="js/contacts.js"></script>
@@ -198,7 +199,7 @@
       var marginOfContactsMove = ( $('#map-move-spb').height() - $('.contacts-move').height() + 84 ) / 2;
       $('.contacts-move').css('top', marginOfContactsMove);
     });
-    
+
     $(window).resize(function(){
       var windowHeight = $(window).height();
       if ($(window).width() > 1368) {

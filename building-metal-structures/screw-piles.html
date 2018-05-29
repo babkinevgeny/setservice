@@ -232,11 +232,30 @@
     <article class="article-wrapper">
       <h2 class="title-section">Винтовые сваи</h2>
       <p class="article-text">Винтовая свая представляет собой стальную металлоконструкцию с заостренным концом и лопастями определенной конфигурации. Свободное вхождение винтовой сваи на необходимую глубину обеспечивают мощные лопасти, которые преобразовывают вращательный момент в поступательное усилие во время погружения. <b>Set Service Group</b> изготавливает винтовые сваи в СПб и Лен. области на заказ.</p>
-      <form class="article-form" action="../mail1.php" method="post">
-        <input type="text" name="organization" placeholder="Название организации">
-        <input type="text" name="email" placeholder="E-mail">
-        <input type="text" name="tel" placeholder="Телефон">
-        <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit">Отправить заявку</button>
+      <h3 class="title-section">Технология винтовых свай</h3>
+      <div class="container-block clearfix">
+        <img src="../img/винтовые сваи2.jpg" width="400" alt="" class="article-img article-img-right">
+        <p class="article-text">Монтаж винтовых свай происходит следующим образом. Винтовые сваи погружаются в грунт в соответствии со схемой свайного фундамента не менее чем на 1,5 метра. При залегании в верхних слоях просадочных грунтов (торфа) винтовая свая завинчивается пока не будет пройден слой в 4-6,5 метров. Минуя слабые слои грунта, свая делает упор и передает нагрузку от сооружения на более твердые слои.</p>
+      </div>
+      <div class="container-block clearfix">
+        <img src="../img/винтовые сваи3.jpg" width="400" alt="" class="article-img article-img-left">
+        <p class="article-text">Несущая способность одной сваи – 6 тонн. При необходимости их подрезают до соответствия уровня проекта, а стволы бетонируются до места подрезки. Если появилась необходимость создания жесткой конструкции, то верхняя часть всех свай соединяется швеллером (металлической балкой) или проф-трубой.</p>
+      </div>
+      <form class="article-form" action="/mail1.php" method="post" id="article-form">
+        <div class="article-form-field">
+          <input type="text" name="organization" placeholder="Название организации">
+        </div>
+        <div class="article-form-field">
+          <input type="text" name="email" placeholder="E-mail">
+        </div>
+        <div class="article-form-field">
+          <input type="text" name="tel" placeholder="Телефон">
+        </div>
+        <div class="article-form-field">
+          <input type="submit" value="Отправить заявку" name="submit" class="btn-text">
+          <div class="g-recaptcha" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit" data-size="invisible" style="diplay:none;"></div>
+        </div>
+        <div class="confidentiality">Нажимая кнопку «Отправить заявку», Вы соглашаетесь на <a href="/confidentiality.html">обработку персональных данных</a></div>
         <div class="thanks">
           <div class="thanks-content">
             <div class="mark">
@@ -248,17 +267,7 @@
           </div>
         </div>
       </form>
-      <h3 class="title-section">Технология винтовых свай</h3>
-      <div class="container-block clearfix">
-        <img src="../img/винтовые сваи2.jpg" width="400" alt="" class="article-img article-img-right">
-        <p class="article-text">Монтаж винтовых свай происходит следующим образом. Винтовые сваи погружаются в грунт в соответствии со схемой свайного фундамента не менее чем на 1,5 метра. При залегании в верхних слоях просадочных грунтов (торфа) винтовая свая завинчивается пока не будет пройден слой в 4-6,5 метров. Минуя слабые слои грунта, свая делает упор и передает нагрузку от сооружения на более твердые слои.</p>
-      </div>
-      <div class="container-block clearfix">
-        <img src="../img/винтовые сваи3.jpg" width="400" alt="" class="article-img article-img-left">
-        <p class="article-text">Несущая способность одной сваи – 6 тонн. При необходимости их подрезают до соответствия уровня проекта, а стволы бетонируются до места подрезки. Если появилась необходимость создания жесткой конструкции, то верхняя часть всех свай соединяется швеллером (металлической балкой) или проф-трубой.</p>
-      </div>
-      <button class="btn-text btn-text-send">Заказать просчет</button>
-      <div class="container-row" style="border-top: 2px solid #eee">
+      <div class="container-row">
         <h3 class="title-section">Применение винтовых свай</h3>
         <img src="../img/винтовые сваи.jpg" width="400" alt="" class="article-img article-img-right" style="margin-top: 30px">
         <p class="article-text">Винтовые сваи могут применяться при строительстве следующих зданий и сооружений:</p>
@@ -344,6 +353,7 @@
   <script src="../js/jquery-3.3.1.min.js"></script>
   <script src="../js/owl.carousel.min.js"></script>
   <script src="../js/form.min.js"></script>
+  <script src="../js/jquery.validate.min.js"></script>
   <!--<script src="js/jquery.magnific-popup.js"></script> -->
   <script src="../js/common.js"></script>
   <script>

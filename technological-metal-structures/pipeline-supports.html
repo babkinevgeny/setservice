@@ -232,22 +232,6 @@
     <article class="article-wrapper">
       <h2 class="title-section">Опоры трубопроводов</h2>
       <p class="article-text">Опоры трубопроводов представляют собой металлоконструкции, которые переводя осевые, поперечные, вертикальные нагрузки, а также крутящиеся моменты на грунт или на несущие конструкции. Опоры трубопроводов используются при закладке трубопроводных магистралей различного назначения. Set Service Group занимается опор для трубопроводов на заказ в СПб и Ленинградской области.</p>
-      <form class="article-form" action="../mail1.php" method="post">
-        <input type="text" name="organization" placeholder="Название организации">
-        <input type="text" name="email" placeholder="E-mail">
-        <input type="text" name="tel" placeholder="Телефон">
-        <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit">Отправить заявку</button>
-        <div class="thanks">
-          <div class="thanks-content">
-            <div class="mark">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 98.5 98.5" enable-background="new 0 0 98.5 98.5" xml:space="preserve">
-                <path class="checkmark" fill="none" stroke-width="8" stroke-miterlimit="10" d="M81.7,17.8C73.5,9.3,62,4,49.2,4C24.3,4,4,24.3,4,49.2s20.3,45.2,45.2,45.2s45.2-20.3,45.2-45.2c0-8.6-2.4-16.6-6.5-23.4l0,0L45.6,68.2L24.7,47.3"/>
-              </svg>
-            </div>
-            <h2 class="title-form">Спасибо за заявку. <br>Наш специалист свяжется с вами в ближайшее время.</h2>
-          </div>
-        </div>
-      </form>
       <h3 class="title-section">Классификация опор трубопроводов</h3>
       <div class="container-block clearfix">
         <img src="../img/опоры трубопроводов.png" width="400" alt="" class="article-img article-img-right">
@@ -267,8 +251,33 @@
         <img src="../img/опоры трубопроводов2.jpg" width="300" alt="" class="article-img article-img-right">
         <p class="article-text">Скользящая опора отличается простотой конструкции, состоящей из гнутого, сварного или изготовленного из уголка прочного основания, держателей полукруглого типа и креплений этих держателей, прокладок между трубопроводом и опорой, обеспечивающих защиту трубы от механического стираний при смещении трубопровода вдоль направляющей или подвижной опоры. Главная цель применения скользящей, подвижной и направляющей опоры заключается в поддержании трубопровода при поперечных и продольных смещениях трубы в определенных параметрах, а также защиты трубопровода от провисания и, как следствие, выхода из строя.</p>
       </div>
-      <button class="btn-text btn-text-send">Заказать просчет</button>
-      <div class="container-row" style="border-top: 2px solid #eee">
+      <form class="article-form" action="/mail1.php" method="post" id="article-form">
+        <div class="article-form-field">
+          <input type="text" name="organization" placeholder="Название организации">
+        </div>
+        <div class="article-form-field">
+          <input type="text" name="email" placeholder="E-mail">
+        </div>
+        <div class="article-form-field">
+          <input type="text" name="tel" placeholder="Телефон">
+        </div>
+        <div class="article-form-field">
+          <input type="submit" value="Отправить заявку" name="submit" class="btn-text">
+          <div class="g-recaptcha" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit" data-size="invisible" style="diplay:none;"></div>
+        </div>
+        <div class="confidentiality">Нажимая кнопку «Отправить заявку», Вы соглашаетесь на <a href="/confidentiality.html">обработку персональных данных</a></div>
+        <div class="thanks">
+          <div class="thanks-content">
+            <div class="mark">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 98.5 98.5" enable-background="new 0 0 98.5 98.5" xml:space="preserve">
+                <path class="checkmark" fill="none" stroke-width="8" stroke-miterlimit="10" d="M81.7,17.8C73.5,9.3,62,4,49.2,4C24.3,4,4,24.3,4,49.2s20.3,45.2,45.2,45.2s45.2-20.3,45.2-45.2c0-8.6-2.4-16.6-6.5-23.4l0,0L45.6,68.2L24.7,47.3"/>
+              </svg>
+            </div>
+            <h2 class="title-form">Спасибо за заявку. <br>Наш специалист свяжется с вами в ближайшее время.</h2>
+          </div>
+        </div>
+      </form>
+      <div class="container-row">
         <h3 class="title-section">Изготовление опор трубопроводов</h3>
         <img src="../img/сварщик.jpg" width="400" alt="" class="article-img article-img-right" style="margin-top: 30px; border: 4px solid #fff899;">
         <p class="article-text">В изготовлении опор трубопроводов применяется сталь различных марок, что зависит от метеоусловий, типа почвы и региона использования. В зависимости от диметра трубопровода, его форм и других параметров, определяется размеры трубопроводов. Они могут быть бестраншейными, подземными и наземными. В производстве данных изделий, соблюдаются требования, предъявляемые для производства трубопроводных опор.</p>
@@ -335,6 +344,7 @@
   <script src="../js/jquery-3.3.1.min.js"></script>
   <script src="../js/owl.carousel.min.js"></script>
   <script src="../js/form.min.js"></script>
+  <script src="../js/jquery.validate.min.js"></script>
   <!--<script src="js/jquery.magnific-popup.js"></script> -->
   <script src="../js/common.js"></script>
   <script>

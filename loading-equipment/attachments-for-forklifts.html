@@ -269,11 +269,21 @@
       <p class="article-text">
         По статистике до 80% погрузчиков эксплуатируется с навесным оборудованием. Устройства позволяют оснащать технику сразу несколькими приспособлениями. С навесным дополнительным оборудованием можно существенно увеличить возможности и производительность Вашей техники. Такая модификация экономически выгоднее покупки узкоспециализированной техники. Set Service Group производит навесное оборудование для погрузчиков на заказ в СПб и Ленинградской области.
       </p>
-      <form class="article-form" action="../mail1.php" method="post">
-        <input type="text" name="organization" placeholder="Название организации">
-        <input type="text" name="email" placeholder="E-mail">
-        <input type="text" name="tel" placeholder="Телефон">
-        <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit">Отправить заявку</button>
+      <form class="article-form" action="/mail1.php" method="post" id="article-form">
+        <div class="article-form-field">
+          <input type="text" name="organization" placeholder="Название организации">
+        </div>
+        <div class="article-form-field">
+          <input type="text" name="email" placeholder="E-mail">
+        </div>
+        <div class="article-form-field">
+          <input type="text" name="tel" placeholder="Телефон">
+        </div>
+        <div class="article-form-field">
+          <input type="submit" value="Отправить заявку" name="submit" class="btn-text">
+          <div class="g-recaptcha" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit" data-size="invisible" style="diplay:none;"></div>
+        </div>
+        <div class="confidentiality">Нажимая кнопку «Отправить заявку», Вы соглашаетесь на <a href="/confidentiality.html">обработку персональных данных</a></div>
         <div class="thanks">
           <div class="thanks-content">
             <div class="mark">
@@ -428,6 +438,7 @@
   <script src="../js/jquery-3.3.1.min.js"></script>
   <script src="../js/owl.carousel.min.js"></script>
   <script src="../js/form.min.js"></script>
+  <script src="../js/jquery.validate.min.js"></script>
   <!--<script src="js/jquery.magnific-popup.js"></script> -->
   <script src="../js/common.js"></script>
   <script>

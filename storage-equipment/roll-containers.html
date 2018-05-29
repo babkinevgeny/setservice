@@ -234,11 +234,30 @@
       <p class="article-text">
         Ролл-контейнер - это тележка, предназначенная для перевозки товаров маленького размера - продуктов питания, одежды и так далее. Это своеобразная этажерка на колесах, оснащенная полками. В некоторых моделях полки складываются И появляется возможность перевозить габаритный груз. Set Service Group занимается производством ролл-контейнеров на заказ в СПб и Ленинградской области.
       </p>
-      <form class="article-form" action="../mail1.php" method="post">
-        <input type="text" name="organization" placeholder="Название организации">
-        <input type="text" name="email" placeholder="E-mail">
-        <input type="text" name="tel" placeholder="Телефон">
-        <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit">Отправить заявку</button>
+      <h3 class="title-section">Назначение ролл-контейнеров</h3>
+      <div class="container-block clearfix">
+        <div class="container-block">
+          <img src="../img/ролл-контейнер.jpg" width="400" alt="" class="article-img article-img-left">
+          <p class="article-text">
+            Перемещение и хранение товаров внутри торгового предприятия, а также вывоз мусора из торговых залов магазинов и супермаркетов осуществляется только на оборудовании, специально для этого предназначенном. Для этого используются в основном ролл-контейнеры на колесах, ролл-тележки, сетчатые передвижные контейнеры, обеспечивающие удобную и быструю доставку товаров со склада в торговый отдел или для внутримагазинного перемещения продукции. Диапазон использования данного хозяйственного оборудования достаточно широк в сфере торговли.
+          </p>
+        </div>
+      </div>
+      <form class="article-form" action="/mail1.php" method="post" id="article-form">
+        <div class="article-form-field">
+          <input type="text" name="organization" placeholder="Название организации">
+        </div>
+        <div class="article-form-field">
+          <input type="text" name="email" placeholder="E-mail">
+        </div>
+        <div class="article-form-field">
+          <input type="text" name="tel" placeholder="Телефон">
+        </div>
+        <div class="article-form-field">
+          <input type="submit" value="Отправить заявку" name="submit" class="btn-text">
+          <div class="g-recaptcha" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit" data-size="invisible" style="diplay:none;"></div>
+        </div>
+        <div class="confidentiality">Нажимая кнопку «Отправить заявку», Вы соглашаетесь на <a href="/confidentiality.html">обработку персональных данных</a></div>
         <div class="thanks">
           <div class="thanks-content">
             <div class="mark">
@@ -250,17 +269,7 @@
           </div>
         </div>
       </form>
-      <h3 class="title-section">Назначение ролл-контейнеров</h3>
-      <div class="container-block clearfix">
-        <div class="container-block">
-          <img src="../img/ролл-контейнер.jpg" width="400" alt="" class="article-img article-img-left">
-          <p class="article-text">
-            Перемещение и хранение товаров внутри торгового предприятия, а также вывоз мусора из торговых залов магазинов и супермаркетов осуществляется только на оборудовании, специально для этого предназначенном. Для этого используются в основном ролл-контейнеры на колесах, ролл-тележки, сетчатые передвижные контейнеры, обеспечивающие удобную и быструю доставку товаров со склада в торговый отдел или для внутримагазинного перемещения продукции. Диапазон использования данного хозяйственного оборудования достаточно широк в сфере торговли.
-          </p>
-        </div>
-      </div>
-      <button class="btn-text btn-text-send">Связаться со специалистом</button>
-      <div class="container-row" style="border-top: 2px solid #eee">
+      <div class="container-row">
         <h3 class="title-section">Преимущества ролл-контейнеров</h3>
         <div class="container-block clearfix">
           <img src="../img/ролл-контейнер1.jpg" width="400" alt="" class="article-img article-img-right">
@@ -343,6 +352,7 @@
   <script src="../js/jquery-3.3.1.min.js"></script>
   <script src="../js/owl.carousel.min.js"></script>
   <script src="../js/form.min.js"></script>
+  <script src="../js/jquery.validate.min.js"></script>
   <!--<script src="js/jquery.magnific-popup.js"></script> -->
   <script src="../js/common.js"></script>
   <script>
