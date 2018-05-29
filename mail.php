@@ -1,52 +1,56 @@
 <?php
 
-$method = $_SERVER['REQUEST_METHOD'];
+ 	include ('mail/recaptchalib.php');
 
-//Script Foreach
-$c = true;
-if ( $method === 'POST' ) {
+    $privatekey = "6LcW7lcUAAAAALRE92Qk7ZQD5-Ru1AQJ7cv-JPDL";
+    $reCaptcha = new ReCaptcha($privatekey);
 
-	$project_name = trim($_POST["project_name"]);
-	$admin_email  = trim($_POST["admin_email"]);
-	$form_subject = trim($_POST["form_subject"]);
+	$response = $reCaptcha->verifyResponse(
+        $_SERVER["REMOTE_ADDR"],
+        $_POST["g-recaptcha-response"]
+    );
 
-	foreach ( $_POST as $key => $value ) {
-		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
-			$message .= "
-			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
-				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
-				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
-			</tr>
-			";
-		}
+    if (!$response->success) die ('Error. Please try again');
+
+
+
+	require 'mail/Exception.php';
+	require 'mail/PHPMailer.php';
+	require 'mail/SMTP.php';
+
+	use PHPMailer\PHPMailer\PHPMailer;
+	use PHPMailer\PHPMailer\Exception;
+
+
+	$mail = new PHPMailer(true);                         // Passing `true` enables exceptions
+	try {
+
+      $organization = $_POST['organization'];
+      $email = $_POST['email'];
+      $tel = $_POST['tel'];
+      $message = $_POST['message'];
+	    //Recipients
+	    $mail->setFrom($_POST['email']);
+	    $mail->addAddress('babkinevgeny@gmail.com');     // Add a recipient
+
+	    //Content
+	    $mail->isHTML(true);
+	    $mail->Subject = 'Заявка с сайта setservice24.ru';
+	    $mail->Body    = "Имя или название организации: $organization<br>Почта: $email<br>Телефон: $tel<br>Текст заявки: $message.";
+      if ($_FILES) {
+        $mail->addAttachment($_FILES['file']['tmp_name'], $_FILES['file']['name']);
+      }
+
+      // for($i=0; $i < count($_FILES['file']['name']); $i++){
+      //
+      //   $ftmp[] = $_FILES['file']['tmp_name'][$i];
+      //   $fname[] = $_FILES['file']['name'][$i];
+      //
+      // }
+      // $mail->addAttachment($ftmp[0],$fname[0]);
+      $mail->CharSet = "utf-8";
+	    $mail->send();
+	    echo 'Message has been sent';
+	} catch (Exception $e) {
+	    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 	}
-} else if ( $method === 'GET' ) {
-
-	$project_name = trim($_GET["project_name"]);
-	$admin_email  = trim($_GET["admin_email"]);
-	$form_subject = trim($_GET["form_subject"]);
-
-	foreach ( $_GET as $key => $value ) {
-		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
-			$message .= "
-			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
-				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
-				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
-			</tr>
-			";
-		}
-	}
-}
-
-$message = "<table style='width: 100%;'>$message</table>";
-
-function adopt($text) {
-	return '=?UTF-8?B?'.Base64_encode($text).'?=';
-}
-
-$headers = "MIME-Version: 1.0" . PHP_EOL .
-"Content-Type: text/html; charset=utf-8" . PHP_EOL .
-'From: '.adopt($project_name).' <'.$admin_email.'>' . PHP_EOL .
-'Reply-To: '.$admin_email.'' . PHP_EOL;
-
-mail($admin_email, adopt($form_subject), $message, $headers );

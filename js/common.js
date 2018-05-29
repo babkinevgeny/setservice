@@ -216,7 +216,7 @@ var doArticleFormSubmit = function () {
   $('#article-form').ajaxSubmit({
     type:"POST",
     data: $('#article-form').serialize(),
-    url:"/mail1.php",
+    url:"/mail.php",
     success: function() {
       $('.thanks').fadeIn().css('display', 'flex');
       setTimeout(function() {
@@ -234,7 +234,7 @@ var doPopupFormSubmit = function(){
   $("#popupform").ajaxSubmit({
     type:"POST",
     data: $("#popupform").serialize(),
-    url:"/mail1.php",
+    url:"/mail.php",
     success: function() {
       $('.popupform-thanks').fadeIn().css('display', 'flex');
       setTimeout(function() {
