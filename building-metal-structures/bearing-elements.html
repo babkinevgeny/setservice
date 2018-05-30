@@ -241,33 +241,31 @@
         <li>прямоугольные;</li>
         <li>двутавровые.</li>
       </ul>
-          <form class="article-form" action="/mail.php" method="post" id="article-form">
-            <div class="article-form-field">
-              <input type="text" name="organization" placeholder="Название организации">
+      <form class="article-form" action="/mail-articleform.php" method="post" id="article-form">
+        <div class="article-form-field">
+          <input type="text" name="organization" placeholder="Название организации">
+        </div>
+        <div class="article-form-field">
+          <input type="text" name="email" placeholder="E-mail">
+        </div>
+        <div class="article-form-field">
+          <input type="text" name="tel" placeholder="Телефон">
+        </div>
+        <div class="article-form-field">
+          <input type="submit" value="Отправить заявку" name="submit" class="btn-text">
+        </div>
+        <div class="confidentiality">Нажимая кнопку «Отправить заявку», Вы соглашаетесь на <a href="/confidentiality.html">обработку персональных данных</a></div>
+        <div class="thanks">
+          <div class="thanks-content">
+            <div class="mark">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 98.5 98.5" enable-background="new 0 0 98.5 98.5" xml:space="preserve">
+                <path class="checkmark" fill="none" stroke-width="8" stroke-miterlimit="10" d="M81.7,17.8C73.5,9.3,62,4,49.2,4C24.3,4,4,24.3,4,49.2s20.3,45.2,45.2,45.2s45.2-20.3,45.2-45.2c0-8.6-2.4-16.6-6.5-23.4l0,0L45.6,68.2L24.7,47.3"/>
+              </svg>
             </div>
-            <div class="article-form-field">
-              <input type="text" name="email" placeholder="E-mail">
-            </div>
-            <div class="article-form-field">
-              <input type="text" name="tel" placeholder="Телефон">
-            </div>
-            <div class="article-form-field">
-              <input type="submit" value="Отправить заявку" name="submit" class="btn-text">
-              <div class="g-recaptcha" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit" data-size="invisible" style="diplay:none;"></div>
-            </div>
-            <!-- <button type="submit" display="none;" class="g-recaptcha btn-text" data-sitekey="" data-callback="doArticleFormSubmit">Отправить заявку</button> -->
-            <div class="confidentiality">Нажимая кнопку «Отправить заявку», Вы соглашаетесь на <a href="/confidentiality.html">обработку персональных данных</a></div>
-            <div class="thanks">
-              <div class="thanks-content">
-                <div class="mark">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 98.5 98.5" enable-background="new 0 0 98.5 98.5" xml:space="preserve">
-                    <path class="checkmark" fill="none" stroke-width="8" stroke-miterlimit="10" d="M81.7,17.8C73.5,9.3,62,4,49.2,4C24.3,4,4,24.3,4,49.2s20.3,45.2,45.2,45.2s45.2-20.3,45.2-45.2c0-8.6-2.4-16.6-6.5-23.4l0,0L45.6,68.2L24.7,47.3"/>
-                  </svg>
-                </div>
-                <h2 class="title-form">Спасибо за заявку. <br>Наш специалист свяжется с вами в ближайшее время.</h2>
-              </div>
-            </div>
-          </form>
+            <h2 class="title-form">Спасибо за заявку. <br>Наш специалист свяжется с вами в ближайшее время.</h2>
+          </div>
+        </div>
+      </form>
           <div class="container-row">
               <h3 class="title-section">Прогоны</h3>
               <div class="container-block clearfix">
@@ -332,15 +330,24 @@
       <div class="btn-form-close"></div>
       <h2 class="title-form">Сделайте заказ прямо сейчас</h2>
       <p>Чтобы экономить ваше время, мы создали систему электронной подачи заказов. Заполните форму и наш специалист свяжится с вами в ближайшее время.</p>
-      <form enctype="multipart/form-data" action="/mail.php" method="post">
-        <input type="text" name="organization" placeholder="Ваше имя или название организации">
-        <input type="text" name="email" placeholder="Ваш E-mail">
-        <input type="text" name="tel" placeholder="Ваш телефон ">
-        <textarea name="message" cols="30" placeholder="Текст заявки"></textarea>
+      <form enctype="multipart/form-data" action="/mail.php" method="post" id="popupform">
+        <div class="popupform-field">
+          <input type="text" name="organization" placeholder="Ваше имя или название организации">
+        </div>
+        <div class="popupform-field">
+          <input type="text" name="email" placeholder="Ваш E-mail">
+        </div>
+        <div class="popupform-field">
+          <input type="text" name="tel" placeholder="Ваш телефон ">
+        </div>
+        <div class="popupform-field">
+          <textarea name="message" cols="30" placeholder="Текст заявки"></textarea>
+        </div>
         <label class="btn-file" for="input-file">Загрузить файл</label>
         <input type="file" name="file" id="input-file">
         <div class="confidentiality">Нажимая кнопку «Отправить заявку», Вы соглашаетесь на <a href="/confidentiality.html">обработку персональных данных</a></div>
-        <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doPopupFormSubmit">Отправить заявку</button>
+        <input type="submit" value="Отправить заявку" name="submit" class="btn-text">
+        <div class="g-recaptcha" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doPopupFormSubmit" data-size="invisible" style="display:none;"></div>
       </form>
     </div>
     <div class="popupform-thanks">

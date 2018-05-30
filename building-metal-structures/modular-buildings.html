@@ -204,11 +204,20 @@
     <article class="article-wrapper">
           <h2 class="title-section">Изготовление модульных строений</h2>
           <p class="article-text">Модульное строение представляет собой сборную блочную конструкций из металлических блоков-контейнеров. При возведении модульного строения из блок-контейнеров возможна стыковка модулей по трем направлениям, таким образом модульное здание может принимать абсолютно любую конфигурацию, в том числе и иметь несколько этажей. <b>Set Service Group</b> производит модульные здания любой сложности по вашему заказу.</p>
-          <form class="article-form" action="../mail.php" method="post">
-            <input type="text" name="organization" placeholder="Название организации">
-            <input type="text" name="email" placeholder="E-mail">
-            <input type="text" name="tel" placeholder="Телефон">
-            <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doArticleFormSubmit">Отправить заявку</button>
+          <form class="article-form" action="/mail-articleform.php" method="post" id="article-form">
+            <div class="article-form-field">
+              <input type="text" name="organization" placeholder="Название организации">
+            </div>
+            <div class="article-form-field">
+              <input type="text" name="email" placeholder="E-mail">
+            </div>
+            <div class="article-form-field">
+              <input type="text" name="tel" placeholder="Телефон">
+            </div>
+            <div class="article-form-field">
+              <input type="submit" value="Отправить заявку" name="submit" class="btn-text">
+            </div>
+            <div class="confidentiality">Нажимая кнопку «Отправить заявку», Вы соглашаетесь на <a href="/confidentiality.html">обработку персональных данных</a></div>
             <div class="thanks">
               <div class="thanks-content">
                 <div class="mark">
@@ -284,15 +293,24 @@
       <div class="btn-form-close"></div>
       <h2 class="title-form">Сделайте заказ прямо сейчас</h2>
       <p>Чтобы экономить ваше время, мы создали систему электронной подачи заказов. Заполните форму и наш специалист свяжится с вами в ближайшее время.</p>
-      <form enctype="multipart/form-data" action="/mail.php" method="post">
-        <input type="text" name="organization" placeholder="Ваше имя или название организации">
-        <input type="text" name="email" placeholder="Ваш E-mail">
-        <input type="text" name="tel" placeholder="Ваш телефон ">
-        <textarea name="message" cols="30" placeholder="Текст заявки"></textarea>
+      <form enctype="multipart/form-data" action="/mail.php" method="post" id="popupform">
+        <div class="popupform-field">
+          <input type="text" name="organization" placeholder="Ваше имя или название организации">
+        </div>
+        <div class="popupform-field">
+          <input type="text" name="email" placeholder="Ваш E-mail">
+        </div>
+        <div class="popupform-field">
+          <input type="text" name="tel" placeholder="Ваш телефон ">
+        </div>
+        <div class="popupform-field">
+          <textarea name="message" cols="30" placeholder="Текст заявки"></textarea>
+        </div>
         <label class="btn-file" for="input-file">Загрузить файл</label>
         <input type="file" name="file" id="input-file">
         <div class="confidentiality">Нажимая кнопку «Отправить заявку», Вы соглашаетесь на <a href="/confidentiality.html">обработку персональных данных</a></div>
-        <button type="submit" class="g-recaptcha btn-text" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doPopupFormSubmit">Отправить заявку</button>
+        <input type="submit" value="Отправить заявку" name="submit" class="btn-text">
+        <div class="g-recaptcha" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doPopupFormSubmit" data-size="invisible" style="display:none;"></div>
       </form>
     </div>
     <div class="popupform-thanks">
