@@ -211,83 +211,6 @@ $('.catalog-title-inner').click( function () {
 	});
 })(jQuery);
 
-//Отправка формы #article-form
-var doArticleFormSubmit = function () {
-  $('#article-form').ajaxSubmit({
-    type:"POST",
-    data: $('#article-form').serialize(),
-    url:"/mail.php",
-    success: function() {
-      $('.thanks').fadeIn().css('display', 'flex');
-      setTimeout(function() {
-        $('.thanks').fadeOut();
-      }, 3000);
-    },
-    error: function() {
-      alert("Error");
-    }
-  });
-};
-
-//Отправка формы #popupform
-var doPopupFormSubmit = function(){
-  $("#popupform").ajaxSubmit({
-    type:"POST",
-    data: $("#popupform").serialize(),
-    url:"/mail.php",
-    success: function() {
-      $('.popupform-thanks').fadeIn().css('display', 'flex');
-      setTimeout(function() {
-        $('.popupform-thanks').fadeOut();
-      }, 3000);
-    },
-    error: function() {
-      alert("Error");
-    }
-  });
-};
-
-//Валидация формы #article-form
-$(function(){
-
-    $('#article-form').validate({
-      rules: {
-        organization: {
-          required: true
-        },
-        email: {
-          required: true,
-          email: true
-        },
-        tel: {
-          required: true,
-          digits: true
-        },
-        message: {
-          required: true
-        }
-      },
-      messages: {
-        organization: {
-          required: 'Это поле обязательно для заполнения'
-        },
-        email:{
-          required: 'Это поле обязательно для заполнения',
-          email: 'Введите email в верном формате'
-        },
-        tel: {
-          required: 'Это поле обязательно для заполнения',
-          digits: 'Поле может содержать только цифры'
-        },
-        message: {
-          required: 'Это поле обязательно для заполнения'
-        }
-      },
-      submitHandler: function(form) {
-        grecaptcha.execute();
-      }
-    });
-});
 
 //Валидация формы #popupform
 $(function(){
@@ -327,6 +250,79 @@ $(function(){
       },
       submitHandler: function(form) {
         grecaptcha.execute();
+      }
+    });
+});
+
+//Отправка формы #popupform
+var doPopupFormSubmit = function(){
+  $("#popupform").ajaxSubmit({
+    type:"POST",
+    data: $("#popupform").serialize(),
+    url:"/mail.php",
+    success: function() {
+      $('.popupform-thanks').fadeIn().css('display', 'flex');
+      setTimeout(function() {
+        $('.popupform-thanks').fadeOut();
+      }, 3000);
+    },
+    error: function() {
+      alert("Error");
+    }
+  });
+};
+
+//Валидация и отправка формы #article-form
+$(function(){
+
+    $('#article-form').validate({
+      rules: {
+        organization: {
+          required: true
+        },
+        email: {
+          required: true,
+          email: true
+        },
+        tel: {
+          required: true,
+          digits: true
+        },
+        message: {
+          required: true
+        }
+      },
+      messages: {
+        organization: {
+          required: 'Это поле обязательно для заполнения'
+        },
+        email:{
+          required: 'Это поле обязательно для заполнения',
+          email: 'Введите email в верном формате'
+        },
+        tel: {
+          required: 'Это поле обязательно для заполнения',
+          digits: 'Поле может содержать только цифры'
+        },
+        message: {
+          required: 'Это поле обязательно для заполнения'
+        }
+      },
+      submitHandler: function(form) {
+        $('#article-form').ajaxSubmit({
+          type:"POST",
+          data: $('#article-form').serialize(),
+          url:"/mail-articleform.php",
+          success: function() {
+            $('.thanks').fadeIn().css('display', 'flex');
+            setTimeout(function() {
+              $('.thanks').fadeOut();
+            }, 3000);
+          },
+          error: function() {
+            alert("Error");
+          }
+        });
       }
     });
 });

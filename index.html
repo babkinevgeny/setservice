@@ -315,7 +315,8 @@
         <input type="file" name="file" id="input-file">
         <div class="confidentiality">Нажимая кнопку «Отправить заявку», Вы соглашаетесь на <a href="/confidentiality.html">обработку персональных данных</a></div>
         <input type="submit" value="Отправить заявку" name="submit" class="btn-text">
-        <div class="g-recaptcha" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doPopupFormSubmit" data-size="invisible" style="diplay:none;"></div>      </form>
+        <div class="g-recaptcha" data-sitekey="6LcW7lcUAAAAAJHLYtoHQSZS31ywn58nrmcDB5Xj" data-callback="doPopupFormSubmit" data-size="invisible" style="display:none;"></div>
+      </form>
     </div>
     <div class="popupform-thanks">
       <div class="popupform-thanks-content">
@@ -380,6 +381,66 @@
       var heightOfHeaderBlock = $('.page-header-block').height();
       var widthOfHeaderBlock = $('.page-header-block').width();
     });
+
+    //Валидация формы #popupform
+    $(function(){
+
+        $('.popupform form').validate({
+          rules: {
+            organization: {
+              required: true
+            },
+            email: {
+              required: true,
+              email: true
+            },
+            tel: {
+              required: true,
+              digits: true
+            },
+            message: {
+              required: true
+            }
+          },
+          messages: {
+            organization: {
+              required: 'Это поле обязательно для заполнения'
+            },
+            email:{
+              required: 'Это поле обязательно для заполнения',
+              email: 'Введите email в верном формате'
+            },
+            tel: {
+              required: 'Это поле обязательно для заполнения',
+              digits: 'Поле может содержать только цифры'
+            },
+            message: {
+              required: 'Это поле обязательно для заполнения'
+            }
+          },
+          submitHandler: function(form) {
+            grecaptcha.execute();
+          }
+        });
+    });
+
+    //Отправка формы #popupform
+    var doPopupFormSubmit = function(){
+      $(".popupform form").ajaxSubmit({
+        type:"POST",
+        data: $(".popupform form").serialize(),
+        url:"/mail.php",
+        success: function() {
+          $('.popupform-thanks').fadeIn().css('display', 'flex');
+          setTimeout(function() {
+            $('.popupform-thanks').fadeOut();
+          }, 3000);
+        },
+        error: function() {
+          alert("Error");
+        }
+      });
+    };
   </script>
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript" >
